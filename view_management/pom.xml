@@ -83,5 +83,36 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <!-- https://mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/ -->
+      <!-- Maven Assembly Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <!-- get all project dependencies -->
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <!-- MainClass in manifest make a executable jar -->
+          <archive>
+            <manifest>
+              <mainClass>htwberlin.mau_mau.view_management.run.Main</mainClass>
+            </manifest>
+          </archive>
+
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <!-- bind to the packaging phase -->
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 </project>

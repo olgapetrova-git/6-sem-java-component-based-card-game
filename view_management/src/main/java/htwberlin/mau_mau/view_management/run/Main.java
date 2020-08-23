@@ -1,5 +1,5 @@
 /*
- * olgapetrova-git/mau_mau_card_game
+ * olgapetrova-git/mau_mau
  */
 package htwberlin.mau_mau.view_management.run;
 
