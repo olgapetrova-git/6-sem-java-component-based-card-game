@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gVPSbM3IZS24H6tMEAxzicdfD3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="" />
+      <created>1598196791738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598196791738</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1598221098596">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1598221098596" />
+    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1598221098596">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1598221098596" />
+    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1598221098595">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1598221098595" />
+    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1598221098596">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1598221098596" />
+    <state x="281" y="135" key="Maven.ArtifactSearchDialog" timestamp="1598219688230">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="281" y="135" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1598219688230" />
+    <state x="252" y="125" key="SettingsEditor" timestamp="1598216972708">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="252" y="125" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1598216972708" />
+    <state x="175" y="141" key="new project wizard" timestamp="1598205945460">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="175" y="141" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1598205945460" />
+  </component>
+</project>

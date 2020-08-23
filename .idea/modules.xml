@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/card_management/card_management.iml" filepath="$PROJECT_DIR$/card_management/card_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game_management/game_management.iml" filepath="$PROJECT_DIR$/game_management/game_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mau_mau.iml" filepath="$PROJECT_DIR$/.idea/mau_mau.iml" />
+      <module fileurl="file://$PROJECT_DIR$/player_management/player_management.iml" filepath="$PROJECT_DIR$/player_management/player_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/real_player_management/real_player_management.iml" filepath="$PROJECT_DIR$/real_player_management/real_player_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rules_management/rules_management.iml" filepath="$PROJECT_DIR$/rules_management/rules_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view_management/view_management.iml" filepath="$PROJECT_DIR$/view_management/view_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/virtual_player_management/virtual_player_management.iml" filepath="$PROJECT_DIR$/virtual_player_management/virtual_player_management.iml" />
+    </modules>
+  </component>
+</project>

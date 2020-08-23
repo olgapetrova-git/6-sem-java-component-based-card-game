@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="real_player_management" />
+        <module name="game_management" />
+        <module name="virtual_player_management" />
+        <module name="player_management" />
+        <module name="card_management" />
+        <module name="view_management" />
+        <module name="rules_management" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="card_management" target="1.7" />
+      <module name="game_management" target="1.7" />
+      <module name="player_management" target="1.7" />
+      <module name="real_player_management" target="1.7" />
+      <module name="rules_management" target="1.7" />
+      <module name="view_management" target="1.7" />
+      <module name="virtual_player_management" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

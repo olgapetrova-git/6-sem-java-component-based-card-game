@@ -1,0 +1,6 @@
+htwberlin\mau_mau\card_management\model\Card.class
+htwberlin\mau_mau\card_management\model\Deck.class
+htwberlin\mau_mau\card_management\model\Suit.class
+htwberlin\mau_mau\card_management\controller\CardController.class
+htwberlin\mau_mau\card_management\controller\CardControllerImpl.class
+htwberlin\mau_mau\card_management\model\Rank.class
