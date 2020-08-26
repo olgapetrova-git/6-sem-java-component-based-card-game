@@ -1,3 +1,3 @@
-htwberlin\mau_mau\game_management\controller\GameControllerImpl.class
-htwberlin\mau_mau\game_management\controller\GameController.class
-htwberlin\mau_mau\game_management\model\GameData.class
+htwberlin\mau_mau\game_management\data\GameData.class
+htwberlin\mau_mau\game_management\service\GameService.class
+htwberlin\mau_mau\game_management\service\GameServiceImpl.class
