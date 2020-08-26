@@ -1,6 +1,6 @@
-C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\model\Card.java
-C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\model\Suit.java
-C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\controller\CardController.java
-C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\model\Deck.java
-C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\model\Rank.java
-C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\controller\CardControllerImpl.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Suit.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\service\CardServiceImpl.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\service\CardService.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Card.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Rank.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Deck.java

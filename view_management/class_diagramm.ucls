@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="htwberlin.mau_mau.card_management.model.Card" project="card_management" 
+  <class id="1" language="java" name="htwberlin.mau_mau.card_management.data.Card" project="card_management"
     file="/card_management/src/main/java/htwberlin/mau_mau/card_management/model/Card.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="753" y="418"/>    
@@ -11,7 +11,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="htwberlin.mau_mau.card_management.model.Deck" project="card_management" 
+  <class id="2" language="java" name="htwberlin.mau_mau.card_management.data.Deck" project="card_management"
     file="/card_management/src/main/java/htwberlin/mau_mau/card_management/model/Deck.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="953" y="311"/>    
@@ -21,7 +21,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="3" language="java" name="htwberlin.mau_mau.card_management.model.Rank" project="card_management" 
+  <enumeration id="3" language="java" name="htwberlin.mau_mau.card_management.data.Rank" project="card_management"
     file="/card_management/src/main/java/htwberlin/mau_mau/card_management/model/Rank.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="848" y="649"/>    
@@ -31,7 +31,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </enumeration>  
-  <enumeration id="4" language="java" name="htwberlin.mau_mau.card_management.model.Suit" project="card_management" 
+  <enumeration id="4" language="java" name="htwberlin.mau_mau.card_management.data.Suit" project="card_management"
     file="/card_management/src/main/java/htwberlin/mau_mau/card_management/model/Suit.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="127" width="202" x="406" y="633"/>    
@@ -41,7 +41,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="5" language="java" name="htwberlin.mau_mau.player_management.model.Player" project="player_management" 
+  <class id="5" language="java" name="htwberlin.mau_mau.player_management.data.Player" project="player_management"
     file="/player_management/src/main/java/htwberlin/mau_mau/player_management/model/Player.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="73" width="209" x="359" y="150"/>    
@@ -51,7 +51,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="htwberlin.mau_mau.real_player_management.model.RealPlayer" 
+  <class id="6" language="java" name="htwberlin.mau_mau.real_player_management.data.RealPlayer"
     project="real_player_management" 
     file="/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/model/RealPlayer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -62,7 +62,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="htwberlin.mau_mau.virtual_player_management.model.VirtualPlayer" 
+  <class id="7" language="java" name="htwberlin.mau_mau.virtual_player_management.data.VirtualPlayer"
     project="virtual_player_management" 
     file="/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/model/VirtualPlayer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -73,7 +73,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="8" language="java" name="htwberlin.mau_mau.rules_management.model.GameRulesId" 
+  <enumeration id="8" language="java" name="htwberlin.mau_mau.rules_management.data.GameRulesId"
     project="rules_management" 
     file="/rules_management/src/main/java/htwberlin/mau_mau/rules_management/model/GameRulesId.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -84,7 +84,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="9" language="java" name="htwberlin.mau_mau.rules_management.model.SpecialRulesGameData" 
+  <class id="9" language="java" name="htwberlin.mau_mau.rules_management.data.SpecialRulesGameData"
     project="rules_management" 
     file="/rules_management/src/main/java/htwberlin/mau_mau/rules_management/model/SpecialRulesGameData.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -95,7 +95,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="htwberlin.mau_mau.rules_management.model.StandardRulesGameData" 
+  <class id="10" language="java" name="htwberlin.mau_mau.rules_management.data.StandardRulesGameData"
     project="rules_management" 
     file="/rules_management/src/main/java/htwberlin/mau_mau/rules_management/model/StandardRulesGameData.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -106,7 +106,7 @@
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="htwberlin.mau_mau.game_management.model.GameData" project="game_management" 
+  <class id="11" language="java" name="htwberlin.mau_mau.game_management.data.GameData" project="game_management"
     file="/game_management/src/main/java/htwberlin/mau_mau/game_management/model/GameData.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="935" y="47"/>    
