@@ -12,11 +12,13 @@
         <module name="player_management" />
         <module name="card_management" />
         <module name="view_management" />
+        <module name="configuration_management" />
         <module name="rules_management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="card_management" target="1.7" />
+      <module name="configuration_management" target="1.7" />
       <module name="game_management" target="1.7" />
       <module name="player_management" target="1.7" />
       <module name="real_player_management" target="1.7" />

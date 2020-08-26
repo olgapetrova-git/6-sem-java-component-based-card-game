@@ -1,20 +1,18 @@
 package htwberlin.mau_mau.virtual_player_management.controller;
 
-import htwberlin.mau_mau.card_management.model.Card;
-import htwberlin.mau_mau.card_management.model.Deck;
+import htwberlin.mau_mau.virtual_player_management.model.VirtualPlayer;
 
 /**
- * The interface Virtual player controller provides operations performed by the virtual player.
+ * The interface Virtual player controller provides operations related to the virtual player.
  */
 public interface VirtualPlayerController {
 
     /**
-     * Make virtual player move, i.e. select a card from the virtual player's hand which can be played against
-     * the topmost card of the playing stack.
+     * Create virtual player with a random name from the predefined list.
      *
-     * @param topmostCard the topmost card
-     * @param hand        the hand
-     * @return the card
+     * @return the virtual player
      */
-    Card makeVirtualPlayerMove(Card topmostCard, Deck hand);
+    VirtualPlayer createVirtualPlayer();
+
+
 }

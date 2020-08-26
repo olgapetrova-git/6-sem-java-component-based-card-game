@@ -67,6 +67,14 @@ public class GameData {
         return drawingStack;
     }
 
+    /**
+     * Sets drawing stack.
+     *
+     * @param drawingStack the drawing stack
+     */
+    public void setDrawingStack(Deck drawingStack) {
+        this.drawingStack = drawingStack;
+    }
 
     /**
      * Gets playing stack.
@@ -75,6 +83,16 @@ public class GameData {
      */
     public Deck getPlayingStack() {
         return playingStack;
+    }
+
+
+    /**
+     * Sets playing stack.
+     *
+     * @param playingStack the playing stack
+     */
+    public void setPlayingStack(Deck playingStack) {
+        this.playingStack = playingStack;
     }
 
     /**

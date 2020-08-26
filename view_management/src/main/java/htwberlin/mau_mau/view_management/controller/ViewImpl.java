@@ -2,18 +2,23 @@ package htwberlin.mau_mau.view_management.controller;
 
 
 import htwberlin.mau_mau.game_management.controller.GameController;
-import htwberlin.mau_mau.game_management.controller.GameControllerImpl;
 import htwberlin.mau_mau.game_management.model.GameData;
 import htwberlin.mau_mau.player_management.model.Player;
 import htwberlin.mau_mau.real_player_management.model.RealPlayer;
 import htwberlin.mau_mau.rules_management.model.GameRulesId;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ViewImpl implements View{
+    @Autowired
+    private GameController gameController;
+
     @Override
-    public void newGameStarted(String name, int virtualPlayers, GameRulesId gameRulesId) {
+    public void newGameStarted(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId) {
         Player player = new RealPlayer(name);
-        GameController gameController = new GameControllerImpl();
-        GameData gameData = gameController.setupNewGame((RealPlayer) player, virtualPlayers, gameRulesId);
+
+        GameData gameData = gameController.setupNewGame(name, numberOfVirtualPlayers, gameRulesId);
         controlGameFlow(gameData, gameController);
     }
 

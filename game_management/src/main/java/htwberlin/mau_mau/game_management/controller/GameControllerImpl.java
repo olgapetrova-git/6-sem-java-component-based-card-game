@@ -1,45 +1,43 @@
 package htwberlin.mau_mau.game_management.controller;
 
+import htwberlin.mau_mau.card_management.controller.CardController;
+import htwberlin.mau_mau.card_management.model.Card;
 import htwberlin.mau_mau.card_management.model.Deck;
 import htwberlin.mau_mau.game_management.model.GameData;
 import htwberlin.mau_mau.player_management.model.Player;
-import htwberlin.mau_mau.real_player_management.model.RealPlayer;
+import htwberlin.mau_mau.real_player_management.controller.RealPlayerController;
 import htwberlin.mau_mau.rules_management.model.GameRulesId;
+import htwberlin.mau_mau.virtual_player_management.controller.VirtualPlayerController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-
-
 
 /**
  * The type GameControllerImpl implements operations to manage game flow.
  */
+@Component
 public class GameControllerImpl implements GameController{
+	@Autowired
+	private RealPlayerController realPlayerController;
+
+	@Autowired
+	private VirtualPlayerController virtualPlayerController;
+
+	@Autowired
+	private CardController cardController;
 
 	@Override
-	public GameData setupNewGame(RealPlayer realPlayer, int virtualPlayers, GameRulesId gameRulesId) {
-		// create game data object:
+	public GameData setupNewGame(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId) {
+
 		GameData gameData = new GameData(new Deck(), new Deck(), new ArrayList<Player>(), gameRulesId);
-		// TODO:
-		// add realPlayer to GameData (call addRealPlayerToGame)
-		// implement GameRules Factory to get an obj for gameRulesId (Standard Rules or specific Rules)
-		// call createDeckOfCards(gameRules.NUMBER_OF_CARDS_IN_DECK)
-		// call shuffleDeck (from DeckController)
-		// create specified number of virtual players: createVirtualPlayer(), and add them to ArrayList
+		gameData.getPlayers().add(realPlayerController.createRealPlayer(name));
+		for (int i = 0; i < numberOfVirtualPlayers; i++){
+			gameData.getPlayers().add(virtualPlayerController.createVirtualPlayer());
+				}
+		gameData.setDrawingStack(cardController.createDeckOfCards());
+		cardController.shuffleDrawingDeck(gameData.getDrawingStack()); 	// call shuffle
 		return gameData;
-	}
-
-@Override
-	public GameData addRealPlayerToGame(GameData gameData, String name) {
-		//TODO:
-		// RealPlayer player = new RealPlayer(name);
-		// add real player to ArrayList in GameData
-		//
-		return gameData;
-	}
-
-	@Override
-	public GameData addVirtualPlayerToGame(GameData gameData) {
-		return null;
 	}
 
 @Override
@@ -50,13 +48,13 @@ public class GameControllerImpl implements GameController{
 	}
 
 	@Override
-	public GameData makeRealPlayerMove(int cardPosition, GameData gameData) {
-		return null;
+	public boolean makeGameMoveForRealPlayer(int cardPosition, GameData gameData) {
+		return false;
 	}
 
 	@Override
-	public GameData makeVirtualPlayerMove(GameData gameData) {
-		return null;
+	public boolean makeGameMoveForVirtualPlayer(Card topmostCard, Deck hand) {
+		return false;
 	}
 
 	/**

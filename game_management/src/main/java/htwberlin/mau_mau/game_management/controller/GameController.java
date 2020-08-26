@@ -1,7 +1,8 @@
 package htwberlin.mau_mau.game_management.controller;
 
+import htwberlin.mau_mau.card_management.model.Card;
+import htwberlin.mau_mau.card_management.model.Deck;
 import htwberlin.mau_mau.game_management.model.GameData;
-import htwberlin.mau_mau.real_player_management.model.RealPlayer;
 import htwberlin.mau_mau.rules_management.model.GameRulesId;
 
 /**
@@ -12,30 +13,12 @@ public interface GameController {
     /**
      * Sets up new game.
      *
-     * @param realPlayer     the real player
-     * @param virtualPlayers the virtual players
-     * @param gameRulesId    the game rules id
+     * @param name                   the name of the real player that he entered in view
+     * @param numberOfVirtualPlayers the virtual players
+     * @param gameRulesId            the game rules id
      * @return gameData the new game
      */
-    GameData setupNewGame(RealPlayer realPlayer, int virtualPlayers, GameRulesId gameRulesId);
-
-    /**
-     * Add real player to game data.
-     *
-     * @param gameData the game data
-     * @param name     the name of the real player he entered in View
-     * @return the game data
-     */
-    GameData addRealPlayerToGame (GameData gameData, String name);
-
-
-    /**
-     * Add virtual player to game data.
-     *
-     * @param gameData the game data
-     * @return the game data
-     */
-    GameData addVirtualPlayerToGame(GameData gameData);
+    GameData setupNewGame(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId);
 
     /**
      * Deal cards to players, i.e. save cards in Hand for each Player and store it in gameData.
@@ -50,15 +33,18 @@ public interface GameController {
      *
      * @param cardPosition the card position in the player's hand, selected by the player in ui
      * @param gameData     the game data
-     * @return the game data
+     * @return the boolean
      */
-    GameData makeRealPlayerMove(int cardPosition, GameData gameData);
+    boolean makeGameMoveForRealPlayer(int cardPosition, GameData gameData);
+
 
     /**
-     * Make virtual player move and store it in the game data.
+     * Make virtual player move and store it in the game data, i.e. select a card from the virtual player's hand
+     * which can be played against the topmost card of the playing stack.
      *
-     * @param gameData the game data
-     * @return the game data
+     * @param topmostCard the topmost card
+     * @param hand        the hand
+     * @return the boolean
      */
-    GameData makeVirtualPlayerMove(GameData gameData);
+    boolean makeGameMoveForVirtualPlayer(Card topmostCard, Deck hand);
 }

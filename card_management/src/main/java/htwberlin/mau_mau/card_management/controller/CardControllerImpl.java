@@ -1,10 +1,18 @@
 package htwberlin.mau_mau.card_management.controller;
 import htwberlin.mau_mau.card_management.model.Card;
 import htwberlin.mau_mau.card_management.model.Deck;
+import org.springframework.stereotype.Component;
+
 /**
  * The type CardControllerImpl implements operations over the cards and decks.
  */
+@Component
 public class CardControllerImpl implements CardController {
+
+    /**
+     * Fixed number of cards in the deck (french).
+     */
+    private static final int NUMBER_OF_CARDS_IN_DECK = 32;
 
     /**
      * Turn over and shuffle the playing stack to serve as new drawing stack, when the drawing stack is empty,
@@ -19,7 +27,8 @@ public class CardControllerImpl implements CardController {
     }
 
     @Override
-    public Deck createDeckOfCards(int numberOfCards, Deck drawingDeck) {
+    public Deck createDeckOfCards() {
+        //TODO
         return null;
     }
 
@@ -29,7 +38,7 @@ public class CardControllerImpl implements CardController {
     }
 
     @Override
-    public Deck addCardToHandFromDrawingStack(Deck drawingStack, Deck hand) {
+    public Deck addCardFromDrawingStackToHand(Deck drawingStack, Deck hand) {
         return null;
         //TODO: if the last card is drawn...call turnOver
     }

@@ -37,4 +37,14 @@ public interface RealPlayerController {
      * @param player     the player
      */
     public void setSaidMauMau(boolean saidMauMau, RealPlayer player);
+
+    /**
+     * Create real player data object using given name.
+     *
+     * @param name the name
+     * @return the real player
+     */
+    public RealPlayer createRealPlayer(String name);
+
+
 }

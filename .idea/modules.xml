@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/card_management/card_management.iml" filepath="$PROJECT_DIR$/card_management/card_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configuration_management/configuration_management.iml" filepath="$PROJECT_DIR$/configuration_management/configuration_management.iml" />
       <module fileurl="file://$PROJECT_DIR$/game_management/game_management.iml" filepath="$PROJECT_DIR$/game_management/game_management.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mau_mau.iml" filepath="$PROJECT_DIR$/.idea/mau_mau.iml" />
       <module fileurl="file://$PROJECT_DIR$/player_management/player_management.iml" filepath="$PROJECT_DIR$/player_management/player_management.iml" />

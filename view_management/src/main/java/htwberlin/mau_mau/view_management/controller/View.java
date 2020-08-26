@@ -10,10 +10,10 @@ public interface View {
      * Action to start the new game.
      *
      * @param name           the player's name
-     * @param virtualPlayers number of the virtual players, that real player has selected
+     * @param numberOfVirtualPlayers number of the virtual players, that real player has selected
      * @param gameRulesId    the game rules id
      */
-    void newGameStarted(String name, int virtualPlayers, GameRulesId gameRulesId);
+    void newGameStarted(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId);
 
    /*
 

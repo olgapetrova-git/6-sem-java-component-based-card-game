@@ -10,8 +10,8 @@ public class VirtualPlayer extends Player {
     /**
      * Instantiates a new Virtual player.
      */
-    public VirtualPlayer() {
+    public VirtualPlayer(String name) {
         //TODO: Add a method which generates names for virtual players
-        super(new String());
+        super(name);
         }
 }

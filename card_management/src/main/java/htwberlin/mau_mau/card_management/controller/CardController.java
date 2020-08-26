@@ -11,11 +11,9 @@ public interface CardController {
 	/**
 	 * Create initial drawing deck of cards.
 	 *
-	 * @param numberOfCards the number of cards
-	 * @param drawingDeck   the drawing deck
 	 * @return Deck the deck
 	 */
-	Deck createDeckOfCards(int numberOfCards, Deck drawingDeck);
+	Deck createDeckOfCards();
 
 
 	/**
@@ -35,7 +33,7 @@ public interface CardController {
 	 * @param hand         the hand
 	 * @return Deck the deck
 	 */
-	Deck addCardToHandFromDrawingStack(Deck drawingStack, Deck hand);
+	Deck addCardFromDrawingStackToHand(Deck drawingStack, Deck hand);
 
 	/**
 	 * Gets card by position from player's hand.

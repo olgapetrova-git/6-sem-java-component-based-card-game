@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/game_management/pom.xml" />
         <option value="$PROJECT_DIR$/view_management/pom.xml" />
         <option value="$PROJECT_DIR$/real_player_management/pom.xml" />
+        <option value="$PROJECT_DIR$/configuration_management/pom.xml" />
       </list>
     </option>
   </component>
