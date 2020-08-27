@@ -19,11 +19,12 @@ public class ViewControllerImpl implements ViewController {
         Player player = new RealPlayer(name);
 
         GameData gameData = gameService.setupNewGame(name, numberOfVirtualPlayers, gameRulesId);
-        controlGameFlow(gameData, gameService);
+        processMainFlow(gameData, gameService);
     }
 
 
-    void controlGameFlow(GameData gameData, GameService gameService) {
+    void processMainFlow(GameData gameData, GameService gameService) {
+
 
         // call dealCardsToPlayers
         // TODO: once, for each player in ArrayList:
@@ -42,7 +43,7 @@ public class ViewControllerImpl implements ViewController {
      * @param player   the player
      * @return the boolean: true, if the player has won, else false
      */
-    boolean doGameTurn(GameData gameData, Player player) {
+    boolean processMove(GameData gameData, Player player) {
         // TODO: if the player is real,
         // request player move,
         // *	if real Player pressed the button "Quit", we call endGame ()

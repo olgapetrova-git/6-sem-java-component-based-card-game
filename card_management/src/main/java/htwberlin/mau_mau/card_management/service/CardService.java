@@ -13,8 +13,17 @@ public interface CardService {
 	 *
 	 * @return Deck the deck
 	 */
-	Deck createDeckOfCards();
+	Deck createDrawingStack();
 
+	/**
+	 * Create initial playing stack deck.
+	 *
+	 * @param drawingStack the drawing stack
+	 * @return the deck
+	 * @throws EmptyDrawingStackException the empty drawing stack exception
+	 * @throws EmptyPlayingStackException the empty playing stack exception
+	 */
+	Deck createPlayingStack(Deck drawingStack) throws EmptyDrawingStackException, EmptyPlayingStackException;
 
 	/**
 	 * Removes one card from the player's hand and add the played card to the top of the playing stack.
@@ -26,14 +35,17 @@ public interface CardService {
 	void removeCardFromHandAddToPlayingStack(Deck hand, Card card, Deck playingStack);
 
 	/**
-	 * Pick the new card from the top of drawing stack and add it to the player's hand.
-	 * Done if a player is not able to play any of his cards or at the beginning of the game.
+	 * Picks the new card from the top of drawing stack and add it to the player's hand.
+	 * When the drawing stack is empty,turns over and shuffles the playing stack to serve as new drawing stack,
 	 *
 	 * @param drawingStack the drawing stack
+	 * @param playingStack the playing stack
 	 * @param hand         the hand
-	 * @return Deck the deck
+	 * @return Deck the modified hand
+	 * @throws EmptyDrawingStackException the empty drawing stack exception
+	 * @throws EmptyPlayingStackException the empty playing stack exception
 	 */
-	Deck addCardFromDrawingStackToHand(Deck drawingStack, Deck hand);
+	void drawCard(Deck drawingStack, Deck playingStack, Deck hand) throws EmptyDrawingStackException, EmptyPlayingStackException;
 
 	/**
 	 * Gets card by position from player's hand.
@@ -59,6 +71,8 @@ public interface CardService {
 	 * @return Deck the deck
 	 */
 	Deck shuffleDrawingDeck(Deck drawingStack);
+
+
 
 
 

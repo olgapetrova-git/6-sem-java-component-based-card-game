@@ -12,4 +12,5 @@ public interface ConfigurationService {
      * @return the configurable application context
      */
     public ConfigurableApplicationContext context();
+
 }

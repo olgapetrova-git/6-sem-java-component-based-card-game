@@ -24,7 +24,7 @@ public class GameServiceTest {
         GameData mockGameData = createNiceMock(GameData.class);
         CardService mockCardService = createNiceMock(CardService.class);
 
-        expect(mockCardService.createDeckOfCards()).andReturn(new Deck());
+        expect(mockCardService.createDrawingStack()).andReturn(new Deck());
         replay(mockCardService);
 
         //Act

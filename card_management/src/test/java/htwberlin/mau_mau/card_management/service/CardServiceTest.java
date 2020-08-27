@@ -6,6 +6,8 @@ import htwberlin.mau_mau.card_management.data.Rank;
 import htwberlin.mau_mau.card_management.data.Suit;
 import org.junit.*;
 
+import static org.junit.Assert.fail;
+
 public class CardServiceTest {
 private CardService cardService;
     @BeforeClass
@@ -24,7 +26,7 @@ private CardService cardService;
     public void testCreateDeckOfCards() {
         //Arrange
         //Act
-        Deck drawingDeck = cardService.createDeckOfCards();
+        Deck drawingDeck = cardService.createDrawingStack();
         //Assert
         Assert.assertEquals(32, drawingDeck.getCards().size());
         //TODO: test that cards are unique
@@ -53,15 +55,21 @@ private CardService cardService;
     }
 
     @Test
-    public void testAddCardFromDrawingStackToHand() {
+    public void testDrawCard() {
         //Arrange
         Deck hand = new Deck();
         hand.getCards().add(new Card(Suit.DIAMONDS, Rank.SEVEN));
         Deck drawingStack = new Deck();
+        Deck playingStack = new Deck();
         drawingStack.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
         drawingStack.getCards().add(new Card(Suit.SPADES, Rank.QUEEN));
         //Act
-        cardService.addCardFromDrawingStackToHand(drawingStack,hand);
+        try {
+            cardService.drawCard(drawingStack, playingStack, hand);
+        } catch (EmptyDrawingStackException | EmptyPlayingStackException e) {
+            e.printStackTrace();
+            fail("Exception occurred: " + e.getMessage());
+        }
         //Assert
         Assert.assertEquals(2, hand.getCards().size());
         Assert.assertEquals(1, drawingStack.getCards().size());
@@ -75,7 +83,7 @@ private CardService cardService;
         Assert.assertEquals(Rank.ACE, drawingStack.getCards().get(0).getRank());
     }
     @Test
-    public void testAddCardFromDrawingStackToHandTurnOver(){
+    public void testDrawCardTurnOver(){
         //if the last card from the drawing stack is drawn, call turnOver
         //Arrange
         Deck playingStack = new Deck();
@@ -85,7 +93,12 @@ private CardService cardService;
         Deck drawingStack = new Deck();
         drawingStack.getCards().add(new Card(Suit.SPADES, Rank.QUEEN));
         //Act
-        cardService.addCardFromDrawingStackToHand(drawingStack,hand);
+        try {
+            cardService.drawCard(drawingStack, playingStack, hand);
+        } catch (EmptyDrawingStackException | EmptyPlayingStackException e) {
+            e.printStackTrace();
+            fail("Exception occurred: " + e.getMessage());
+        }
         //Assert
         Assert.assertEquals(1, hand.getCards().size());
         Assert.assertEquals(1, drawingStack.getCards().size());
@@ -102,6 +115,10 @@ private CardService cardService;
 
     }
 
+    @Test
+    public void testDrawCardThrowsException(){
+        //TODO: add test with exception occurred
+    }
     @Test
     public void getCardByPositionFromHand() {
         //Arrange

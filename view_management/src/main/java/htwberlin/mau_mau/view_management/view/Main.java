@@ -18,7 +18,7 @@ public class Main {
 	public static String systemName = System.getProperty("os.name").toLowerCase();
 
 	public static void main(String[] args) throws Exception {
-		cls = Class.forName("htwberlin.mau_mau.view_management.view.App");
+		cls = Class.forName("htwberlin.mau_mau.view_management.view.UI");
 
 		// check if an argument was passed on jar execution
 		if (args.length == 0) {
@@ -26,7 +26,7 @@ public class Main {
 			final String jarPath = Main.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 			final String decodedPath = URLDecoder.decode(jarPath, "UTF-8");
 			// Setting for the terminal window title (Linux/Windows)
-			// final String windowTitle = "App Name";
+			// final String windowTitle = "UI Name";
 			final String windowTitle = cls.getSimpleName();
 			// Check the current platform...
 			if (systemName.contains("windows")) {
