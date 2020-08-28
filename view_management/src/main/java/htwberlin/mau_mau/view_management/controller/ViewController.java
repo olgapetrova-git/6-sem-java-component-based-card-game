@@ -7,27 +7,11 @@ import htwberlin.mau_mau.rules_management.data.GameRulesId;
  *
  */
 public interface ViewController {
+
     /**
      * Action to start the new game.
      *
-     * @param name           the player's name
-     * @param numberOfVirtualPlayers number of the virtual players, that real player has selected
-     * @param gameRulesId    the game rules id
      */
-    void newGameStarted(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId);
+    void run();
 
-   /*
-
-     * Action to select the card from player's hand.
-     *
-     * @param cardPosition the card position
-
-    void cardSelected(int cardPosition);
-
-    void mauSaid();
-
-    void maumauSaid();
-
-    void gameEnded();
-    */
-}
+  }

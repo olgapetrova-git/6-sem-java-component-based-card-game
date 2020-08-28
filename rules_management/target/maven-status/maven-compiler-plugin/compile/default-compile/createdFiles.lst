@@ -1,8 +1,8 @@
 htwberlin\mau_mau\rules_management\data\StandardRulesGameData.class
-htwberlin\mau_mau\rules_management\service\StandardRulesServiceImpl.class
-htwberlin\mau_mau\rules_management\service\GameRulesFactory$1.class
+htwberlin\mau_mau\rules_management\service\RulesProvider.class
+htwberlin\mau_mau\rules_management\service\RulesServiceStandard.class
+htwberlin\mau_mau\rules_management\service\RulesServiceSpecial.class
 htwberlin\mau_mau\rules_management\data\GameRulesId.class
 htwberlin\mau_mau\rules_management\data\SpecialRulesGameData.class
-htwberlin\mau_mau\rules_management\service\GameRulesService.class
-htwberlin\mau_mau\rules_management\service\GameRulesFactory.class
-htwberlin\mau_mau\rules_management\service\SpecialRulesServiceImpl.class
+htwberlin\mau_mau\rules_management\service\RulesService.class
+htwberlin\mau_mau\rules_management\service\RulesProvider$1.class

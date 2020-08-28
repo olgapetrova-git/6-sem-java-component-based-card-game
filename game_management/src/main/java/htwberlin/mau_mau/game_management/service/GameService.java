@@ -40,11 +40,11 @@ public interface GameService {
 
     /**
      * Makes virtual player move and store it in the game data, i.e. select a card from the virtual player's hand
-     * which can be played against the topmost card of the playing stack.
+     * which can be played against the open card at the top of the playing stack.
      *
-     * @param topmostCard the topmost card
-     * @param hand        the hand
+     * @param openCard the open card at the top of the playing stack
+     * @param hand        the virtual player's hand
      * @return the boolean
      */
-    boolean makeGameMoveForVirtualPlayer(Card topmostCard, Deck hand);
+    boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand);
 }

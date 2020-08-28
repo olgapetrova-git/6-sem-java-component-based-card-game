@@ -41,7 +41,6 @@ public interface CardService {
 	 * @param drawingStack the drawing stack
 	 * @param playingStack the playing stack
 	 * @param hand         the hand
-	 * @return Deck the modified hand
 	 * @throws EmptyDrawingStackException the empty drawing stack exception
 	 * @throws EmptyPlayingStackException the empty playing stack exception
 	 */
@@ -57,12 +56,12 @@ public interface CardService {
 	Card getCardByPositionFromHand(int position, Deck hand);
 
 	/**
-	 * Gets topmost card from the playing stack.
+	 * Gets the open card from top of the the playing stack.
 	 *
 	 * @param playingStack the playing stack
-	 * @return Card the card
+	 * @return Card the open card on the top of the playing stack.
 	 */
-	Card getTopmostCardFromPlayingStack(Deck playingStack);
+	Card getOpenCard(Deck playingStack);
 
 	/**
 	 * Shuffles deck, i.e. rearrange a drawing deck of cards by placing them in random order.

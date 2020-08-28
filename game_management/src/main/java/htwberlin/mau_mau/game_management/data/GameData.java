@@ -1,5 +1,6 @@
 package htwberlin.mau_mau.game_management.data;
 
+import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.player_management.data.Player;
@@ -26,7 +27,7 @@ public class GameData {
      */
     private ArrayList<Player> players;
 
-     /**
+    /**
      * Current player
      */
     private Player currentPlayer;
@@ -40,6 +41,12 @@ public class GameData {
      * Flag, if player has won.
       */
     private boolean isWin;
+
+
+    /**
+     * Current open card on the top of the playing stack
+     */
+    private Card openCard;
 
     /**
      * Instantiates a new Game data.
@@ -113,6 +120,16 @@ public class GameData {
     }
 
     /**
+     * Sets current player.
+     *
+     * @param currentPlayer the current player
+     */
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+
+    /**
      * Gets Game Rules Id.
      *
      * @return the game rules id
@@ -138,5 +155,23 @@ public class GameData {
      */
     public void setWin(boolean win) {
         isWin = win;
+    }
+
+    /**
+     * Gets open card at the top of the playing stack.
+     *
+     * @return the open card at the top of the playing stack
+     */
+    public Card getOpenCard() {
+        return openCard;
+    }
+
+    /**
+     * Sets the open card at the top of the playing stack.
+     *
+     * @param openCard the open card at the top of the playing stack
+     */
+    public void setOpenCard(Card openCard) {
+        this.openCard = openCard;
     }
 }

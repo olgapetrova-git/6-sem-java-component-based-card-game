@@ -7,6 +7,7 @@ import htwberlin.mau_mau.card_management.service.EmptyDrawingStackException;
 import htwberlin.mau_mau.card_management.service.EmptyPlayingStackException;
 import htwberlin.mau_mau.game_management.data.GameData;
 import htwberlin.mau_mau.player_management.data.Player;
+import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.real_player_management.service.RealPlayerService;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.virtual_player_management.service.VirtualPlayerService;
@@ -34,25 +35,29 @@ public class GameServiceImpl implements GameService {
     @Autowired
     private CardService cardService;
 
+
     @Override
     public GameData setupNewGame(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId) {
 
         GameData gameData = new GameData(new Deck(), new Deck(), new ArrayList<Player>(), gameRulesId);
-        gameData.getPlayers().add(realPlayerService.createRealPlayer(name));
+        RealPlayer realPlayer = realPlayerService.createRealPlayer(name);
+        gameData.getPlayers().add(realPlayer);
         for (int i = 0; i < numberOfVirtualPlayers; i++) {
             gameData.getPlayers().add(virtualPlayerService.createVirtualPlayer());
         }
+        gameData.setCurrentPlayer(realPlayer);
         gameData.setDrawingStack(cardService.createDrawingStack());
         cardService.shuffleDrawingDeck(gameData.getDrawingStack());
         dealCardsToPlayers(gameData);
         try {
-            cardService.createPlayingStack(gameData.getDrawingStack());
+            gameData.setPlayingStack(cardService.createPlayingStack(gameData.getDrawingStack()));
         } catch (EmptyDrawingStackException e) {
             LOGGER.error(e.getMessage());
 
         } catch (EmptyPlayingStackException e) {
             LOGGER.error(e.getMessage());
         }
+        gameData.setOpenCard(cardService.getOpenCard(gameData.getPlayingStack()));
         return gameData;
     }
 
@@ -76,7 +81,7 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public boolean makeGameMoveForVirtualPlayer(Card topmostCard, Deck hand) {
+    public boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand) {
         return false;
     }
 

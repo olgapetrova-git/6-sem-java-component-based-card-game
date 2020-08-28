@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("StandardRulesServiceImpl")
-public class StandardRulesServiceImpl implements GameRulesService {
+@Qualifier("RulesServiceStandard")
+public class RulesServiceStandard implements RulesService {
     public static final int NUMBER_OF_CARDS_IN_DECK = 52;
 
     @Override
-    public boolean validatePlayerMove(Card card, Card topmostCard) {
+    public boolean validatePlayerMove(Card card, Card openCard) {
         return false;
     }
 

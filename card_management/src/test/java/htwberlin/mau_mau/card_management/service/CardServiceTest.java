@@ -110,7 +110,7 @@ private CardService cardService;
         Assert.assertEquals(Suit.DIAMONDS, drawingStack.getCards().get(0).getSuit());
         Assert.assertEquals(Rank.SEVEN, drawingStack.getCards().get(0).getRank());
 
-        Assert.assertEquals(Suit.HEARTS, playingStack.getCards().get(0).getSuit()); //topmost card left in the playing stack after turnover
+        Assert.assertEquals(Suit.HEARTS, playingStack.getCards().get(0).getSuit()); //open top card left in the playing stack after turnover
         Assert.assertEquals(Rank.ACE, playingStack.getCards().get(0).getRank());
 
     }
@@ -133,13 +133,13 @@ private CardService cardService;
     }
 
     @Test
-    public void getTopmostCardFromPlayingStack() {
+    public void getOpenCard() {
         //Arrange
         Deck playingStack = new Deck();
         playingStack.getCards().add(new Card(Suit.DIAMONDS, Rank.SEVEN));
         playingStack.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
         //Act
-        Card card = cardService.getTopmostCardFromPlayingStack(playingStack);
+        Card card = cardService.getOpenCard(playingStack);
         //Assert
         Assert.assertEquals(Suit.HEARTS, card.getSuit());
         Assert.assertEquals(Rank.ACE, card.getRank());

@@ -37,7 +37,7 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public Deck createPlayingStack(Deck drawingStack)
-            throws EmptyDrawingStackException, EmptyPlayingStackException{
+            throws EmptyDrawingStackException, EmptyPlayingStackException {
         Deck playingStack = new Deck();
         try {
             playingStack.getCards().add(drawingStack.getCards().pop());
@@ -72,8 +72,6 @@ public class CardServiceImpl implements CardService {
         } catch (ArrayIndexOutOfBoundsException e) {
             throw new EmptyPlayingStackException();
         }
-
-
     }
 
     @Override
@@ -82,8 +80,8 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public Card getTopmostCardFromPlayingStack(Deck playingStack) {
-        return null;
+    public Card getOpenCard(Deck playingStack) {
+        return playingStack.getCards().peek();
     }
 
     @Override

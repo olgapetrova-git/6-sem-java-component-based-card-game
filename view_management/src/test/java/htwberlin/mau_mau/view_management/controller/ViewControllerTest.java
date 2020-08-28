@@ -19,7 +19,7 @@ public class ViewControllerTest {
     }
 
     @Test
-    public void testNewGameStarted() {
+    public void testRun() {
         //Arrange
         GameData mockGameData = createNiceMock(GameData.class);
         GameService mockGameService = createNiceMock(GameService.class);
@@ -27,7 +27,7 @@ public class ViewControllerTest {
         replay(mockGameService);
 
         //Act
-        viewController.newGameStarted("test", 5, GameRulesId.SPECIAL);
+        viewController.run();
 
         //Assert
         // TODO: Implement DI

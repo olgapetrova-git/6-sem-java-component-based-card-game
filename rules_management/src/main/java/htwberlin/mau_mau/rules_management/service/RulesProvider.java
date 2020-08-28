@@ -1,21 +1,40 @@
 package htwberlin.mau_mau.rules_management.service;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 /**
- * The type GameRulesFactory returns instance of RulesService object of specific type.
+ * The type RulesProvider returns instance of RulesService object of specific type for different game variations.
  */
-public class GameRulesFactory {
+@Component
+public class RulesProvider {
+
+    @Autowired
+    @Qualifier("RulesServiceStandard")
+    private RulesService rulesServiceStandard;
+
+    @Autowired
+    @Qualifier("RulesServiceSpecial")
+    private RulesService rulesServiceSpecial;
+
+    private RulesService rulesService;
+
+    public RulesService getRulesService() {
+        return rulesService;
+    }
+
     /**
-     * Get game rules for different game variations.
+     * Choose game rules for different game variations.
      *
      * @param gameRulesId the game rules id
      * @return the game rules
      */
-    public static RulesService getGameRules(GameRulesId gameRulesId){
+    public void chooseRules(GameRulesId gameRulesId){
         switch (gameRulesId) {
-            case SPECIAL:return new RulesServiceSpecial();
-            default:return new RulesServiceStandard();
-
-        }
-    }
+            case SPECIAL:  rulesService =  rulesServiceSpecial;
+            break;
+            default: rulesService = rulesServiceStandard;
+     }
+         }
 }
