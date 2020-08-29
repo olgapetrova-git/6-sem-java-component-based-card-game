@@ -221,9 +221,12 @@ public class UI {
                 System.out.println("Please enter your name: ");
                 name = scanner.nextLine();
                 if (name.isEmpty()) {
+
                     throw new NameIsEmptyException();
                 }
                 success = true;
+            } catch (NameIsEmptyException e) {
+                System.out.println("Incorrect input. Empty name entered.");
             } catch (Exception e) {
                 LOGGER.debug("User input exception: " + e.getMessage());
                 System.out.println("Incorrect input.");
@@ -263,9 +266,9 @@ public class UI {
                     throw new NumberOutOfLimitsException(num, min, max);
                 }
                 success = true;
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException | NumberOutOfLimitsException e) {
                 LOGGER.error("User input exception: " + e.toString());
-                System.out.println("Incorrect input.");
+                System.out.println("Incorrect input. Expected value between " + min + " and " + max + ", but received " + num + ".");
                 scanner.nextLine();
             } catch (Exception e) {
                 LOGGER.error("User input exception: " + e.getMessage());
@@ -317,9 +320,10 @@ public class UI {
                     throw new PlayerMoveException(num, min, max);
                 }
                 success = true;
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException | PlayerMoveException e) {
                 LOGGER.error("User input exception: " + e.toString());
-                System.out.println("Incorrect input.");
+                System.out.println("Incorrect input. Expected value between " + min + " and " + max + ", 100, 200, 300, or 400," +
+                        " but received " + num + ".");
                 scanner.nextLine();
             } catch (Exception e) {
                 LOGGER.error("User input exception: " + e.getMessage());

@@ -48,7 +48,17 @@ public class GameServiceImpl implements GameService {
         RealPlayer realPlayer = realPlayerService.createRealPlayer(name);
         gameData.getPlayers().add(realPlayer);
         for (int i = 0; i < numberOfVirtualPlayers; i++) {
-            gameData.getPlayers().add(virtualPlayerService.createVirtualPlayer());
+            boolean duplicate = false;
+            Player newPlayer;
+            do {
+                newPlayer = virtualPlayerService.createVirtualPlayer();
+                for (Player player : gameData.getPlayers()) {
+                    if (player.getName().equals(newPlayer.getName())) {
+                        duplicate = true;
+                    }
+                }
+            } while (duplicate);
+            gameData.getPlayers().add(newPlayer);
         }
         gameData.setCurrentPlayer(realPlayer);
         gameData.setDrawingStack(cardService.createDrawingStack());
