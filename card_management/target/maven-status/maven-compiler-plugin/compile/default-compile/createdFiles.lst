@@ -1,4 +1,5 @@
 htwberlin\mau_mau\card_management\service\CardServiceImpl.class
+htwberlin\mau_mau\card_management\service\IncorrectCardPositionException.class
 htwberlin\mau_mau\card_management\service\EmptyDrawingStackException.class
 htwberlin\mau_mau\card_management\data\Deck.class
 htwberlin\mau_mau\card_management\data\Suit.class

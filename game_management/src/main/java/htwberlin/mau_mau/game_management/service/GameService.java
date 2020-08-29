@@ -26,7 +26,7 @@ public interface GameService {
      * @param gameData the game data
      * @return the game data
      */
-    GameData dealCardsToPlayers(GameData gameData);
+    void dealCardsToPlayers(GameData gameData);
 
     /**
      * Makes real player move and store it in the game data.
@@ -44,7 +44,8 @@ public interface GameService {
      *
      * @param openCard the open card at the top of the playing stack
      * @param hand        the virtual player's hand
+     * @param gameData     the game data
      * @return the boolean
      */
-    boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand);
+    boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData);
 }

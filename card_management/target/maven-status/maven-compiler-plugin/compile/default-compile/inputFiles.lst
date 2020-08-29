@@ -3,6 +3,7 @@ C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\ht
 C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\service\EmptyPlayingStackException.java
 C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\service\CardServiceImpl.java
 C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\service\CardService.java
+C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\service\IncorrectCardPositionException.java
 C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Card.java
 C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Rank.java
 C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management\src\main\java\htwberlin\mau_mau\card_management\data\Deck.java

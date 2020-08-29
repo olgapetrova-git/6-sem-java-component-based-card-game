@@ -1,15 +1,18 @@
 package htwberlin.mau_mau.game_management.service;
 
-import htwberlin.mau_mau.card_management.service.CardService;
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
+import htwberlin.mau_mau.card_management.service.CardService;
 import htwberlin.mau_mau.card_management.service.EmptyDrawingStackException;
 import htwberlin.mau_mau.card_management.service.EmptyPlayingStackException;
+import htwberlin.mau_mau.card_management.service.IncorrectCardPositionException;
 import htwberlin.mau_mau.game_management.data.GameData;
 import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.real_player_management.service.RealPlayerService;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.service.RulesProvider;
+import htwberlin.mau_mau.rules_management.service.RulesService;
 import htwberlin.mau_mau.virtual_player_management.service.VirtualPlayerService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,6 +38,8 @@ public class GameServiceImpl implements GameService {
     @Autowired
     private CardService cardService;
 
+    @Autowired
+    private RulesProvider rulesProvider;
 
     @Override
     public GameData setupNewGame(String name, int numberOfVirtualPlayers, GameRulesId gameRulesId) {
@@ -51,10 +56,7 @@ public class GameServiceImpl implements GameService {
         dealCardsToPlayers(gameData);
         try {
             gameData.setPlayingStack(cardService.createPlayingStack(gameData.getDrawingStack()));
-        } catch (EmptyDrawingStackException e) {
-            LOGGER.error(e.getMessage());
-
-        } catch (EmptyPlayingStackException e) {
+        } catch (EmptyDrawingStackException | EmptyPlayingStackException e) {
             LOGGER.error(e.getMessage());
         }
         gameData.setOpenCard(cardService.getOpenCard(gameData.getPlayingStack()));
@@ -62,7 +64,7 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public GameData dealCardsToPlayers(GameData gameData) {
+    public void dealCardsToPlayers(GameData gameData) {
         for (int i = 0; i < 5; i++) {
             for (Player player : gameData.getPlayers()) {
                 try {
@@ -72,27 +74,45 @@ public class GameServiceImpl implements GameService {
                 }
             }
         }
-        return gameData;
     }
 
     @Override
     public boolean makeGameMoveForRealPlayer(int cardPosition, GameData gameData) {
-        return false;
+        RulesService rulesService = rulesProvider.getRulesService();
+        boolean success = false;
+
+        try {
+            success = rulesService.validatePlayerMove(gameData.getPlayers().get(0).getHand().getCards().get(cardPosition),
+                    gameData.getOpenCard());
+
+            if (success) {
+                cardService.playCard(gameData.getPlayers().get(0).getHand(), cardPosition, gameData.getPlayingStack());
+                gameData.setOpenCard(cardService.getOpenCard(gameData.getPlayingStack()));
+            }
+        } catch (IncorrectCardPositionException e) {
+            LOGGER.error(e.getMessage());
+        }
+
+        return success;
     }
 
     @Override
-    public boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand) {
-        return false;
+    public boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData) {
+        RulesService rulesService = rulesProvider.getRulesService();
+        boolean success = false;
+
+        for (int i = 0; i < hand.getCards().size(); i++) {
+            success = rulesService.validatePlayerMove(hand.getCards().get(i), openCard);
+            if (success) {
+                try {
+                    cardService.playCard(hand, i, gameData.getPlayingStack());
+                    gameData.setOpenCard(cardService.getOpenCard(gameData.getPlayingStack()));
+                } catch (IncorrectCardPositionException e) {
+                    LOGGER.error(e.getMessage());
+                }
+                break;
+            }
+        }
+        return success;
     }
-
-    /**
-     * End game.
-     *
-     * @param gameData the game data
-     */
-    void endGame(GameData gameData) {
-        // TODO: reset the game and show menu
-    }
-
-
 }

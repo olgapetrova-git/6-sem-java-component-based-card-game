@@ -38,15 +38,14 @@ public class GameData {
     private GameRulesId gameRulesId;
 
     /**
-     * Flag, if player has won.
-      */
-    private boolean isWin;
-
-
-    /**
      * Current open card on the top of the playing stack
      */
     private Card openCard;
+
+    /**
+     * Status of current game
+     */
+    private GameStatus gameStatus;
 
     /**
      * Instantiates a new Game data.
@@ -61,7 +60,7 @@ public class GameData {
         this.playingStack = playingStack;
         this.players = players;
         this.gameRulesId = gameRulesId;
-        isWin = false;
+        this.gameStatus = GameStatus.NORMAL;
     }
 
     /**
@@ -138,25 +137,6 @@ public class GameData {
         return gameRulesId;
     }
 
-
-    /**
-     * Gets win boolean.
-     *
-     * @return the boolean, if player has won.
-     */
-    public boolean isWin() {
-        return isWin;
-    }
-
-    /**
-     * Sets win.
-     *
-     * @param win the win
-     */
-    public void setWin(boolean win) {
-        isWin = win;
-    }
-
     /**
      * Gets open card at the top of the playing stack.
      *
@@ -173,5 +153,23 @@ public class GameData {
      */
     public void setOpenCard(Card openCard) {
         this.openCard = openCard;
+    }
+
+    /**
+     * Gets status of the current game.
+     *
+     * @return status of the current game.
+     */
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+
+    /**
+     * Sets status of the current game.
+     *
+     * @param gameStatus status of the current game.
+     */
+    public void setGameStatus(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
     }
 }

@@ -29,10 +29,10 @@ public interface CardService {
 	 * Removes one card from the player's hand and add the played card to the top of the playing stack.
 	 *
 	 * @param hand         the hand
-	 * @param card         the card
+	 * @param cardPosition card position in hand
 	 * @param playingStack the playing stack
 	 */
-	void removeCardFromHandAddToPlayingStack(Deck hand, Card card, Deck playingStack);
+	void playCard(Deck hand, int cardPosition, Deck playingStack) throws IncorrectCardPositionException;
 
 	/**
 	 * Picks the new card from the top of drawing stack and add it to the player's hand.
@@ -41,10 +41,11 @@ public interface CardService {
 	 * @param drawingStack the drawing stack
 	 * @param playingStack the playing stack
 	 * @param hand         the hand
+	 * @return
 	 * @throws EmptyDrawingStackException the empty drawing stack exception
 	 * @throws EmptyPlayingStackException the empty playing stack exception
 	 */
-	void drawCard(Deck drawingStack, Deck playingStack, Deck hand) throws EmptyDrawingStackException, EmptyPlayingStackException;
+	Card drawCard(Deck drawingStack, Deck playingStack, Deck hand) throws EmptyDrawingStackException, EmptyPlayingStackException;
 
 	/**
 	 * Gets card by position from player's hand.
@@ -70,10 +71,4 @@ public interface CardService {
 	 * @return Deck the deck
 	 */
 	Deck shuffleDrawingDeck(Deck drawingStack);
-
-
-
-
-
-
 }

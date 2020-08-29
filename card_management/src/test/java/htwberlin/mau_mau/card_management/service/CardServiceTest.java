@@ -9,7 +9,7 @@ import org.junit.*;
 import static org.junit.Assert.fail;
 
 public class CardServiceTest {
-private CardService cardService;
+    private CardService cardService;
     @BeforeClass
     public static void initialize() {}
 
@@ -42,7 +42,11 @@ private CardService cardService;
         Deck playingStack = new Deck();
         playingStack.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
         //Act
-        cardService.removeCardFromHandAddToPlayingStack(hand, testCard, playingStack);
+        try {
+            cardService.playCard(hand, 0, playingStack);
+        } catch (IncorrectCardPositionException e){
+
+        }
         //Assert
         Assert.assertEquals(1,hand.getCards().size());
         Assert.assertEquals(2, playingStack.getCards().size());
@@ -143,7 +147,7 @@ private CardService cardService;
         //Assert
         Assert.assertEquals(Suit.HEARTS, card.getSuit());
         Assert.assertEquals(Rank.ACE, card.getRank());
-     }
+    }
 
     @Test
     public void shuffleDrawingDeck() {

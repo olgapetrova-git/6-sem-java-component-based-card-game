@@ -5,3 +5,4 @@ htwberlin\mau_mau\view_management\controller\ViewController.class
 htwberlin\mau_mau\view_management\view\ApplicationBuilder.class
 htwberlin\mau_mau\view_management\controller\ViewControllerImpl.class
 htwberlin\mau_mau\view_management\view\NumberOutOfLimitsException.class
+htwberlin\mau_mau\view_management\view\PlayerMoveException.class
