@@ -4,14 +4,17 @@ import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.player_management.data.Player;
+import htwberlin.mau_mau.rules_management.data.RulesResult;
+import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
+
 import java.util.ArrayList;
 
 /**
- * The type Game data describes current game via game entities.
+ * The type Game data describes current game state via game entities.
  */
 public class GameData {
     /**
-     * An object of the drawing stack of cards. Represents an undealt portion of the deck of cards, face down, which are
+     * An object of the drawing stack of cards. Represents a not yet dealt portion of the deck of cards, face down, which are
      * left over after setting up the game and will be used in the rest of the game.
      */
     private Deck drawingStack;
@@ -48,7 +51,12 @@ public class GameData {
     private GameStatus gameStatus;
 
     /**
-     * Instantiates a new Game data.
+     * Result and status of last rules validation
+     */
+    private RulesResult rulesResult;
+
+    /**
+     * Instantiates a new Game data object.
      *
      * @param drawingStack the drawing stack, an undealt portion of the deck of cards
      * @param playingStack the playing stack, the pack of cards, which were already played
@@ -61,6 +69,10 @@ public class GameData {
         this.players = players;
         this.gameRulesId = gameRulesId;
         this.gameStatus = GameStatus.NORMAL;
+
+        // instantiate RulesResult as standard by default
+        // it will be changed later if player selects special rules
+        this.rulesResult = new RulesResultStandard(false, "");
     }
 
     /**
@@ -127,7 +139,6 @@ public class GameData {
         this.currentPlayer = currentPlayer;
     }
 
-
     /**
      * Gets Game Rules Id.
      *
@@ -171,5 +182,23 @@ public class GameData {
      */
     public void setGameStatus(GameStatus gameStatus) {
         this.gameStatus = gameStatus;
+    }
+
+    /**
+     * Gets rules result object.
+     *
+     * @return the rules result
+     */
+    public RulesResult getRulesResult() {
+        return rulesResult;
+    }
+
+    /**
+     * Sets rules result.
+     *
+     * @param rulesResult the rules result
+     */
+    public void setRulesResult(RulesResult rulesResult) {
+        this.rulesResult = rulesResult;
     }
 }

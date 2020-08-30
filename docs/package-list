@@ -1,0 +1,14 @@
+htwberlin.mau_mau.card_management.data
+htwberlin.mau_mau.card_management.service
+htwberlin.mau_mau.configuration_management.service
+htwberlin.mau_mau.game_management.data
+htwberlin.mau_mau.game_management.service
+htwberlin.mau_mau.player_management.data
+htwberlin.mau_mau.real_player_management.data
+htwberlin.mau_mau.real_player_management.service
+htwberlin.mau_mau.rules_management.data
+htwberlin.mau_mau.rules_management.service
+htwberlin.mau_mau.view_management.controller
+htwberlin.mau_mau.view_management.view
+htwberlin.mau_mau.virtual_player_management.data
+htwberlin.mau_mau.virtual_player_management.service

@@ -31,21 +31,23 @@ public interface CardService {
 	 * @param hand         the hand
 	 * @param cardPosition card position in hand
 	 * @param playingStack the playing stack
+	 * @throws IncorrectCardPositionException the incorrect card position exception
 	 */
 	void playCard(Deck hand, int cardPosition, Deck playingStack) throws IncorrectCardPositionException;
 
 	/**
 	 * Picks the new card from the top of drawing stack and add it to the player's hand.
-	 * When the drawing stack is empty,turns over and shuffles the playing stack to serve as new drawing stack,
+	 * When the drawing stack is empty,turns over and shuffles the playing stack to serve as new drawing stack.
 	 *
 	 * @param drawingStack the drawing stack
 	 * @param playingStack the playing stack
 	 * @param hand         the hand
-	 * @return
+	 * @return card
 	 * @throws EmptyDrawingStackException the empty drawing stack exception
 	 * @throws EmptyPlayingStackException the empty playing stack exception
 	 */
-	Card drawCard(Deck drawingStack, Deck playingStack, Deck hand) throws EmptyDrawingStackException, EmptyPlayingStackException;
+	Card drawCard(Deck drawingStack, Deck playingStack, Deck hand)
+			throws EmptyDrawingStackException, EmptyPlayingStackException;
 
 	/**
 	 * Gets card by position from player's hand.

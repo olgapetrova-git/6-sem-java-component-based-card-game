@@ -4,6 +4,7 @@ import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
 import htwberlin.mau_mau.game_management.data.GameData;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.RulesResult;
 
 /**
  * The interface Game Service provides operations to control the main game flow.
@@ -24,7 +25,6 @@ public interface GameService {
      * Deals cards to players, i.e. save cards in Hand for each Player and store it in gameData.
      *
      * @param gameData the game data
-     * @return the game data
      */
     void dealCardsToPlayers(GameData gameData);
 
@@ -33,9 +33,9 @@ public interface GameService {
      *
      * @param cardPosition the card position in the player's hand, selected by the player in ui
      * @param gameData     the game data
-     * @return the boolean
+     * @return RulesResult object that contains rules validation result
      */
-    boolean makeGameMoveForRealPlayer(int cardPosition, GameData gameData);
+    RulesResult makeGameMoveForRealPlayer(int cardPosition, GameData gameData);
 
 
     /**
@@ -43,9 +43,17 @@ public interface GameService {
      * which can be played against the open card at the top of the playing stack.
      *
      * @param openCard the open card at the top of the playing stack
-     * @param hand        the virtual player's hand
-     * @param gameData     the game data
-     * @return the boolean
+     * @param hand     the virtual player's hand
+     * @param gameData the game data
+     * @return RulesResult object that contains rules validation result
      */
-    boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData);
+    RulesResult makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData);
+
+    /**
+     * Gets number of cards player has to draw as a penalty from RulesService
+     *
+     * @param rulesResult object containing rules validation state and result
+     * @return int number of penalty cards
+     */
+    int countPenaltyCards(RulesResult rulesResult);
 }

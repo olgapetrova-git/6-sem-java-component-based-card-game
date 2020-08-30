@@ -25,10 +25,9 @@ public class RulesProvider {
     }
 
     /**
-     * Choose game rules for different game variations.
+     * Sets game rules for different game variations.
      *
      * @param gameRulesId the game rules id
-     * @return the game rules
      */
     public void chooseRules(GameRulesId gameRulesId){
         switch (gameRulesId) {

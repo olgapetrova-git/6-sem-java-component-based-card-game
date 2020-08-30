@@ -29,7 +29,19 @@ public class CardServiceTest {
         Deck drawingDeck = cardService.createDrawingStack();
         //Assert
         Assert.assertEquals(32, drawingDeck.getCards().size());
-        //TODO: test that cards are unique
+        // Check that cards are unique
+        for(int i=0;i<drawingDeck.getCards().size();i++){
+            Card cardA = drawingDeck.getCards().get(i);
+            for(int j=0;j<drawingDeck.getCards().size();j++) {
+                Card cardB = drawingDeck.getCards().get(j);
+                if(i!=j){
+                    if(cardA.getRank() == cardB.getRank()
+                            && cardA.getSuit() == cardB.getSuit()){
+                        Assert.fail("Card is not unique: " + cardA.getSuit().toString() + " of " + cardA.getRank().toString());
+                    }
+                }
+            }
+        }
     }
 
     @Test
@@ -45,7 +57,7 @@ public class CardServiceTest {
         try {
             cardService.playCard(hand, 0, playingStack);
         } catch (IncorrectCardPositionException e){
-
+            Assert.fail("Unexpected IncorrectCardPositionException for position 0: " + e.getMessage());
         }
         //Assert
         Assert.assertEquals(1,hand.getCards().size());
@@ -101,7 +113,7 @@ public class CardServiceTest {
             cardService.drawCard(drawingStack, playingStack, hand);
         } catch (EmptyDrawingStackException | EmptyPlayingStackException e) {
             e.printStackTrace();
-            fail("Exception occurred: " + e.getMessage());
+            Assert.fail("Unexpected Exception occurred: " + e.getMessage());
         }
         //Assert
         Assert.assertEquals(1, hand.getCards().size());
@@ -119,21 +131,31 @@ public class CardServiceTest {
 
     }
 
-    @Test
-    public void testDrawCardThrowsException(){
-        //TODO: add test with exception occurred
-    }
-    @Test
-    public void getCardByPositionFromHand() {
+    @Test(expected = EmptyPlayingStackException.class)
+    public void testDrawCardThrowsEmptyPlayingStackException() throws EmptyDrawingStackException, EmptyPlayingStackException {
         //Arrange
         Deck hand = new Deck();
         hand.getCards().add(new Card(Suit.DIAMONDS, Rank.SEVEN));
-        hand.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
+        Deck drawingStack = new Deck();
+        Deck playingStack = new Deck();
+        drawingStack.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
         //Act
-        Card card = cardService.getCardByPositionFromHand(1,hand);
+        cardService.drawCard(drawingStack, playingStack, hand);
         //Assert
-        Assert.assertEquals(Suit.HEARTS, card.getSuit());
-        Assert.assertEquals(Rank.ACE, card.getRank());
+    }
+
+    @Test
+    public void testCreatePlayingStack(){
+        Deck drawingStack = new Deck();
+        drawingStack.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
+        drawingStack.getCards().add(new Card(Suit.SPADES, Rank.QUEEN));
+        try{
+            Deck playingStack = cardService.createPlayingStack(drawingStack);
+        } catch (EmptyDrawingStackException | EmptyPlayingStackException e) {
+            e.printStackTrace();
+            Assert.fail("Unexpected Exception occurred: " + e.getMessage());
+        }
+        //TODO:
     }
 
     @Test

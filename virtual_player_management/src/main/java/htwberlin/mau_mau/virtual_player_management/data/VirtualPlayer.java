@@ -9,9 +9,10 @@ import htwberlin.mau_mau.player_management.data.Player;
 public class VirtualPlayer extends Player {
     /**
      * Instantiates a new Virtual player.
+     *
+     * @param name the name
      */
     public VirtualPlayer(String name) {
-        //TODO: Add a method which generates names for virtual players
         super(name);
         }
 }

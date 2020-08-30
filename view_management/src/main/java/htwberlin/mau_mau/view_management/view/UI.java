@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+/**
+ * https://github.com/olgapetrova-git/mau_mau/
+ */
 
 /**
  * Provides actions for the player to interact with the game.
@@ -59,12 +62,14 @@ public class UI {
         if (gameRulesId == GameRulesId.SPECIAL) {
             System.out.println("\nSpecial rules:\n" +
                     "* A SEVEN forces the next player to take two cards from the drawing stack \n" +
-                    "- unless he can counter the attack with his own SEVEN. After that, the game continues as usual.\n" +
-                    "* An EIGHT means: skip a round - unless you can counter the attack with your own eight \n" +
-                    "and let the following player skip. This does not continue after that.\n" +
-                    "* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
+                    "- unless he can counter the attack with his own SEVEN. If SEVEN is played again,  \n" +
+                    "next player must play SEVEN too or draw four cards. After that, the game continues as usual.\n" +
+                    "SORRY, UNDER CONSTRUCTION: \n"+
+                    "([NOT IMPLEMENTED YET]* An EIGHT means: skip a round - unless you can counter the attack with your own eight \n" +
+                    "and let the following player skip. This does not continue after that.)\n" +
+                    "([NOT IMPLEMENTED YET]* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
                     "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
-                    "on any card. But JACK on JACK is forbidden.");
+                    "on any card. But JACK on JACK is forbidden.)");
         }
     }
 
@@ -77,18 +82,19 @@ public class UI {
      * @param players  the players
      */
     public void showTable(Deck hand, Card openCard, ArrayList<Player> players) {
-        System.out.println("\nYOUR TURN NOW: \nCards in your hand: ");
-        int num = 1;
-        for (Card card : hand.getCards()) {
-            System.out.println(num + " - " + getCardText(card));
-            num++;
-        }
         System.out.println("\nPlayers' cards: ");
         for (int i = 1; i < players.size(); i++) {
 
             System.out.println(players.get(i).getName() + " has "
                     + players.get(i).getHand().getCards().size() + " cards.");
         }
+        System.out.println("\nYOUR TURN NOW: \nCards in your hand: ");
+        int num = 1;
+        for (Card card : hand.getCards()) {
+            System.out.println(num + " - " + getCardText(card));
+            num++;
+        }
+
         System.out.println("\nOpen card: " + getCardText(openCard));
     }
 
@@ -102,6 +108,11 @@ public class UI {
         return card.getRank().toString() + " of " + card.getSuit().toString();
     }
 
+    /**
+     * Show virtual player turn.
+     *
+     * @param name the name
+     */
     public void showVirtualPlayerTurn(String name) {
         System.out.println("\n" + name + " MAKES THE MOVE: ");
     }
@@ -125,17 +136,17 @@ public class UI {
      *
      * @param success  boolean true, if the card is successfully played
      * @param name     the player's name
+     * @param message  text
      * @param card     the played card
      * @param openCard the open card
      */
-    public void showPlayedCard(boolean success, String name, Card card, Card openCard) {
+    public void showPlayedCard(boolean success, String name, String message, Card card, Card openCard) {
         if (success) {
 
-            System.out.println(name + " played " + getCardText(card)
+            System.out.println(message + name + " played " + getCardText(card)
                     + " against " + getCardText(openCard) + ".");
         } else {
-            System.out.println("You can't play this card now. Choose another card from your hand or \n " +
-                    "draw a new card from the drawing stack, please.");
+            System.out.println(message);
         }
     }
 
@@ -153,6 +164,20 @@ public class UI {
             System.out.println(name + " said 'Mau!' The end of the game is approaching! It means, \n" +
                     "there are only two cards left in the player's hand and one of them is played now.");
         }
+    }
+
+    /**
+     * Show that player said "Mau!" but have too many cards left.
+     */
+    public void showIncorrectMau() { //200
+        System.out.println("You said 'Mau!', but it's not the time yet - you have more than two cards.");
+    }
+
+    /**
+     * Show that player said "Mau-Mau!" but have too many cards left.
+     */
+    public void showIncorrectMauMau() { //300
+        System.out.println("You said 'Mau-Mau!', but it's not the time yet - you have more than one card.");
     }
 
     /**
@@ -239,6 +264,15 @@ public class UI {
     }
 
     /**
+     * Request user to press enter.
+     */
+    public void requestEnter() {
+        scanner.nextLine();
+        System.out.println("Press enter to finish.");
+        scanner.nextLine();
+    }
+
+    /**
      * Requests a specific number of virtual players from user.
      *
      * @return num requested number
@@ -301,11 +335,12 @@ public class UI {
     }
 
     /**
-     * Request player move int.
+     * Request player move, returns card position in player's hand or code for other operations -
+     * draw card, say mau, etc.
      *
-     * @param min the min
-     * @param max the max
-     * @return the int
+     * @param min first card number in player's hand
+     * @param max last card number in player's hand
+     * @return int card position in player's hand or code for other operations
      */
     public int requestPlayerMove(int min, int max) {
         boolean success = false;
@@ -313,7 +348,7 @@ public class UI {
         do {
             try {
                 System.out.println("\nEnter (" + min + "-" + max + ") to play a card, 100 - to draw a card, 200 - to say" +
-                        " 'Mau!', 300 - to say 'Mau-Mau!', 400 - to quit the game.");
+                        " 'Mau!', \n300 - to say 'Mau-Mau!', 400 - to quit the game.");
                 num = scanner.nextInt();
 
                 if (!((num >= min && num <= max) || num == 100 || num == 200 || num == 300 || num == 400)) {
@@ -342,6 +377,4 @@ public class UI {
     public void close() {
         scanner.close();
     }
-
-
 }

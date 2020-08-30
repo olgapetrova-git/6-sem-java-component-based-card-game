@@ -7,9 +7,12 @@ import htwberlin.mau_mau.view_management.controller.ViewControllerImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ConfigurableApplicationContext;
+/**
+ * https://github.com/olgapetrova-git/mau_mau/
+ */
 
 /**
- * Provides actions for the player to interact with the game.
+ * Provides an entry point to start a program.
  */
 public class ApplicationRunner
 {

@@ -12,7 +12,7 @@ public class VirtualPlayerServiceImpl implements VirtualPlayerService {
     public VirtualPlayer createVirtualPlayer() {
         String[] names = {"Hunter Thompson", "Raymond Chandler", "John Cheever", "O. Henry", "Tennessee Williams",
                 "Dylan Thomas", "Dorothy Parker", "Truman Capote", "Edgar Allen Poe", "Charles Bukowski",
-                "F. Scott Fitzgerald", "James Joyce", " Ernest Hemingway"};//Top 15 Great Alcoholic Writers
+                "F. Scott Fitzgerald", "James Joyce", "Ernest Hemingway"};//Top 15 Great Alcoholic Writers
         int randomNum = ThreadLocalRandom.current().nextInt(0, names.length);
         String name = names[randomNum];
         return new VirtualPlayer(name);

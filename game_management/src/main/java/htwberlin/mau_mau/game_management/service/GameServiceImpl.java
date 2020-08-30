@@ -11,6 +11,7 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.real_player_management.service.RealPlayerService;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
 import htwberlin.mau_mau.rules_management.service.RulesService;
 import htwberlin.mau_mau.virtual_player_management.service.VirtualPlayerService;
@@ -87,15 +88,14 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public boolean makeGameMoveForRealPlayer(int cardPosition, GameData gameData) {
+    public RulesResult makeGameMoveForRealPlayer(int cardPosition, GameData gameData) {
         RulesService rulesService = rulesProvider.getRulesService();
-        boolean success = false;
+        gameData.setRulesResult(rulesService.validatePlayerMove(
+                gameData.getPlayers().get(0).getHand().getCards().get(cardPosition),
+                gameData.getOpenCard(), gameData.getRulesResult()));
 
         try {
-            success = rulesService.validatePlayerMove(gameData.getPlayers().get(0).getHand().getCards().get(cardPosition),
-                    gameData.getOpenCard());
-
-            if (success) {
+            if (gameData.getRulesResult().getSuccess()) {
                 cardService.playCard(gameData.getPlayers().get(0).getHand(), cardPosition, gameData.getPlayingStack());
                 gameData.setOpenCard(cardService.getOpenCard(gameData.getPlayingStack()));
             }
@@ -103,17 +103,18 @@ public class GameServiceImpl implements GameService {
             LOGGER.error(e.getMessage());
         }
 
-        return success;
+        return gameData.getRulesResult();
     }
 
     @Override
-    public boolean makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData) {
+    public RulesResult makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData) {
         RulesService rulesService = rulesProvider.getRulesService();
-        boolean success = false;
 
         for (int i = 0; i < hand.getCards().size(); i++) {
-            success = rulesService.validatePlayerMove(hand.getCards().get(i), openCard);
-            if (success) {
+
+            gameData.setRulesResult(rulesService.validatePlayerMove(hand.getCards().get(i), openCard, gameData.getRulesResult()));
+
+            if (gameData.getRulesResult().getSuccess()) {
                 try {
                     cardService.playCard(hand, i, gameData.getPlayingStack());
                     gameData.setOpenCard(cardService.getOpenCard(gameData.getPlayingStack()));
@@ -123,6 +124,14 @@ public class GameServiceImpl implements GameService {
                 break;
             }
         }
-        return success;
+
+        return gameData.getRulesResult();
+    }
+
+    @Override
+    public int countPenaltyCards(RulesResult rulesResult) {
+        RulesService rulesService = rulesProvider.getRulesService();
+
+        return rulesService.countPenaltyCards(rulesResult);
     }
 }

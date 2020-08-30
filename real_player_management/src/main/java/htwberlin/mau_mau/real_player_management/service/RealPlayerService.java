@@ -10,15 +10,14 @@ public interface RealPlayerService {
      * Gets value of saidMau boolean.
      *
      * @param player the player
-     * @return the boolean
+     * @return the boolean: true,  if the real player has said "Mau!"
      */
     public boolean isSaidMau(RealPlayer player);
 
     /**
      * Sets value of saidMau boolean.
      *
-     * @param saidMau the boolean, if the real player has said "Mau" when it is his turn and he only has two cards
-     *      *                  left in his hand, at least one of which can be played
+     * @param saidMau the boolean, if the real player has said "Mau" when it is his turn and he only has two cards      *                  left in his hand, at least one of which can be played
      * @param player  the player
      */
     public void setSaidMau(boolean saidMau, RealPlayer player);
@@ -27,7 +26,7 @@ public interface RealPlayerService {
      * Gets value of saidMauMau boolean.
      *
      * @param player the player
-     * @return the boolean
+     * @return the boolean: true,  if the real player has said "Mau-Mau!"
      */
     public boolean isSaidMauMau(RealPlayer player);
 

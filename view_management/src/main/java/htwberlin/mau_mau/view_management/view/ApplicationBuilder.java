@@ -7,9 +7,11 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.URLDecoder;
 import java.util.Scanner;
-
+/**
+ * https://github.com/olgapetrova-git/mau_mau/
+ */
 /*
- * Provides an entry point to start a program.
+ * Provides a possibility to run a .jar with a program on a double-click.
   */
 public class ApplicationBuilder {
 
