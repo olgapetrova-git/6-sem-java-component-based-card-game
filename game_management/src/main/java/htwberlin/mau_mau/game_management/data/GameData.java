@@ -7,12 +7,29 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.ArrayList;
+
+import static javax.persistence.GenerationType.AUTO;
 
 /**
  * The type Game data describes current game state via game entities.
  */
+@Entity
 public class GameData {
+
+
+    /**
+     * Unique identifier.
+     */
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy=AUTO)
+    private long id;
+
     /**
      * An object of the drawing stack of cards. Represents a not yet dealt portion of the deck of cards, face down, which are
      * left over after setting up the game and will be used in the rest of the game.
@@ -75,6 +92,14 @@ public class GameData {
         this.rulesResult = new RulesResultStandard(false, "");
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
+    public long getId() {
+        return id;
+    }
     /**
      * Gets drawing stack.
      *

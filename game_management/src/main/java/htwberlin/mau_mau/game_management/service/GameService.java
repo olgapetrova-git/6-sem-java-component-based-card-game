@@ -56,4 +56,10 @@ public interface GameService {
      * @return int number of penalty cards
      */
     int countPenaltyCards(RulesResult rulesResult);
+
+    /**
+     * Saves gameData object to persistent storage.
+     * @param gameData
+     */
+    void saveToDB(GameData gameData);
 }

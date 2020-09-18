@@ -20,6 +20,9 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.ArrayList;
 
 /**
@@ -29,6 +32,8 @@ import java.util.ArrayList;
 public class GameServiceImpl implements GameService {
 
     private static final Logger LOGGER = LogManager.getLogger(GameServiceImpl.class);
+/*    @Autowired
+    private EntityManager entityManager;*/
 
     @Autowired
     private RealPlayerService realPlayerService;
@@ -133,5 +138,14 @@ public class GameServiceImpl implements GameService {
         RulesService rulesService = rulesProvider.getRulesService();
 
         return rulesService.countPenaltyCards(rulesResult);
+    }
+
+    @Override
+    public void saveToDB(GameData gameData) {
+/*        entityManager.getTransaction().begin();
+        entityManager.persist(gameData);
+        entityManager.getTransaction().commit();
+        entityManager.clear();
+        entityManager.close();*/
     }
 }

@@ -48,7 +48,7 @@ public class ViewControllerImpl implements ViewController {
         int numberOfVirtualPlayers = ui.requestNumberOfVirtualPlayers();
         GameRulesId gameRulesId = ui.requestGameRules();
         GameData gameData = gameService.setupNewGame(name, numberOfVirtualPlayers, gameRulesId);
-
+        gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
         if(rulesProvider.getRulesService() instanceof RulesServiceSpecial){
             gameData.setRulesResult(new RulesResultSpecial(false,""));

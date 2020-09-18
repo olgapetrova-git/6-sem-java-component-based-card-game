@@ -57,12 +57,7 @@
       <version>1.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
-    <dependency>
-      <groupId>htwberlin</groupId>
-      <artifactId>player_management</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
+
     <dependency>
       <groupId>htwberlin</groupId>
       <artifactId>real_player_management</artifactId>

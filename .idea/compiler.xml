@@ -18,6 +18,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="card_management" target="1.7" />
+      <module name="card_management_impl" target="1.7" />
+      <module name="card_management_inter" target="1.7" />
       <module name="configuration_management" target="1.7" />
       <module name="game_management" target="1.7" />
       <module name="player_management" target="1.7" />
