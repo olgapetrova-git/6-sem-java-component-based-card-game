@@ -24,4 +24,12 @@ public interface RulesService {
 	 * @return int number of penalty cards
 	 */
 	int countPenaltyCards(RulesResult rulesResult);
+
+	/**
+	 * Sets up rulesResult object at the start of the game. Checks, if open card is special, sets up related rules.
+	 *
+	 * @param openCard the open card on the top of the playing deck
+	 * @return rulesResult : object containing validation result and text message
+	 */
+	RulesResult setUpRules(Card openCard);
 }

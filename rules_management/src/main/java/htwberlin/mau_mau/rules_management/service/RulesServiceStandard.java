@@ -1,7 +1,10 @@
 package htwberlin.mau_mau.rules_management.service;
 
 import htwberlin.mau_mau.card_management.data.Card;
+import htwberlin.mau_mau.card_management.data.Rank;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
+import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
+import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -49,5 +52,10 @@ public class RulesServiceStandard implements RulesService {
     @Override
     public int countPenaltyCards(RulesResult rulesResult) {
         return 1;
+    }
+
+    @Override
+    public RulesResult setUpRules(Card openCard) {
+          return new RulesResultStandard(false,"");
     }
 }
