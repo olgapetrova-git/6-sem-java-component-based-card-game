@@ -2,11 +2,8 @@ package htwberlin.mau_mau.view_management.controller;
 
 import htwberlin.mau_mau.card_management.data.Deck;
 import htwberlin.mau_mau.card_management.service.CardService;
-import htwberlin.mau_mau.configuration_management.service.ConfigurationService;
-import htwberlin.mau_mau.configuration_management.service.ConfigurationServiceImpl;
 import htwberlin.mau_mau.game_management.data.GameData;
 import htwberlin.mau_mau.game_management.service.GameService;
-import htwberlin.mau_mau.game_management.service.GameServiceImpl;
 import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
@@ -20,7 +17,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 
 import java.util.ArrayList;
 

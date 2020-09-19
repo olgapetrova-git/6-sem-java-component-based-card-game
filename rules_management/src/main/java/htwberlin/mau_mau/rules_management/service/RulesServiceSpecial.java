@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Qualifier("RulesServiceSpecial")
 public class RulesServiceSpecial implements RulesService {
     private static final Logger LOGGER = LogManager.getLogger(RulesServiceSpecial.class);
-    private static String[] messages = {"Success! ", "Cool! ", "Great! ", "WOW! ", "Prima! ", "Nice move. ", "OK. ",
+    private static final String[] messages = {"Success! ", "Cool! ", "Great! ", "WOW! ", "Prima! ", "Nice move. ", "OK. ",
             "Phew! ", "Awesome! ", "Fine. ", "Alright! ", "Not bad. ", "Good. ", "Okay. ", "Super! ", "Well done. ",
             "Quite good. ", "Acceptable. "};
 
@@ -32,12 +32,10 @@ public class RulesServiceSpecial implements RulesService {
                     "on any card. But JACK on JACK is forbidden.");
          */
 
-        LOGGER.debug(("*** VALIDATING "
-                + card.getRank().toString() + " of " + card.getSuit().toString())
-                + " AGAINST "
-                + openCard.getRank().toString() + " of " + openCard.getSuit().toString()
-                + " USING SPECIAL RULES"
-        );
+        LOGGER.debug(String.format("*** VALIDATING %s of %s AGAINST %s of %s USING SPECIAL RULES",
+                card.getRank().toString(), card.getSuit().toString(),
+                openCard.getRank().toString(), openCard.getSuit().toString()));
+
 
         if (((RulesResultSpecial) rulesResult).isSevenPlayed()) {
             validateSeven(card, ((RulesResultSpecial) rulesResult));
@@ -68,7 +66,8 @@ public class RulesServiceSpecial implements RulesService {
 
     /**
      * Validates Player's move if SEVEN has been played.
-     * @param card
+     *
+     * @param card played card
      * @param rulesResult object containing rules validation result and text message
      */
     private void validateSeven(Card card, RulesResultSpecial rulesResult) {
@@ -110,5 +109,16 @@ public class RulesServiceSpecial implements RulesService {
         }
 
         return 1;
+    }
+
+    @Override
+    public RulesResult setUpRules(Card openCard) {
+        RulesResultSpecial rulesResultSpecial = new RulesResultSpecial(false, "");
+        if (openCard.getRank() == Rank.SEVEN) {
+            rulesResultSpecial.setSevenCounter(1);
+            rulesResultSpecial.setSevenPlayed(true);
+        }
+
+        return rulesResultSpecial;
     }
 }

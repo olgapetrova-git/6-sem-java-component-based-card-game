@@ -50,16 +50,8 @@ public class ViewControllerImpl implements ViewController {
         GameData gameData = gameService.setupNewGame(name, numberOfVirtualPlayers, gameRulesId);
         gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
-        if(rulesProvider.getRulesService() instanceof RulesServiceSpecial){
-            gameData.setRulesResult(new RulesResultSpecial(false,""));
-            if(gameData.getOpenCard().getRank()== Rank.SEVEN){
-                ((RulesResultSpecial)(gameData.getRulesResult())).setSevenCounter(1);
-                ((RulesResultSpecial)(gameData.getRulesResult())).setSevenPlayed(true);
-            }
-        }
-
+        gameData.setRulesResult(rulesProvider.getRulesService().setUpRules(gameData.getOpenCard()));
         ui.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
-
         processMainFlow(gameData);
         ui.requestEnter();
         ui.close();

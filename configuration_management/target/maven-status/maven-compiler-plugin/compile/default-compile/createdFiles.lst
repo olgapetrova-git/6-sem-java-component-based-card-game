@@ -1,2 +1,4 @@
 htwberlin\mau_mau\configuration_management\service\ConfigurationServiceImpl.class
+htwberlin\mau_mau\configuration_management\runner\ApplicationRunner.class
+htwberlin\mau_mau\configuration_management\runner\ApplicationBuilder.class
 htwberlin\mau_mau\configuration_management\service\ConfigurationService.class
