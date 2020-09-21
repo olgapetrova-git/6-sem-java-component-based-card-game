@@ -24,6 +24,9 @@ public class View {
 
     private static final Logger LOGGER = LogManager.getLogger(View.class);
 
+    private static final String USER_INPUT_EXCEPTION = "User input exception: ";
+    private static final String INCORRECT_INPUT = "Incorrect input.";
+
     /**
      * Instantiates a new View.
      */
@@ -253,8 +256,8 @@ public class View {
             } catch (NameIsEmptyException e) {
                 System.out.println("Incorrect input. Empty name entered.");
             } catch (Exception e) {
-                LOGGER.debug("User input exception: " + e.getMessage());
-                System.out.println("Incorrect input.");
+                LOGGER.debug(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
+                System.out.println(INCORRECT_INPUT);
             }
         }
         while (!success);
@@ -292,6 +295,7 @@ public class View {
     private int requestLimitedNumber(String message, int min, int max) {
         boolean success = false;
         int num = 1;
+
         do {
             try {
                 System.out.println(message);
@@ -301,12 +305,12 @@ public class View {
                 }
                 success = true;
             } catch (InputMismatchException | NumberOutOfLimitsException e) {
-                LOGGER.error("User input exception: " + e.toString());
+                LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.toString()));
                 System.out.println("Incorrect input. Expected value between " + min + " and " + max + ", but received " + num + ".");
                 scanner.nextLine();
             } catch (Exception e) {
-                LOGGER.error("User input exception: " + e.getMessage());
-                System.out.println("Incorrect input.");
+                LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
+                System.out.println(INCORRECT_INPUT);
                 scanner.nextLine();
             }
         }
@@ -356,13 +360,13 @@ public class View {
                 }
                 success = true;
             } catch (InputMismatchException | PlayerMoveException e) {
-                LOGGER.error("User input exception: " + e.toString());
+                LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.toString()));
                 System.out.println("Incorrect input. Expected value between " + min + " and " + max + ", 100, 200, 300, or 400," +
                         " but received " + num + ".");
                 scanner.nextLine();
             } catch (Exception e) {
-                LOGGER.error("User input exception: " + e.getMessage());
-                System.out.println("Incorrect input.");
+                LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
+                System.out.println(INCORRECT_INPUT);
                 scanner.nextLine();
             }
         }

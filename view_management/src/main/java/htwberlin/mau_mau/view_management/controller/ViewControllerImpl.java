@@ -23,7 +23,7 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class ViewControllerImpl implements ViewController {
-    private static final Logger LOGGER = LogManager.getLogger(ViewController.class);
+    private static final Logger LOGGER = LogManager.getLogger(ViewControllerImpl.class);
 
     @Autowired
     private View view;
@@ -91,9 +91,13 @@ public class ViewControllerImpl implements ViewController {
             } else {
                 view.showVictoryVirtualPlayer(gameData.getCurrentPlayer().getName(), gameData.getPlayers().get(0).getName());
             }
-            LOGGER.debug("*** " + gameData.getCurrentPlayer().getName() + " HAS WON! ***");
+            if (LOGGER.isDebugEnabled()) {
+                      LOGGER.debug(String.format("*** %s  HAS WON! ***", gameData.getCurrentPlayer().getName()));
+              }
         } else if (gameData.getGameStatus() == GameStatus.QUIT) {
-            LOGGER.debug("*** QUIT ***");
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("*** QUIT ***");
+            }
             view.showQuit(gameData.getPlayers().get(0).getName());
             //Press enter to continue
             // quit
@@ -123,10 +127,10 @@ public class ViewControllerImpl implements ViewController {
         // Real Player Move
         boolean moveSuccess = false;
         Card oldOpenCard = gameData.getOpenCard();
-
-        LOGGER.debug("*** PLAYING STACK SIZE: " + gameData.getPlayingStack().getCards().size());
-        LOGGER.debug("*** DRAWING STACK SIZE: " + gameData.getDrawingStack().getCards().size());
-
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(String.format("*** PLAYING STACK SIZE: %s ", gameData.getPlayingStack().getCards().size()));
+            LOGGER.debug(String.format("*** DRAWING STACK SIZE: %s ", gameData.getDrawingStack().getCards().size()));
+        }
         int move = view.requestPlayerMove(1, player.getHand().getCards().size());
 
         // try to play card
@@ -134,8 +138,10 @@ public class ViewControllerImpl implements ViewController {
             RulesResult rulesResult = gameService.makeGameMoveForRealPlayer(move - 1, gameData);
             boolean success = rulesResult.getSuccess();
             if (success) {
-                LOGGER.debug("*** YOU PLAYED " + gameData.getOpenCard().getRank().toString() + " of "
-                        + gameData.getOpenCard().getSuit().toString());
+                if (LOGGER.isDebugEnabled()) {
+                    LOGGER.debug(String.format("*** YOU PLAYED %s of %s ", gameData.getOpenCard().getRank().toString(),
+                             gameData.getOpenCard().getSuit().toString()));
+                }
                 view.showPlayedCard(success, "You", rulesResult.getMessage(), gameData.getOpenCard(),
                         oldOpenCard);
                 if (player.getHand().getCards().size() == 1 && !((RealPlayer) player).isSaidMau()) {
@@ -206,16 +212,17 @@ public class ViewControllerImpl implements ViewController {
             gameData.setGameStatus(GameStatus.QUIT);
             moveSuccess = true;
         }
-
-        LOGGER.debug("*** MOVE: " + move);
-
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug((String.format("*** MOVE: %s", move)));
+        }
         return moveSuccess;
     }
 
     boolean processVirtualPlayerMove(GameData gameData, Player player) {
         Card oldOpenCard = gameData.getOpenCard();
-
-        LOGGER.debug("*** " + player.getName() + " MAKES HIS MOVE");
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug((String.format("*** %s MAKES HIS MOVE", player.getName())));
+        }
         view.showVirtualPlayerTurn(player.getName());
         RulesResult rulesResult = gameService.makeGameMoveForVirtualPlayer(gameData.getOpenCard(), player.getHand(),
                 gameData);
@@ -224,15 +231,21 @@ public class ViewControllerImpl implements ViewController {
         // here view.show what card was played (open card)
         if (success) {
             if (player.getHand().getCards().size() == 1) {
-                LOGGER.debug("*** " + player.getName() + " SAID MAU!");
+                if (LOGGER.isDebugEnabled()) {
+                    LOGGER.debug((String.format("*** %s SAID MAU!", player.getName())));
+                }
                 view.showMau(player.getName());
             }
             if (player.getHand().getCards().size() == 0) {
-                LOGGER.debug("*** " + player.getName() + " SAID MAU-MAU!");
+                if (LOGGER.isDebugEnabled()) {
+                    LOGGER.debug(String.format("*** %s  SAID MAU-MAU!", player.getName()));
+                }
                 view.showMauMau(player.getName());
             }
-            LOGGER.debug("*** " + player.getName() + " PLAYED " + gameData.getOpenCard().getRank().toString()
-                    + " of " + gameData.getOpenCard().getSuit().toString());
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug(String.format("*** %s  PLAYED %s of %s ", player.getName(),
+                        gameData.getOpenCard().getRank().toString(), gameData.getOpenCard().getSuit().toString()));
+            }
             view.showPlayedCard(success, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
         } else {
             try {
@@ -241,7 +254,9 @@ public class ViewControllerImpl implements ViewController {
                 for (int i = 0; i < numberOfPenaltyCards; i++) {
                     Card drawnCard = cardService.drawCard(gameData.getDrawingStack(), gameData.getPlayingStack(),
                             player.getHand());
-                    LOGGER.debug("*** " + player.getName() + " DREW A CARD");
+                    if (LOGGER.isDebugEnabled()) {
+                        LOGGER.debug(String.format("*** %s DREW A CARD", player.getName()));
+                    }
                     view.showDrawCard(player.getName(), drawnCard);
                 }
             } catch (EmptyPlayingStackException | EmptyDrawingStackException e) {

@@ -31,11 +31,11 @@ public class RulesServiceSpecial implements RulesService {
                     "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
                     "on any card. But JACK on JACK is forbidden.");
          */
-
-        LOGGER.debug(String.format("*** VALIDATING %s of %s AGAINST %s of %s USING SPECIAL RULES",
-                card.getRank().toString(), card.getSuit().toString(),
-                openCard.getRank().toString(), openCard.getSuit().toString()));
-
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(String.format("*** VALIDATING %s of %s AGAINST %s of %s USING SPECIAL RULES",
+                    card.getRank().toString(), card.getSuit().toString(),
+                    openCard.getRank().toString(), openCard.getSuit().toString()));
+        }
 
         if (((RulesResultSpecial) rulesResult).isSevenPlayed()) {
             validateSeven(card, ((RulesResultSpecial) rulesResult));

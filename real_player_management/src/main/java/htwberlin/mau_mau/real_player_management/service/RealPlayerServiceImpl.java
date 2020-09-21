@@ -27,8 +27,6 @@ public class RealPlayerServiceImpl implements RealPlayerService {
 
     @Override
     public RealPlayer createRealPlayer(String name) {
-       RealPlayer player = new RealPlayer(name);
-
-        return player;
+        return new RealPlayer(name);
     }
 }
