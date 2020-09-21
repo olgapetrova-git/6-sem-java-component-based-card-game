@@ -23,41 +23,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/configuration_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/configuration_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/ApplicationBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/ApplicationBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/ApplicationRunner.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/ApplicationRunner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/UI.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/UI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/src/main/resources/log4j2.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/ApplicationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/runner/ApplicationBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/runner/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/resources/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/test/java/htwberlin/mau_mau/view_management/controller/ViewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/test/java/htwberlin/mau_mau/view_management/controller/ViewControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/target/classes/log4j2.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/view_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/view_management.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,7 +146,7 @@
   <component name="RunManager" selected="Application.ApplicationRunner">
     <configuration name="ApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.configuration_management.runner.ApplicationRunner" />
-      <module name="view_management" />
+      <module name="configuration_management" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="htwberlin.mau_mau.configuration_management.runner.*" />
@@ -508,14 +513,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="231" y="54" key="#Project_Structure" timestamp="1598820566298">
+    <state x="231" y="54" key="#Project_Structure" timestamp="1600720243329">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="231" y="54" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1598820566298" />
-    <state x="57" y="68" width="1363" height="785" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600522969887">
+    <state x="231" y="54" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1600720243329" />
+    <state x="57" y="68" width="1363" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600720299121">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="57" y="68" width="1363" height="785" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1600522969887" />
+    <state x="57" y="68" width="1363" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1600720299121" />
     <state x="406" y="282" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598700265737">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -528,10 +533,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="349" width="543" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1500.960@0.0.1500.960" timestamp="1600522094122" />
-    <state x="307" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598640647544">
+    <state x="307" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600722325450">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="307" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1598640647544" />
+    <state x="307" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1600722325450" />
     <state x="498" y="179" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598824034874">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -540,22 +545,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1599669234552" />
-    <state width="1458" height="285" key="GridCell.Tab.0.bottom" timestamp="1600527936999">
+    <state width="1458" height="251" key="GridCell.Tab.0.bottom" timestamp="1600722439895">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="285" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600527936999" />
-    <state width="1458" height="285" key="GridCell.Tab.0.center" timestamp="1600527936999">
+    <state width="1458" height="251" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600722439895" />
+    <state width="1458" height="251" key="GridCell.Tab.0.center" timestamp="1600722439894">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="285" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600527936999" />
-    <state width="1458" height="285" key="GridCell.Tab.0.left" timestamp="1600527936998">
+    <state width="1458" height="251" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600722439894" />
+    <state width="1458" height="251" key="GridCell.Tab.0.left" timestamp="1600722439894">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="285" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600527936998" />
-    <state width="1458" height="285" key="GridCell.Tab.0.right" timestamp="1600527936999">
+    <state width="1458" height="251" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600722439894" />
+    <state width="1458" height="251" key="GridCell.Tab.0.right" timestamp="1600722439895">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="285" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600527936999" />
+    <state width="1458" height="251" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600722439895" />
     <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1600422715086">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -588,18 +593,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="297" y="216" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1500.960@0.0.1500.960" timestamp="1598612705366" />
-    <state x="459" y="79" width="630" height="801" key="find.popup" timestamp="1598641099796">
+    <state x="459" y="79" width="630" height="801" key="find.popup" timestamp="1600722230761">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="459" y="79" width="630" height="801" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1598641099796" />
+    <state x="459" y="79" width="630" height="801" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1600722230761" />
     <state x="175" y="141" key="new project wizard" timestamp="1600444879497">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="175" y="141" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1600444879497" />
-    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1598289761117">
+    <state x="415" y="208" width="672" height="678" key="search.everywhere.popup" timestamp="1600720684756">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1598289761117" />
+    <state x="415" y="208" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1600720684756" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -19,15 +19,15 @@ import java.util.Scanner;
  * Provides actions for the player to interact with the game.
  */
 @Component
-public class UI {
+public class View {
     private Scanner scanner;
 
-    private static final Logger LOGGER = LogManager.getLogger(UI.class);
+    private static final Logger LOGGER = LogManager.getLogger(View.class);
 
     /**
-     * Instantiates a new UI.
+     * Instantiates a new View.
      */
-    public UI() {
+    public View() {
         scanner = new Scanner(System.in);
     }
 
@@ -143,8 +143,8 @@ public class UI {
     public void showPlayedCard(boolean success, String name, String message, Card card, Card openCard) {
         if (success) {
 
-            System.out.println(message + name + " played " + getCardText(card)
-                    + " against " + getCardText(openCard) + ".");
+            System.out.println(name + " played " + getCardText(card)
+                    + " against " + getCardText(openCard) + ".\n" + message);
         } else {
             System.out.println(message);
         }
@@ -372,7 +372,7 @@ public class UI {
     }
 
     /**
-     * Frees resources used by UI.
+     * Frees resources used by View.
      */
     public void close() {
         scanner.close();

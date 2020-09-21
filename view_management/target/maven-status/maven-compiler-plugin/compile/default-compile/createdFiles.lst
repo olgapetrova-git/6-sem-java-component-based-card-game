@@ -1,5 +1,5 @@
 htwberlin\mau_mau\view_management\view\NumberOutOfLimitsException.class
-htwberlin\mau_mau\view_management\view\UI.class
+htwberlin\mau_mau\view_management\view\View.class
 htwberlin\mau_mau\view_management\view\NameIsEmptyException.class
 htwberlin\mau_mau\view_management\view\PlayerMoveException.class
 htwberlin\mau_mau\view_management\controller\ViewController.class

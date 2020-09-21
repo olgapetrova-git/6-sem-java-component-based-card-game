@@ -43,7 +43,7 @@ public class RulesServiceSpecial implements RulesService {
                 || (card.getRank() == openCard.getRank())) {
             if (card.getRank() == Rank.SEVEN) {
                 rulesResult.setSuccess(true);
-                rulesResult.setMessage("SEVEN is played! Next player must play SEVEN or draw two cards!\n");
+                rulesResult.setMessage("SEVEN is played! Next player must play SEVEN or draw two cards!");
                 ((RulesResultSpecial) rulesResult).setSevenPlayed(true);
                 ((RulesResultSpecial) rulesResult).setSevenCounter(1);
             } else {

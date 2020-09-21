@@ -8,7 +8,7 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
-import htwberlin.mau_mau.view_management.view.UI;
+import htwberlin.mau_mau.view_management.view.View;
 import org.easymock.EasyMockRunner;
 import org.easymock.Mock;
 import org.easymock.MockType;
@@ -30,7 +30,7 @@ public class ViewControllerTest {
     private ViewController viewController = new ViewControllerImpl();
 
     @Mock(MockType.NICE)
-    private UI uiMock;
+    private View viewMock;
 
     @Mock(MockType.NICE)
     private GameService gameServiceMock;
@@ -50,17 +50,17 @@ public class ViewControllerTest {
         //Arrange
         ArrayList<Player> players = new ArrayList<>();
         players.add(new RealPlayer("test"));
-        expect(uiMock.requestGameRules()).andReturn(GameRulesId.STANDARD);
-        expect(uiMock.requestPlayerMove(anyInt(), anyInt())).andReturn(400);
+        expect(viewMock.requestGameRules()).andReturn(GameRulesId.STANDARD);
+        expect(viewMock.requestPlayerMove(anyInt(), anyInt())).andReturn(400);
         expect(gameServiceMock.setupNewGame(anyString(), anyInt(), anyObject(GameRulesId.class)))
                 .andReturn(new GameData(new Deck(), new Deck(), players, GameRulesId.STANDARD));
-        replay(uiMock);
+        replay(viewMock);
         replay(gameServiceMock);
         replay(cardServiceMock);
         //Act
         viewController.run();
         //Assert
-        verify(uiMock);
+        verify(viewMock);
         verify(gameServiceMock);
     }
 

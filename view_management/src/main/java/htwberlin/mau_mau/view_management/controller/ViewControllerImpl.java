@@ -1,7 +1,6 @@
 package htwberlin.mau_mau.view_management.controller;
 
 import htwberlin.mau_mau.card_management.data.Card;
-import htwberlin.mau_mau.card_management.data.Rank;
 import htwberlin.mau_mau.card_management.service.CardService;
 import htwberlin.mau_mau.card_management.service.EmptyDrawingStackException;
 import htwberlin.mau_mau.card_management.service.EmptyPlayingStackException;
@@ -12,24 +11,22 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
-import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
-import htwberlin.mau_mau.rules_management.service.RulesServiceSpecial;
-import htwberlin.mau_mau.view_management.view.UI;
+import htwberlin.mau_mau.view_management.view.View;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 /**
  * The type View controller.
  */
-@Component
+@Controller
 public class ViewControllerImpl implements ViewController {
     private static final Logger LOGGER = LogManager.getLogger(ViewController.class);
 
     @Autowired
-    private UI ui;
+    private View view;
 
     @Autowired
     private GameService gameService;
@@ -42,19 +39,19 @@ public class ViewControllerImpl implements ViewController {
 
     @Override
     public void run() {
-        ui.showStartGreeting();
+        view.showStartGreeting();
 
-        String name = ui.requestPlayerName();
-        int numberOfVirtualPlayers = ui.requestNumberOfVirtualPlayers();
-        GameRulesId gameRulesId = ui.requestGameRules();
+        String name = view.requestPlayerName();
+        int numberOfVirtualPlayers = view.requestNumberOfVirtualPlayers();
+        GameRulesId gameRulesId = view.requestGameRules();
         GameData gameData = gameService.setupNewGame(name, numberOfVirtualPlayers, gameRulesId);
         gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
         gameData.setRulesResult(rulesProvider.getRulesService().setUpRules(gameData.getOpenCard()));
-        ui.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
+        view.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
         processMainFlow(gameData);
-        ui.requestEnter();
-        ui.close();
+        view.requestEnter();
+        view.close();
     }
 
     /**
@@ -66,7 +63,7 @@ public class ViewControllerImpl implements ViewController {
 
 
         do {
-            ui.showTable(gameData.getPlayers().get(0).getHand(), gameData.getOpenCard(), gameData.getPlayers());
+            view.showTable(gameData.getPlayers().get(0).getHand(), gameData.getOpenCard(), gameData.getPlayers());
 
             for (Player player : gameData.getPlayers()) {
                 boolean success = false;
@@ -90,14 +87,14 @@ public class ViewControllerImpl implements ViewController {
 
         if (gameData.getGameStatus() == GameStatus.WIN) {
             if (gameData.getCurrentPlayer() instanceof RealPlayer) {
-                ui.showVictoryRealPlayer(gameData.getCurrentPlayer().getName());
+                view.showVictoryRealPlayer(gameData.getCurrentPlayer().getName());
             } else {
-                ui.showVictoryVirtualPlayer(gameData.getCurrentPlayer().getName(), gameData.getPlayers().get(0).getName());
+                view.showVictoryVirtualPlayer(gameData.getCurrentPlayer().getName(), gameData.getPlayers().get(0).getName());
             }
             LOGGER.debug("*** " + gameData.getCurrentPlayer().getName() + " HAS WON! ***");
         } else if (gameData.getGameStatus() == GameStatus.QUIT) {
             LOGGER.debug("*** QUIT ***");
-            ui.showQuit(gameData.getPlayers().get(0).getName());
+            view.showQuit(gameData.getPlayers().get(0).getName());
             //Press enter to continue
             // quit
         }
@@ -130,7 +127,7 @@ public class ViewControllerImpl implements ViewController {
         LOGGER.debug("*** PLAYING STACK SIZE: " + gameData.getPlayingStack().getCards().size());
         LOGGER.debug("*** DRAWING STACK SIZE: " + gameData.getDrawingStack().getCards().size());
 
-        int move = ui.requestPlayerMove(1, player.getHand().getCards().size());
+        int move = view.requestPlayerMove(1, player.getHand().getCards().size());
 
         // try to play card
         if (move >= 1 && move <= player.getHand().getCards().size()) {
@@ -139,16 +136,16 @@ public class ViewControllerImpl implements ViewController {
             if (success) {
                 LOGGER.debug("*** YOU PLAYED " + gameData.getOpenCard().getRank().toString() + " of "
                         + gameData.getOpenCard().getSuit().toString());
-                ui.showPlayedCard(success, "You", rulesResult.getMessage(), gameData.getOpenCard(),
+                view.showPlayedCard(success, "You", rulesResult.getMessage(), gameData.getOpenCard(),
                         oldOpenCard);
                 if (player.getHand().getCards().size() == 1 && !((RealPlayer) player).isSaidMau()) {
                     LOGGER.debug("*** 1 CARD LEFT AND MAU NOT SAID");
-                    ui.showNotSaid("'Mau!'");
+                    view.showNotSaid("'Mau!'");
                     try {
                         for (int i = 0; i < 2; i++) {
                             Card drawnCard = cardService.drawCard(gameData.getDrawingStack(),
                                     gameData.getPlayingStack(), player.getHand());
-                            ui.showDrawCard("You", drawnCard);
+                            view.showDrawCard("You", drawnCard);
                         }
                     } catch (EmptyPlayingStackException | EmptyDrawingStackException e) {
                         LOGGER.error(e.getMessage());
@@ -156,12 +153,12 @@ public class ViewControllerImpl implements ViewController {
                 }
                 if (player.getHand().getCards().size() == 0 && !((RealPlayer) player).isSaidMauMau()) {
                     LOGGER.debug("*** 0 CARDS LEFT AND MAU-MAU NOT SAID");
-                    ui.showNotSaid("'Mau-Mau!'");
+                    view.showNotSaid("'Mau-Mau!'");
                     try {
                         for (int i = 0; i < 2; i++) {
                             Card drawnCard = cardService.drawCard(gameData.getDrawingStack(),
                                     gameData.getPlayingStack(), player.getHand());
-                            ui.showDrawCard("You", drawnCard);
+                            view.showDrawCard("You", drawnCard);
                         }
                     } catch (EmptyPlayingStackException | EmptyDrawingStackException e) {
                         LOGGER.error(e.getMessage());
@@ -172,7 +169,7 @@ public class ViewControllerImpl implements ViewController {
 
             } else {
                 LOGGER.debug("*** YOU CAN'T PLAY THIS CARD NOW");
-                ui.showPlayedCard(false, "You", rulesResult.getMessage(), gameData.getOpenCard(),
+                view.showPlayedCard(false, "You", rulesResult.getMessage(), gameData.getOpenCard(),
                         oldOpenCard);
             }
 
@@ -185,7 +182,7 @@ public class ViewControllerImpl implements ViewController {
                 for (int i = 0; i < numberOfPenaltyCards; i++) {
                     Card drawnCard = cardService.drawCard(gameData.getDrawingStack(), gameData.getPlayingStack(),
                             player.getHand());
-                    ui.showDrawCard("You", drawnCard);
+                    view.showDrawCard("You", drawnCard);
                 }
                 moveSuccess = true;
             } catch (EmptyPlayingStackException | EmptyDrawingStackException e) {
@@ -193,16 +190,16 @@ public class ViewControllerImpl implements ViewController {
             }
         } else if (move == 200) {
             if(player.getHand().getCards().size()>2) {
-                ui.showIncorrectMau();
+                view.showIncorrectMau();
             } else {
-                ui.showMau("You");
+                view.showMau("You");
             }
             ((RealPlayer) player).setSaidMau(true);
         } else if (move == 300) {
             if(player.getHand().getCards().size()>1) {
-                ui.showIncorrectMauMau();
+                view.showIncorrectMauMau();
             } else {
-                ui.showMauMau("You");
+                view.showMauMau("You");
             }
             ((RealPlayer) player).setSaidMauMau(true);
         } else if (move == 400) {
@@ -219,24 +216,24 @@ public class ViewControllerImpl implements ViewController {
         Card oldOpenCard = gameData.getOpenCard();
 
         LOGGER.debug("*** " + player.getName() + " MAKES HIS MOVE");
-        ui.showVirtualPlayerTurn(player.getName());
+        view.showVirtualPlayerTurn(player.getName());
         RulesResult rulesResult = gameService.makeGameMoveForVirtualPlayer(gameData.getOpenCard(), player.getHand(),
                 gameData);
         boolean success = rulesResult.getSuccess();
         // here mau/maumau if required
-        // here ui.show what card was played (open card)
+        // here view.show what card was played (open card)
         if (success) {
             if (player.getHand().getCards().size() == 1) {
                 LOGGER.debug("*** " + player.getName() + " SAID MAU!");
-                ui.showMau(player.getName());
+                view.showMau(player.getName());
             }
             if (player.getHand().getCards().size() == 0) {
                 LOGGER.debug("*** " + player.getName() + " SAID MAU-MAU!");
-                ui.showMauMau(player.getName());
+                view.showMauMau(player.getName());
             }
             LOGGER.debug("*** " + player.getName() + " PLAYED " + gameData.getOpenCard().getRank().toString()
                     + " of " + gameData.getOpenCard().getSuit().toString());
-            ui.showPlayedCard(success, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
+            view.showPlayedCard(success, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
         } else {
             try {
                 int numberOfPenaltyCards = gameService.countPenaltyCards(gameData.getRulesResult());
@@ -245,7 +242,7 @@ public class ViewControllerImpl implements ViewController {
                     Card drawnCard = cardService.drawCard(gameData.getDrawingStack(), gameData.getPlayingStack(),
                             player.getHand());
                     LOGGER.debug("*** " + player.getName() + " DREW A CARD");
-                    ui.showDrawCard(player.getName(), drawnCard);
+                    view.showDrawCard(player.getName(), drawnCard);
                 }
             } catch (EmptyPlayingStackException | EmptyDrawingStackException e) {
                 LOGGER.error(e.getMessage());
