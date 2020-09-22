@@ -57,19 +57,19 @@ public class View {
                 "The card you play must match the open card on the top of the playing stack.\n" +
                 "Either suit or rank have to match! You can choose a card to play from your hand,\n" +
                 "entering a number of card. If you have no suitable card to play, you must draw a card\n" +
-                " - enter 100. The turn of a player ends directly after drawing a card. \n" +
+                " - enter 'D'. The turn of a player ends directly after drawing a card. \n" +
                 "Notice, that you must announce your last card saying 'Mau!' or you get 2 penalty cards.\n" +
                 "Similarly, you must declare your win with 'Mau-Mau!' before you play your last card\nR" +
                 "or game continues with 2 penalty cards for you and this win is not accepted.\n" +
-                "You enter 200 to say 'Mau!' or 300 to say 'Mau-Mau!' To quit the game prematurely, enter 400.");
+                "You enter 'M' to say 'Mau!' or 'MM' to say 'Mau-Mau!' To quit the game prematurely, enter 'Q'.");
         if (gameRulesId == GameRulesId.SPECIAL) {
             System.out.println("\nSpecial rules:\n" +
                     "* A SEVEN forces the next player to take two cards from the drawing stack \n" +
                     "- unless he can counter the attack with his own SEVEN. If SEVEN is played again,  \n" +
                     "next player must play SEVEN too or draw four cards. After that, the game continues as usual.\n" +
-                    "SORRY, UNDER CONSTRUCTION: \n"+
-                    "([NOT IMPLEMENTED YET]* An EIGHT means: skip a round - unless you can counter the attack with your own eight \n" +
-                    "and let the following player skip. This does not continue after that.)\n" +
+                    "SORRY, UNDER CONSTRUCTION: \n" +
+                    "([NOT IMPLEMENTED YET]* An EIGHT means: skip a round, entering 'S' - unless you can counter \n" +
+                    "the attack with your own eight and let the following player skip. This does not continue after that.)\n" +
                     "([NOT IMPLEMENTED YET]* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
                     "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
                     "on any card. But JACK on JACK is forbidden.)");
@@ -168,6 +168,7 @@ public class View {
                     "there are only two cards left in the player's hand and one of them is played now.");
         }
     }
+
     /**
      * Show that player said "Mau-Mau!".
      *
@@ -181,6 +182,7 @@ public class View {
             System.out.println("\n" + name + " said 'Mau-Mau!' and celebrates the discarding of the last card.");
         }
     }
+
     /**
      * Show that player said "Mau!" but have too many cards left.
      */
@@ -292,24 +294,30 @@ public class View {
      */
     private int requestLimitedNumber(String message, int min, int max) {
         boolean success = false;
+        String input="";
         int num = 1;
 
         do {
             try {
                 System.out.println(message);
-                num = scanner.nextInt();
-                if (num < min || num > max) {
-                    throw new NumberOutOfLimitsException(num, min, max);
+                input = scanner.nextLine();
+                if(isNumeric(input)){
+                    num=Integer.parseInt(input);
+                    if (num < min || num > max) {
+                        throw new NumberOutOfLimitsException(num, min, max);
+                    }
+                    success = true;
+                } else {
+                        throw new NotANumberException(input, min, max);
                 }
                 success = true;
-            } catch (InputMismatchException | NumberOutOfLimitsException e) {
+            } catch (NotANumberException | NumberOutOfLimitsException e) {
                 LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.toString()));
-                System.out.println("Incorrect input. Expected value between " + min + " and " + max + ", but received " + num + ".");
-                scanner.nextLine();
+                System.out.println("Incorrect input. Expected value between " + min + " and " + max
+                        + ", but received " + input + ".");
             } catch (Exception e) {
                 LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
                 System.out.println(INCORRECT_INPUT);
-                scanner.nextLine();
             }
         }
         while (!success);
@@ -347,25 +355,45 @@ public class View {
     public int requestPlayerMove(int min, int max) {
         boolean success = false;
         int num = 1;
+        String move = "";
         do {
             try {
-                System.out.println("\nEnter (" + min + "-" + max + ") to play a card, 100 - to draw a card, 200 - to say" +
-                        " 'Mau!', \n300 - to say 'Mau-Mau!', 400 - to quit the game.");
-                num = scanner.nextInt();
-
-                if (!((num >= min && num <= max) || num == 100 || num == 200 || num == 300 || num == 400)) {
-                    throw new PlayerMoveException(num, min, max);
+                System.out.println("\nEnter (" + min + "-" + max + ") to play a card, 'D' - to draw a card,"
+            + "'M' - to say 'Mau!', \n'MM' - to say 'Mau-Mau!', 'Q' - to quit the game.");
+                //S - skip the round,
+                move = scanner.nextLine();
+                if (isNumeric(move)) {
+                    num = Integer.parseInt(move);
+                    if (!(num >= min && num <= max)) {
+                        throw new PlayerMoveException(move, min, max);
+                    }
+                    success = true;
+                } else {
+                    switch (move.toLowerCase()) {
+                        case "d":
+                            num = 100;
+                            break;
+                        case "m":
+                            num = 200;
+                            break;
+                        case "mm":
+                            num = 300;
+                            break;
+                        case "q":
+                            num = 400;
+                            break;
+                        default:
+                            throw new PlayerMoveException(move, min, max);
+                    }
+                    success = true;
                 }
-                success = true;
             } catch (InputMismatchException | PlayerMoveException e) {
                 LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.toString()));
-                System.out.println("Incorrect input. Expected value between " + min + " and " + max + ", 100, 200, 300, or 400," +
-                        " but received " + num + ".");
-                scanner.nextLine();
+                System.out.println("Incorrect input. Expected value between " + min + " and " + max
+                        + ", 'D', 'M', 'MM', or 'Q', but received " + move + ".");
             } catch (Exception e) {
                 LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
                 System.out.println(INCORRECT_INPUT);
-                scanner.nextLine();
             }
         }
         while (!success);
@@ -378,5 +406,24 @@ public class View {
      */
     public void close() {
         scanner.close();
+    }
+
+
+    /**
+     * Checks if String is an integer
+     *
+     * @param move String
+     * @return true, if integer
+     */
+    public static boolean isNumeric(String move) {
+        if (move == null) {
+            return false;
+        }
+        try {
+            Integer.parseInt(move);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
     }
 }

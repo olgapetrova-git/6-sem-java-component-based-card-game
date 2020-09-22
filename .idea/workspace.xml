@@ -23,15 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/NotANumberException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/PlayerMoveException.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/PlayerMoveException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
@@ -88,6 +92,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="htwberlin.mau_mau.view_management.view" />
+      <recent name="htwberlin.mau_mau.card_management.service" />
+      <recent name="htwberlin.mau_mau.configuration_management.controller" />
+      <recent name="htwberlin.mau_mau.virtual_player_management.controller" />
+      <recent name="htwberlin.mau_mau.real_player_management.controller" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="htwberlin.mau_mau.game_management.service" />
       <recent name="htwberlin.mau_mau.configuration_management.controller" />
@@ -98,10 +109,11 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="htwberlin.mau_mau.configuration_management.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="htwberlin.mau_mau.view_management.view" />
       <recent name="htwberlin.mau_mau.card_management_impl.service" />
       <recent name="htwberlin.mau_mau.card_management_inter.service" />
     </key>
@@ -111,15 +123,8 @@
       <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\game_management\src\main\resources" />
       <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="htwberlin.mau_mau.configuration_management.service" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="htwberlin.mau_mau.view_management.view" />
-      <recent name="htwberlin.mau_mau.card_management.service" />
-      <recent name="htwberlin.mau_mau.configuration_management.controller" />
-      <recent name="htwberlin.mau_mau.virtual_player_management.controller" />
-      <recent name="htwberlin.mau_mau.real_player_management.controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ApplicationRunner">
@@ -536,38 +541,38 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1599669234552" />
-    <state width="1458" height="162" key="GridCell.Tab.0.bottom" timestamp="1600776156557">
+    <state width="1458" height="316" key="GridCell.Tab.0.bottom" timestamp="1600798720551">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="162" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
-    <state width="1458" height="162" key="GridCell.Tab.0.center" timestamp="1600776156557">
+    <state width="1458" height="316" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
+    <state width="1458" height="316" key="GridCell.Tab.0.center" timestamp="1600798720551">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="162" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
-    <state width="1458" height="162" key="GridCell.Tab.0.left" timestamp="1600776156557">
+    <state width="1458" height="316" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
+    <state width="1458" height="316" key="GridCell.Tab.0.left" timestamp="1600798720551">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="162" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
-    <state width="1458" height="162" key="GridCell.Tab.0.right" timestamp="1600776156557">
+    <state width="1458" height="316" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
+    <state width="1458" height="316" key="GridCell.Tab.0.right" timestamp="1600798720551">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="162" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
-    <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1600422715086">
+    <state width="1458" height="316" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
+    <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1600798747965">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600422715086" />
-    <state width="1458" height="316" key="GridCell.Tab.1.center" timestamp="1600422715084">
+    <state width="1458" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
+    <state width="1458" height="316" key="GridCell.Tab.1.center" timestamp="1600798747965">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1600422715084" />
-    <state width="1458" height="316" key="GridCell.Tab.1.left" timestamp="1600422715084">
+    <state width="1458" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
+    <state width="1458" height="316" key="GridCell.Tab.1.left" timestamp="1600798747965">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1600422715084" />
-    <state width="1458" height="316" key="GridCell.Tab.1.right" timestamp="1600422715085">
+    <state width="1458" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
+    <state width="1458" height="316" key="GridCell.Tab.1.right" timestamp="1600798747965">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1600422715085" />
+    <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
     <state x="281" y="135" key="Maven.ArtifactSearchDialog" timestamp="1598219688230">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -606,5 +611,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="move.toLowerCase()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
