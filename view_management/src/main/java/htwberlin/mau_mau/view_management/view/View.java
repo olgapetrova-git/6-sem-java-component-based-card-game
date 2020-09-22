@@ -168,21 +168,6 @@ public class View {
                     "there are only two cards left in the player's hand and one of them is played now.");
         }
     }
-
-    /**
-     * Show that player said "Mau!" but have too many cards left.
-     */
-    public void showIncorrectMau() { //200
-        System.out.println("You said 'Mau!', but it's not the time yet - you have more than two cards.");
-    }
-
-    /**
-     * Show that player said "Mau-Mau!" but have too many cards left.
-     */
-    public void showIncorrectMauMau() { //300
-        System.out.println("You said 'Mau-Mau!', but it's not the time yet - you have more than one card.");
-    }
-
     /**
      * Show that player said "Mau-Mau!".
      *
@@ -195,6 +180,19 @@ public class View {
         } else {
             System.out.println("\n" + name + " said 'Mau-Mau!' and celebrates the discarding of the last card.");
         }
+    }
+    /**
+     * Show that player said "Mau!" but have too many cards left.
+     */
+    public void showIncorrectMau() { //200
+        System.out.println("You said 'Mau!', but it's not the time yet - you have more than two cards.");
+    }
+
+    /**
+     * Show that player said "Mau-Mau!" but have too many cards left.
+     */
+    public void showIncorrectMauMau() { //300
+        System.out.println("You said 'Mau-Mau!', but it's not the time yet - you have more than one card.");
     }
 
     /**

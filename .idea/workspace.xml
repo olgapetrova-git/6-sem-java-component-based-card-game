@@ -23,13 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -508,6 +512,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="556" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1600524471934" />
+    <state x="431" y="216" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600772181650">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="431" y="216" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1500.960@0.0.1500.960" timestamp="1600772181650" />
     <state x="481" y="349" width="543" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1600522094122">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -528,22 +536,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1599669234552" />
-    <state width="1458" height="251" key="GridCell.Tab.0.bottom" timestamp="1600723096523">
+    <state width="1458" height="162" key="GridCell.Tab.0.bottom" timestamp="1600776156557">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="251" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600723096523" />
-    <state width="1458" height="251" key="GridCell.Tab.0.center" timestamp="1600723096523">
+    <state width="1458" height="162" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
+    <state width="1458" height="162" key="GridCell.Tab.0.center" timestamp="1600776156557">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="251" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600723096523" />
-    <state width="1458" height="251" key="GridCell.Tab.0.left" timestamp="1600723096523">
+    <state width="1458" height="162" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
+    <state width="1458" height="162" key="GridCell.Tab.0.left" timestamp="1600776156557">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="251" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600723096523" />
-    <state width="1458" height="251" key="GridCell.Tab.0.right" timestamp="1600723096523">
+    <state width="1458" height="162" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
+    <state width="1458" height="162" key="GridCell.Tab.0.right" timestamp="1600776156557">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="251" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600723096523" />
+    <state width="1458" height="162" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600776156557" />
     <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1600422715086">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -576,10 +584,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="297" y="216" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1500.960@0.0.1500.960" timestamp="1598612705366" />
-    <state x="459" y="79" width="688" height="801" key="find.popup" timestamp="1600724796531">
+    <state x="459" y="79" width="688" height="801" key="find.popup" timestamp="1600773040266">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="459" y="79" width="688" height="801" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1600724796531" />
+    <state x="459" y="79" width="688" height="801" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1600773040266" />
     <state x="175" y="141" key="new project wizard" timestamp="1600444879497">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
