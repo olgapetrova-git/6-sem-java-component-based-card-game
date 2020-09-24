@@ -4,6 +4,7 @@ import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
 import htwberlin.mau_mau.game_management.data.GameData;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 
 /**
@@ -49,13 +50,14 @@ public interface GameService {
      */
     RulesResult makeGameMoveForVirtualPlayer(Card openCard, Deck hand, GameData gameData);
 
+
     /**
-     * Gets number of cards player has to draw as a penalty from RulesService
+     * Gets post action from RulesService if player can not make a move.
      *
      * @param rulesResult object containing rules validation state and result
-     * @return int number of penalty cards
+     * @return the post action
      */
-    int countPenaltyCards(RulesResult rulesResult);
+    PostAction getPostAction(RulesResult rulesResult);
 
     /**
      * Saves gameData object to persistent storage.

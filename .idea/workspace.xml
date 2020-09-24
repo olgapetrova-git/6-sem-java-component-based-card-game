@@ -23,21 +23,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/NotANumberException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/PostAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_6_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_1_spec_1_0_0_Beta1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/test/java/htwberlin/mau_mau/card_management/service/CardServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/test/java/htwberlin/mau_mau/card_management/service/CardServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/configuration_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/configuration_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/src/test/java/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/test/java/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/target/test-classes/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/test-classes/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/game_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/game_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/src/test/java/htwberlin/mau_mau/game_management/service/GameServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/test/java/htwberlin/mau_mau/game_management/service/GameServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/player_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/player_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/src/test/java/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/src/test/java/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/rules_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/rules_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/test/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecialTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/test/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecialTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/test/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/test/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/PlayerMoveException.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/PlayerMoveException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/view_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/view_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual_player_management/src/test/java/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/src/test/java/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +89,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -85,20 +123,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/card_management_inter/src/main/java/htwberlin/mau_mau/card_management_inter/service" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/card_management" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="htwberlin.mau_mau.view_management.view" />
-      <recent name="htwberlin.mau_mau.card_management.service" />
-      <recent name="htwberlin.mau_mau.configuration_management.controller" />
-      <recent name="htwberlin.mau_mau.virtual_player_management.controller" />
-      <recent name="htwberlin.mau_mau.real_player_management.controller" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="htwberlin.mau_mau.game_management.service" />
       <recent name="htwberlin.mau_mau.configuration_management.controller" />
@@ -112,10 +143,8 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="htwberlin.mau_mau.configuration_management.service" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="htwberlin.mau_mau.view_management.view" />
-      <recent name="htwberlin.mau_mau.card_management_impl.service" />
-      <recent name="htwberlin.mau_mau.card_management_inter.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\card_management_inter\src\main\java\htwberlin\mau_mau\card_management_inter\service" />
@@ -123,8 +152,17 @@
       <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\game_management\src\main\resources" />
       <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="htwberlin.mau_mau.view_management.view" />
+      <recent name="htwberlin.mau_mau.card_management_impl.service" />
+      <recent name="htwberlin.mau_mau.card_management_inter.service" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="htwberlin.mau_mau.view_management.view" />
+      <recent name="htwberlin.mau_mau.card_management.service" />
+      <recent name="htwberlin.mau_mau.configuration_management.controller" />
+      <recent name="htwberlin.mau_mau.virtual_player_management.controller" />
+      <recent name="htwberlin.mau_mau.real_player_management.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ApplicationRunner">
@@ -184,7 +222,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameServiceTest.testGetPostAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="game_management" />
       <extension name="coverage">
         <pattern>
@@ -194,12 +232,56 @@
       </extension>
       <option name="PACKAGE_NAME" value="htwberlin.mau_mau.game_management.service" />
       <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.game_management.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="testGetPostAction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RulesServiceSpecialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rules_management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwberlin.mau_mau.rules_management.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.rules_management.service" />
+      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.rules_management.service.RulesServiceSpecialTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="card_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="BUILD ALL configuration_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/configuration_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="view_management [clean install]" run_configuration_type="MavenRunConfiguration" />
+      </method>
+    </configuration>
+    <configuration name="card_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -225,7 +307,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="configuration_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="dependency:analyze card_management" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -236,22 +318,19 @@
             </option>
             <option name="goals">
               <list>
-                <option value="clean" />
-                <option value="install" />
+                <option value="dependency:analyze" />
               </list>
             </option>
-            <option name="pomFileName" value="pom.xml" />
+            <option name="pomFileName" />
             <option name="profilesMap">
               <map />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/configuration_management" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/card_management" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="view_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
-      </method>
+      <method v="2" />
     </configuration>
     <configuration name="dependency:analyze configuration_management  " type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -278,7 +357,157 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="game_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="dependency:analyze game_management" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:analyze" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/game_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="dependency:analyze player_management" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:analyze" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/player_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="dependency:analyze real_player_management" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:analyze" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/real_player_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="dependency:analyze rules_management" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:analyze" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/rules_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="dependency:analyze view_management" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:analyze" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/view_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="dependency:analyze virtual_player_management" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:analyze" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/virtual_player_management" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="game_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -303,10 +532,10 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="rules_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="virtual_player_management [clean install]" run_configuration_type="MavenRunConfiguration" />
       </method>
     </configuration>
-    <configuration name="player_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="player_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -331,10 +560,10 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="card_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="rules_management [clean install]" run_configuration_type="MavenRunConfiguration" />
       </method>
     </configuration>
-    <configuration name="real_player_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="real_player_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -359,10 +588,10 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="virtual_player_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="player_management [clean install]" run_configuration_type="MavenRunConfiguration" />
       </method>
     </configuration>
-    <configuration name="rules_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="rules_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -387,10 +616,10 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="real_player_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="card_management [clean install]" run_configuration_type="MavenRunConfiguration" />
       </method>
     </configuration>
-    <configuration name="view_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="view_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -415,10 +644,10 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="game_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="game_management [clean install]" run_configuration_type="MavenRunConfiguration" />
       </method>
     </configuration>
-    <configuration name="virtual_player_management [clean install -test]" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="virtual_player_management [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -443,30 +672,39 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="player_management [clean install -test]" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="real_player_management [clean install]" run_configuration_type="MavenRunConfiguration" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.ApplicationRunner" />
-      <item itemvalue="JUnit.GameServiceTest" />
       <item itemvalue="JUnit.GameServiceJpaTest" />
       <item itemvalue="JUnit.ConfigurationServiceTest" />
+      <item itemvalue="JUnit.RulesServiceSpecialTest" />
+      <item itemvalue="Maven.dependency:analyze rules_management" />
+      <item itemvalue="Maven.dependency:analyze view_management" />
+      <item itemvalue="Maven.dependency:analyze virtual_player_management" />
+      <item itemvalue="Maven.dependency:analyze card_management" />
+      <item itemvalue="Maven.dependency:analyze game_management" />
+      <item itemvalue="Maven.dependency:analyze player_management" />
+      <item itemvalue="Maven.dependency:analyze real_player_management" />
       <item itemvalue="Maven.dependency:analyze configuration_management  " />
-      <item itemvalue="Maven.card_management [clean install -test]" />
-      <item itemvalue="Maven.configuration_management [clean install -test]" />
-      <item itemvalue="Maven.player_management [clean install -test]" />
-      <item itemvalue="Maven.virtual_player_management [clean install -test]" />
-      <item itemvalue="Maven.real_player_management [clean install -test]" />
-      <item itemvalue="Maven.rules_management [clean install -test]" />
-      <item itemvalue="Maven.game_management [clean install -test]" />
-      <item itemvalue="Maven.view_management [clean install -test]" />
+      <item itemvalue="Maven.card_management [clean install]" />
+      <item itemvalue="Maven.BUILD ALL configuration_management [clean install]" />
+      <item itemvalue="Maven.player_management [clean install]" />
+      <item itemvalue="Maven.virtual_player_management [clean install]" />
+      <item itemvalue="Maven.real_player_management [clean install]" />
+      <item itemvalue="Maven.rules_management [clean install]" />
+      <item itemvalue="Maven.game_management [clean install]" />
+      <item itemvalue="Maven.view_management [clean install]" />
+      <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicationRunner" />
+        <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
+        <item itemvalue="JUnit.RulesServiceSpecialTest" />
         <item itemvalue="JUnit.GameServiceJpaTest" />
         <item itemvalue="JUnit.ConfigurationServiceTest" />
-        <item itemvalue="JUnit.GameServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -505,18 +743,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="231" y="54" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1600720243329" />
-    <state x="57" y="68" width="1363" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600720299121">
+    <state x="57" y="68" width="1363" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600983301823">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="57" y="68" width="1363" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1600720299121" />
+    <state x="57" y="68" width="1363" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1600983301823" />
     <state x="406" y="282" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598700265737">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="406" y="282" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1500.960@0.0.1500.960" timestamp="1598700265737" />
-    <state x="556" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1600524471934">
+    <state x="556" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1600978250313">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="556" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1600524471934" />
+    <state x="556" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1600978250313" />
     <state x="431" y="216" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600772181650">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -537,54 +775,56 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="502" y="331" key="AddEditExclusionDialog/0.0.1500.960@0.0.1500.960" timestamp="1600725106241" />
-    <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1599669234552">
+    <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1600941398830">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1599669234552" />
-    <state width="1458" height="316" key="GridCell.Tab.0.bottom" timestamp="1600798720551">
+    <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1600941398830" />
+    <state x="1132" y="362" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600907426797" />
+    <state width="1458" height="311" key="GridCell.Tab.0.bottom" timestamp="1600985949016">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
-    <state width="1458" height="316" key="GridCell.Tab.0.center" timestamp="1600798720551">
+    <state width="1458" height="311" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600985949016" />
+    <state width="1458" height="311" key="GridCell.Tab.0.center" timestamp="1600985949016">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
-    <state width="1458" height="316" key="GridCell.Tab.0.left" timestamp="1600798720551">
+    <state width="1458" height="311" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600985949016" />
+    <state width="1458" height="311" key="GridCell.Tab.0.left" timestamp="1600985949016">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
-    <state width="1458" height="316" key="GridCell.Tab.0.right" timestamp="1600798720551">
+    <state width="1458" height="311" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600985949016" />
+    <state width="1458" height="311" key="GridCell.Tab.0.right" timestamp="1600985949016">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600798720551" />
-    <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1600798747965">
+    <state width="1458" height="311" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600985949016" />
+    <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1600985942652">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
-    <state width="1458" height="316" key="GridCell.Tab.1.center" timestamp="1600798747965">
+    <state width="1458" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600985942652" />
+    <state width="1458" height="316" key="GridCell.Tab.1.center" timestamp="1600985942652">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
-    <state width="1458" height="316" key="GridCell.Tab.1.left" timestamp="1600798747965">
+    <state width="1458" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1600985942652" />
+    <state width="1458" height="316" key="GridCell.Tab.1.left" timestamp="1600985942652">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
-    <state width="1458" height="316" key="GridCell.Tab.1.right" timestamp="1600798747965">
+    <state width="1458" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1600985942652" />
+    <state width="1458" height="316" key="GridCell.Tab.1.right" timestamp="1600985942652">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1600798747965" />
+    <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1600985942652" />
     <state x="281" y="135" key="Maven.ArtifactSearchDialog" timestamp="1598219688230">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="281" y="135" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1598219688230" />
-    <state x="252" y="110" key="SettingsEditor" timestamp="1599728469299">
+    <state x="252" y="110" key="SettingsEditor" timestamp="1600938112732">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="252" y="110" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1599728469299" />
-    <state x="475" y="242" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1599589307317">
+    <state x="252" y="110" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1600938112732" />
+    <state x="323" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600907455516" />
+    <state x="475" y="242" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600940521150">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="475" y="242" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1500.960@0.0.1500.960" timestamp="1599589307317" />
+    <state x="475" y="242" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1500.960@0.0.1500.960" timestamp="1600940521150" />
     <state x="297" y="216" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598612705366">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

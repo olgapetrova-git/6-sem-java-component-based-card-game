@@ -1,6 +1,7 @@
 package htwberlin.mau_mau.rules_management.service;
 
 import htwberlin.mau_mau.card_management.data.Card;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 
 /**
@@ -17,13 +18,14 @@ public interface RulesService {
 	 */
 	RulesResult validatePlayerMove(Card card, Card openCard, RulesResult rulesResult);
 
+
 	/**
-	 * Counts number of cards player has to draw as a penalty.
+	 * Define post action if player can not make a move.
 	 *
 	 * @param rulesResult object containing rules validation result and text message
-	 * @return int number of penalty cards
+	 * @return the post action
 	 */
-	int countPenaltyCards(RulesResult rulesResult);
+	PostAction definePostAction(RulesResult rulesResult);
 
 	/**
 	 * Sets up rulesResult object at the start of the game. Checks, if open card is special, sets up related rules.

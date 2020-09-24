@@ -11,6 +11,7 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.real_player_management.service.RealPlayerService;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
 import htwberlin.mau_mau.rules_management.service.RulesService;
@@ -20,9 +21,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.ArrayList;
 
 /**
@@ -134,10 +132,10 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public int countPenaltyCards(RulesResult rulesResult) {
+    public PostAction getPostAction(RulesResult rulesResult) {
         RulesService rulesService = rulesProvider.getRulesService();
 
-        return rulesService.countPenaltyCards(rulesResult);
+        return rulesService.definePostAction(rulesResult);
     }
 
     @Override

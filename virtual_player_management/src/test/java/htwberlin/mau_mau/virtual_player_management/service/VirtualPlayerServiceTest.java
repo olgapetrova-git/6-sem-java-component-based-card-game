@@ -19,7 +19,7 @@ public class VirtualPlayerServiceTest {
     }
 
     @Test
-    public void createVirtualPlayer() {
+    public void testCreateVirtualPlayer() {
         //Arrange
         //Act
         VirtualPlayer player = virtualPlayerService.createVirtualPlayer();

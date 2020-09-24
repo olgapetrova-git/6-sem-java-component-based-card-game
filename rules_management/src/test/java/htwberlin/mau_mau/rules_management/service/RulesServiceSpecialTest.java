@@ -3,9 +3,9 @@ package htwberlin.mau_mau.rules_management.service;
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Rank;
 import htwberlin.mau_mau.card_management.data.Suit;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
-import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,17 +17,17 @@ public class RulesServiceSpecialTest {
     private RulesResult rulesResult;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp(){
         rulesService = new RulesServiceSpecial();
         rulesResult = new RulesResultSpecial(false, "");
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown(){
     }
 
     @Test
-    public void validatePlayerMoveValidSuit() {
+    public void testValidatePlayerMoveValidSuit() {
         //Arrange
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.CLUBS, Rank.EIGHT);
@@ -38,7 +38,7 @@ public class RulesServiceSpecialTest {
     }
 
     @Test
-    public void validatePlayerMoveValidRank() {
+    public void testValidatePlayerMoveValidRank() {
         //Arrange
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.HEARTS, Rank.ACE);
@@ -49,7 +49,7 @@ public class RulesServiceSpecialTest {
     }
 
     @Test
-    public void validatePlayerMoveInvalid() {
+    public void testValidatePlayerMoveInvalid() {
         //Arrange
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.HEARTS, Rank.EIGHT);
@@ -60,35 +60,45 @@ public class RulesServiceSpecialTest {
     }
 
     @Test
-    public void countPenaltyCardsNormal() {
+    public void testDefinePostActionNormal() {
         //Arrange
         ((RulesResultSpecial)rulesResult).setSevenPlayed(false);
         // Act
-        int count = rulesService.countPenaltyCards(rulesResult);
+        PostAction postAction = rulesService.definePostAction(rulesResult);
         //Assert
-        Assert.assertEquals(1 ,count);
+        Assert.assertEquals(PostAction.DRAWONE ,postAction);
     }
 
     @Test
-    public void countPenaltyCardsSevenFirstTurn() {
+    public void testDefinePostActionSevenFirstTurn() {
         //Arrange
         ((RulesResultSpecial)rulesResult).setSevenPlayed(true);
         ((RulesResultSpecial)rulesResult).setSevenCounter(1);
         // Act
-        int count = rulesService.countPenaltyCards(rulesResult);
+        PostAction postAction = rulesService.definePostAction(rulesResult);
         //Assert
-        Assert.assertEquals(2 ,count);
+        Assert.assertEquals(PostAction.DRAWTWO, postAction);
     }
 
     @Test
-    public void countPenaltyCardsSevenSecondTurn() {
+    public void testDefinePostActionSevenSecondTurn() {
         //Arrange
         ((RulesResultSpecial)rulesResult).setSevenPlayed(true);
         ((RulesResultSpecial)rulesResult).setSevenCounter(2);
         // Act
-        int count = rulesService.countPenaltyCards(rulesResult);
+        PostAction postAction = rulesService.definePostAction(rulesResult);
         //Assert
-        Assert.assertEquals(4 ,count);
+        Assert.assertEquals(PostAction.DRAWFOUR ,postAction);
+    }
+    @Test
+    public void testDefinePostActionEight(){
+        //Arrange
+        ((RulesResultSpecial)rulesResult).setEightPlayed(true);
+        ((RulesResultSpecial)rulesResult).setEightCounter(1);
+        //Act
+        PostAction postAction = rulesService.definePostAction(rulesResult);
+        //Assert
+        Assert.assertEquals(PostAction.SKIP ,postAction);
     }
 
 }

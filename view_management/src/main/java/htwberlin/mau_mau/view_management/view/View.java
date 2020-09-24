@@ -66,10 +66,12 @@ public class View {
             System.out.println("\nSpecial rules:\n" +
                     "* A SEVEN forces the next player to take two cards from the drawing stack \n" +
                     "- unless he can counter the attack with his own SEVEN. If SEVEN is played again,  \n" +
-                    "next player must play SEVEN too or draw four cards. After that, the game continues as usual.\n" +
+                    "next player must play SEVEN too or draw four cards. Press 'D' once to draw and you \n" +
+                    "will be given a required number of cards. After that, the game continues as usual.\n" +
                     "SORRY, UNDER CONSTRUCTION: \n" +
                     "([NOT IMPLEMENTED YET]* An EIGHT means: skip a round, entering 'S' - unless you can counter \n" +
-                    "the attack with your own eight and let the following player skip. This does not continue after that.)\n" +
+                    "the attack with your own eight and let the following player skip. This rule is no longer valid \n" +
+                    "if anyone skips a round or if a second player counters with an eight.\n" +
                     "([NOT IMPLEMENTED YET]* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
                     "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
                     "on any card. But JACK on JACK is forbidden.)");

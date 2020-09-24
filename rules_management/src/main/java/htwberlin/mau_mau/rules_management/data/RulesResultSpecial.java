@@ -4,12 +4,18 @@ public class RulesResultSpecial extends RulesResult {
 
     private boolean sevenPlayed;
     private int sevenCounter;
+    private boolean eightPlayed;
+
+
+    private int eightCounter;
 
     public RulesResultSpecial(boolean success, String message) {
         super(success, message);
 
         sevenPlayed = false;
         sevenCounter = 0;
+        eightPlayed = false;
+        eightCounter = 0;
     }
 
     public boolean isSevenPlayed() {
@@ -26,5 +32,21 @@ public class RulesResultSpecial extends RulesResult {
 
     public void setSevenCounter(int sevenCounter) {
         this.sevenCounter = sevenCounter;
+    }
+
+    public boolean isEightPlayed() {
+        return eightPlayed;
+    }
+
+    public void setEightPlayed(boolean eightPlayed) {
+        this.eightPlayed = eightPlayed;
+    }
+
+    public int getEightCounter() {
+        return eightCounter;
+    }
+
+    public void setEightCounter(int eightCounter) {
+        this.eightCounter = eightCounter;
     }
 }

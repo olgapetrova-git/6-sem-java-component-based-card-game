@@ -10,6 +10,7 @@ import htwberlin.mau_mau.game_management.service.GameService;
 import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
 import htwberlin.mau_mau.view_management.view.View;
@@ -142,7 +143,8 @@ public class ViewControllerImpl implements ViewController {
             moveSuccess = playRealPlayerCard(gameData, player, move - 1, gameData.getOpenCard());
 
         } else if (move == 100) {
-            givePenaltyCards(gameData, player, gameService.countPenaltyCards(gameData.getRulesResult()), "You");
+            int numberOfPenaltyCards = countPenaltyCards(gameService.getPostAction(gameData.getRulesResult()));
+            givePenaltyCards(gameData, player, numberOfPenaltyCards, "You");
             moveSuccess = true;
 
         } else if (move == 200) {
@@ -239,7 +241,13 @@ public class ViewControllerImpl implements ViewController {
             }
             view.showPlayedCard(true, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
         } else {
-            givePenaltyCards(gameData, player, gameService.countPenaltyCards(gameData.getRulesResult()), player.getName());
+            PostAction postAction = gameService.getPostAction(gameData.getRulesResult());
+            if(postAction == PostAction.SKIP){
+                // view showSkipForVirtualPlayer();
+            } else {
+                int numberOfPenaltyCards = countPenaltyCards(postAction);
+                givePenaltyCards(gameData, player, numberOfPenaltyCards, player.getName());
+            }
         }
         if (player.getHand().getCards().isEmpty()) {
             gameData.setGameStatus(GameStatus.WIN);
@@ -247,5 +255,17 @@ public class ViewControllerImpl implements ViewController {
 
         return true;
     }
-
+ private int countPenaltyCards(PostAction postAction){
+        int numberOfPenaltyCards;
+        switch(postAction){
+            case DRAWONE: numberOfPenaltyCards = 1;
+            break;
+            case DRAWTWO: numberOfPenaltyCards = 2;
+            break;
+            case DRAWFOUR: numberOfPenaltyCards = 4;
+            break;
+            default: numberOfPenaltyCards = 0;
+        }
+        return numberOfPenaltyCards;
+ }
 }

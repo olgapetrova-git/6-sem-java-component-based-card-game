@@ -159,7 +159,7 @@ public class CardServiceTest {
     }
 
     @Test
-    public void getOpenCard() {
+    public void testGetOpenCard() {
         //Arrange
         Deck playingStack = new Deck();
         playingStack.getCards().add(new Card(Suit.DIAMONDS, Rank.SEVEN));
@@ -172,7 +172,7 @@ public class CardServiceTest {
     }
 
     @Test
-    public void shuffleDrawingDeck() {
+    public void testShuffleDrawingDeck() {
         //Arrange
         Deck drawingStack = new Deck();
         drawingStack.getCards().add(new Card(Suit.SPADES, Rank.QUEEN));

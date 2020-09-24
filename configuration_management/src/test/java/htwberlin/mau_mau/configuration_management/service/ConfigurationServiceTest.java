@@ -18,7 +18,7 @@ private ConfigurationService configurationService;
     }
 
     @Test
-    public void context() {
+    public void testContext() {
         //Arrange
         //Act
         ConfigurableApplicationContext context = configurationService.context();

@@ -61,7 +61,7 @@ public class RealPlayerServiceTest {
     }
 
     @Test
-    public void createRealPlayer() {
+    public void testCreateRealPlayer() {
         //Arrange
         //Act
         RealPlayer player = realPlayerService.createRealPlayer("TestName");

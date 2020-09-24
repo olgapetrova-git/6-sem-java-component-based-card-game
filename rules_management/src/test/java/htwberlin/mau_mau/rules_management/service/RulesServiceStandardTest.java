@@ -3,14 +3,13 @@ package htwberlin.mau_mau.rules_management.service;
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Rank;
 import htwberlin.mau_mau.card_management.data.Suit;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class RulesServiceStandardTest {
 
@@ -28,7 +27,7 @@ public class RulesServiceStandardTest {
     }
 
     @Test
-    public void validatePlayerMoveValidSuit() {
+    public void testValidatePlayerMoveValidSuit() {
         //Arrange
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.CLUBS, Rank.SEVEN);
@@ -39,7 +38,7 @@ public class RulesServiceStandardTest {
     }
 
     @Test
-    public void validatePlayerMoveValidRank() {
+    public void testValidatePlayerMoveValidRank() {
         //Arrange
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.HEARTS, Rank.ACE);
@@ -50,7 +49,7 @@ public class RulesServiceStandardTest {
     }
 
     @Test
-    public void validatePlayerMoveInvalid() {
+    public void testValidatePlayerMoveInvalid() {
         //Arrange
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.HEARTS, Rank.SEVEN);
@@ -61,11 +60,11 @@ public class RulesServiceStandardTest {
     }
 
     @Test
-    public void countPenaltyCards() {
+    public void testDefinePostAction() {
         //Arrange
         // Act
-        int count = rulesService.countPenaltyCards(rulesResult);
+        PostAction postAction = rulesService.definePostAction(rulesResult);
         //Assert
-        Assert.assertEquals(1 ,count);
+        Assert.assertEquals(PostAction.DRAWONE, postAction);
     }
 }

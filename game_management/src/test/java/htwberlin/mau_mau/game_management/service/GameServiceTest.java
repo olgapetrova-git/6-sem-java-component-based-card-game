@@ -10,6 +10,7 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.real_player_management.service.RealPlayerService;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
@@ -71,7 +72,7 @@ public class GameServiceTest {
     }
 
     @Test
-    public void setupNewGame() {
+    public void testSetupNewGame() {
         //Arrange
         Deck drawingStack = new Deck();
         drawingStack.getCards().add(new Card(Suit.HEARTS, Rank.ACE));
@@ -84,6 +85,7 @@ public class GameServiceTest {
         replay(cardServiceMock);
         //Act
         gameService.setupNewGame("test", 1, GameRulesId.STANDARD);
+
         //Assert
         verify(realPlayerServiceMock);
         verify(virtualPlayerServiceMock);
@@ -91,7 +93,7 @@ public class GameServiceTest {
     }
 
     @Test
-    public void dealCardsToPlayers() {
+    public void testDealCardsToPlayers() {
         //Arrange
         replay(cardServiceMock);
         //Act
@@ -101,7 +103,7 @@ public class GameServiceTest {
     }
 
     @Test
-    public void makeGameMoveForRealPlayer() {
+    public void testMakeGameMoveForRealPlayer() {
         //Arrange
         RulesResultStandard rulesResultStandard = new RulesResultStandard(true,"test");
         gameData.setRulesResult(rulesResultStandard);
@@ -122,7 +124,7 @@ public class GameServiceTest {
     }
 
     @Test
-    public void makeGameMoveForVirtualPlayer() {
+    public void testMakeGameMoveForVirtualPlayer() {
         RulesResultStandard rulesResultStandard = new RulesResultStandard(true,"test");
         gameData.setRulesResult(rulesResultStandard);
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceStandardMock);
@@ -143,15 +145,16 @@ public class GameServiceTest {
     }
 
     @Test
-    public void countPenaltyCards() {
+    public void testGetPostAction() {
         //Arrange
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceStandardMock);
-        expect(rulesServiceStandardMock.countPenaltyCards(anyObject(RulesResult.class))).andReturn(0);
+        expect(rulesServiceStandardMock.definePostAction(anyObject(RulesResult.class))).andReturn(PostAction.DRAWONE);
         replay(rulesProviderMock);
+        replay(rulesServiceStandardMock);
         //Act
-        int count = gameService.countPenaltyCards(new RulesResultStandard(false,""));
+       PostAction postAction = gameService.getPostAction(new RulesResultStandard(false,""));
+       //Assert
         verify(rulesProviderMock);
-        //Assert
-        assertEquals(0, count);
+        assertEquals(PostAction.DRAWONE, postAction);
     }
 }

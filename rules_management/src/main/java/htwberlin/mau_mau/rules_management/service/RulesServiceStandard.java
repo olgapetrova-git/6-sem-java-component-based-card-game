@@ -1,6 +1,7 @@
 package htwberlin.mau_mau.rules_management.service;
 
 import htwberlin.mau_mau.card_management.data.Card;
+import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 import org.apache.logging.log4j.LogManager;
@@ -46,8 +47,8 @@ public class RulesServiceStandard implements RulesService {
     }
 
     @Override
-    public int countPenaltyCards(RulesResult rulesResult) {
-        return 1;
+    public PostAction definePostAction(RulesResult rulesResult) {
+        return PostAction.DRAWONE;
     }
 
     @Override
