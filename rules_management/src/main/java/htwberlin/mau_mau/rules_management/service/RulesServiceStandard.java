@@ -1,6 +1,7 @@
 package htwberlin.mau_mau.rules_management.service;
 
 import htwberlin.mau_mau.card_management.data.Card;
+import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Component
@@ -21,7 +23,7 @@ public class RulesServiceStandard implements RulesService {
             "Quite good. ", "Acceptable. "};
 
     @Override
-    public RulesResult validatePlayerMove(Card card, Card openCard, RulesResult rulesResult) {
+    public RulesResult validatePlayerMove(Card card, Card openCard, RulesResult rulesResult, int numberOfPlayers) {
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug(String.format("*** VALIDATING %s of %s AGAINST %s of %s USING STANDARD RULES",
                     card.getRank().toString(), card.getSuit().toString(), openCard.getRank().toString(),
@@ -55,4 +57,22 @@ public class RulesServiceStandard implements RulesService {
     public RulesResult setUpRules(Card openCard) {
           return new RulesResultStandard(false,"");
     }
+
+    @Override
+    public Player defineCurrentPlayer(RulesResult rulesResult, ArrayList<Player> players) {
+        int oldCurrentPlayerIndex = rulesResult.getCurrentPlayerIndex();
+
+        int newCurrentPlayerIndex = oldCurrentPlayerIndex + rulesResult.getDirection();
+        if (newCurrentPlayerIndex >= players.size()){
+            newCurrentPlayerIndex = 0;
+        }
+        if (newCurrentPlayerIndex < 0){
+            newCurrentPlayerIndex = players.size() - 1;
+        }
+
+        rulesResult.setCurrentPlayerIndex(newCurrentPlayerIndex);
+        return players.get(newCurrentPlayerIndex);
+    }
+
+
 }

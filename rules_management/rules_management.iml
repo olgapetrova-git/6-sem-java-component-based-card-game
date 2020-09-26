@@ -21,5 +21,6 @@
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.13.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.13.3" level="project" />
     <orderEntry type="module" module-name="card_management" />
+    <orderEntry type="module" module-name="player_management" />
   </component>
 </module>

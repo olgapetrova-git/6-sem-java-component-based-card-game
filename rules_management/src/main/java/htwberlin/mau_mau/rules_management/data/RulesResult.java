@@ -8,9 +8,17 @@ public abstract class RulesResult {
     protected boolean success;
     protected String message;
 
+
+
+    protected int currentPlayerIndex;
+    protected int direction;
+
     public RulesResult(boolean success, String message) {
         this.success = success;
         this.message = message;
+        currentPlayerIndex = 0;
+        //clockwise
+        direction = 1;
     }
 
     public boolean getSuccess() {
@@ -27,5 +35,21 @@ public abstract class RulesResult {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getCurrentPlayerIndex() {
+        return currentPlayerIndex;
+    }
+
+    public void setCurrentPlayerIndex(int currentPlayerIndex) {
+        this.currentPlayerIndex = currentPlayerIndex;
+    }
+
+    public int getDirection() {
+        return direction;
+    }
+
+    public void setDirection(int direction) {
+        this.direction = direction;
     }
 }

@@ -28,8 +28,8 @@
     <orderEntry type="library" name="Maven: com.h2database:h2:1.4.197" level="project" />
     <orderEntry type="module" module-name="card_management" />
     <orderEntry type="module" module-name="rules_management" />
-    <orderEntry type="module" module-name="real_player_management" />
     <orderEntry type="module" module-name="player_management" />
+    <orderEntry type="module" module-name="real_player_management" />
     <orderEntry type="module" module-name="virtual_player_management" />
   </component>
 </module>

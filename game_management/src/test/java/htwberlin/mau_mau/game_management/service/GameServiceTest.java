@@ -116,7 +116,7 @@ public class GameServiceTest {
         gameData.setRulesResult(rulesResultStandard);
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceStandardMock);
         expect(rulesServiceStandardMock.validatePlayerMove(anyObject(Card.class), anyObject(Card.class),
-                anyObject(RulesResult.class))).andReturn(new RulesResultStandard(true, "test2"));
+                anyObject(RulesResult.class), anyInt())).andReturn(new RulesResultStandard(true, "test2"));
         replay(rulesServiceStandardMock);
         replay(rulesProviderMock);
         gameData.getPlayers().get(0).getHand().getCards().add(new Card(Suit.HEARTS, Rank.ACE));
@@ -136,7 +136,7 @@ public class GameServiceTest {
         gameData.setRulesResult(rulesResultStandard);
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceStandardMock);
         expect(rulesServiceStandardMock.validatePlayerMove(anyObject(Card.class), anyObject(Card.class),
-                anyObject(RulesResult.class))).andReturn(new RulesResultStandard(true, "test2"));
+                anyObject(RulesResult.class), anyInt())).andReturn(new RulesResultStandard(true, "test2"));
         replay(rulesServiceStandardMock);
         replay(rulesProviderMock);
         gameData.getPlayers().get(0).getHand().getCards().add(new Card(Suit.HEARTS, Rank.ACE));

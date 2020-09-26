@@ -50,6 +50,7 @@ public class ViewControllerImpl implements ViewController {
         gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
         gameData.setRulesResult(rulesProvider.getRulesService().setUpRules(gameData.getOpenCard()));
+        gameData.getRulesResult().setCurrentPlayerIndex(gameData.getPlayers().size()-1);
         view.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
         processMainFlow(gameData);
         view.requestEnter();
@@ -62,10 +63,23 @@ public class ViewControllerImpl implements ViewController {
      * @param gameData current game object
      */
     private void processMainFlow(GameData gameData) {
-
-
         do {
-            doOneRound(gameData);
+            Player player = rulesProvider.getRulesService().defineCurrentPlayer(
+                    gameData.getRulesResult(), gameData.getPlayers());
+
+            gameData.setCurrentPlayer(player);
+
+            boolean success;
+
+            if (player instanceof RealPlayer) {
+                view.showTable(gameData.getPlayers().get(0).getHand(), gameData.getOpenCard(), gameData.getPlayers());
+                ((RealPlayer) player).setSaidMau(false);
+                ((RealPlayer) player).setSaidMauMau(false);
+            }
+
+            do {
+                success = processMove(gameData, player);
+            } while (!success);
         } while (gameData.getGameStatus() == GameStatus.NORMAL);
 
         if (gameData.getGameStatus() == GameStatus.WIN) {
@@ -140,10 +154,10 @@ public class ViewControllerImpl implements ViewController {
         if (gameData.getRulesResult() instanceof RulesResultSpecial) {
             isEightPlayed = ((RulesResultSpecial) gameData.getRulesResult()).isEightPlayed();
             if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug(String.format("*** EIGHT STATUS BEFORE PLAYER MOVE: %s ",
-                    isEightPlayed));
+                LOGGER.debug(String.format("*** EIGHT STATUS BEFORE PLAYER MOVE: %s ",
+                        isEightPlayed));
+            }
         }
-                }
         int move = view.requestPlayerMove(1, player.getHand().getCards().size(), isEightPlayed);
 
         // try to play card
@@ -173,12 +187,12 @@ public class ViewControllerImpl implements ViewController {
         } else if (move == 400) {
             gameData.setGameStatus(GameStatus.QUIT);
             moveSuccess = true;
-        } else if (move == 500){
+        } else if (move == 500) {
             gameService.getPostAction(gameData.getRulesResult());
             view.showSkip("You");
             moveSuccess = true;
         }
-            if (LOGGER.isDebugEnabled()) {
+        if (LOGGER.isDebugEnabled()) {
             LOGGER.debug((String.format("*** MOVE: %s", move)));
         }
         return moveSuccess;

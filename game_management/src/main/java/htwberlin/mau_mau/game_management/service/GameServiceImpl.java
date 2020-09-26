@@ -96,7 +96,8 @@ public class GameServiceImpl implements GameService {
         RulesService rulesService = rulesProvider.getRulesService();
         gameData.setRulesResult(rulesService.validatePlayerMove(
                 gameData.getPlayers().get(0).getHand().getCards().get(cardPosition),
-                gameData.getOpenCard(), gameData.getRulesResult()));
+                gameData.getOpenCard(), gameData.getRulesResult(),
+                gameData.getPlayers().size()));
 
         try {
             if (gameData.getRulesResult().getSuccess()) {
@@ -116,7 +117,10 @@ public class GameServiceImpl implements GameService {
 
         for (int i = 0; i < hand.getCards().size(); i++) {
 
-            gameData.setRulesResult(rulesService.validatePlayerMove(hand.getCards().get(i), openCard, gameData.getRulesResult()));
+            gameData.setRulesResult(rulesService.validatePlayerMove(
+                    hand.getCards().get(i), openCard, gameData.getRulesResult(),
+                    gameData.getPlayers().size()
+            ));
 
             if (gameData.getRulesResult().getSuccess()) {
                 try {

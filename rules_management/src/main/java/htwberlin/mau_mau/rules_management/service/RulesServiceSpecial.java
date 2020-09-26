@@ -3,6 +3,7 @@ package htwberlin.mau_mau.rules_management.service;
 
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Rank;
+import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
@@ -11,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Component
@@ -22,7 +24,7 @@ public class RulesServiceSpecial implements RulesService {
             "Quite good. ", "Acceptable. "};
 
     @Override
-    public RulesResult validatePlayerMove(Card card, Card openCard, RulesResult rulesResult) {
+    public RulesResult validatePlayerMove(Card card, Card openCard, RulesResult rulesResult, int numberOfPlayers) {
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug(String.format("*** VALIDATING %s of %s AGAINST %s of %s USING SPECIAL RULES",
                     card.getRank().toString(), card.getSuit().toString(),
@@ -39,6 +41,8 @@ public class RulesServiceSpecial implements RulesService {
                 validateSeven(card, ((RulesResultSpecial) rulesResult));
             } else if (card.getRank() == Rank.EIGHT) {
                 validateEight(card, ((RulesResultSpecial) rulesResult));
+            } else if (card.getRank() == Rank.NINE) {
+                validateNine(((RulesResultSpecial) rulesResult), numberOfPlayers);
             } else {
                 int randomNum = ThreadLocalRandom.current().nextInt(0, messages.length);
                 String successMessage = messages[randomNum];
@@ -113,6 +117,17 @@ public class RulesServiceSpecial implements RulesService {
         }
     }
 
+    private void validateNine(RulesResultSpecial rulesResult, int numberOfPlayers) {
+        rulesResult.setNinePlayed(true);
+        rulesResult.setSuccess(true);
+        if(numberOfPlayers==2) {
+            rulesResult.setMessage("NINE is played! The direction of play changes.\n" +
+                    "Because there are only two players, the card means skipping a round for next player.");
+        } else {
+            rulesResult.setMessage("NINE is played! The direction of play changes.");
+        }
+    }
+
     @Override
     public PostAction definePostAction(RulesResult rulesResult) {
         if (((RulesResultSpecial) rulesResult).isSevenPlayed()) {
@@ -145,5 +160,31 @@ public class RulesServiceSpecial implements RulesService {
             rulesResultSpecial.setEightPlayed(true);
         }
         return rulesResultSpecial;
+    }
+
+    @Override
+    public Player defineCurrentPlayer(RulesResult rulesResult, ArrayList<Player> players) {
+        int oldCurrentPlayerIndex = rulesResult.getCurrentPlayerIndex();
+
+        if(((RulesResultSpecial)rulesResult).isNinePlayed()){
+            ((RulesResultSpecial)rulesResult).setNinePlayed(false);
+
+            if(players.size()==2){
+                return players.get(oldCurrentPlayerIndex);
+            } else {
+                rulesResult.setDirection(-rulesResult.getDirection());
+            }
+        }
+
+        int newCurrentPlayerIndex = oldCurrentPlayerIndex + rulesResult.getDirection();
+        if (newCurrentPlayerIndex >= players.size()){
+            newCurrentPlayerIndex = 0;
+        }
+        if (newCurrentPlayerIndex < 0){
+            newCurrentPlayerIndex = players.size() - 1;
+        }
+
+        rulesResult.setCurrentPlayerIndex(newCurrentPlayerIndex);
+        return players.get(newCurrentPlayerIndex);
     }
 }

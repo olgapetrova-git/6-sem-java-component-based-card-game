@@ -32,7 +32,7 @@ public class RulesServiceStandardTest {
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.CLUBS, Rank.SEVEN);
         // Act
-        rulesResult = rulesService.validatePlayerMove(card, open, rulesResult);
+        rulesResult = rulesService.validatePlayerMove(card, open, rulesResult, 3);
         //Assert
         Assert.assertTrue(rulesResult.getSuccess());
     }
@@ -43,7 +43,7 @@ public class RulesServiceStandardTest {
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.HEARTS, Rank.ACE);
         // Act
-        rulesResult = rulesService.validatePlayerMove(card, open, rulesResult);
+        rulesResult = rulesService.validatePlayerMove(card, open, rulesResult, 3);
         //Assert
         Assert.assertTrue(rulesResult.getSuccess());
     }
@@ -54,7 +54,7 @@ public class RulesServiceStandardTest {
         Card card = new Card(Suit.CLUBS, Rank.ACE);
         Card open = new Card(Suit.HEARTS, Rank.SEVEN);
         // Act
-        rulesResult = rulesService.validatePlayerMove(card, open, rulesResult);
+        rulesResult = rulesService.validatePlayerMove(card, open, rulesResult, 3);
         //Assert
         Assert.assertFalse(rulesResult.getSuccess());
     }

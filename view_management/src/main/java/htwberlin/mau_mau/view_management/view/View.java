@@ -71,6 +71,8 @@ public class View {
                     "* An EIGHT means: skip a round, entering 'S' - unless you can counter \n" +
                     "the attack with your own eight and let the following player skip. This rule is no longer valid \n" +
                     "if anyone skips a round or if a second player counters with an eight.\n" +
+                    "* A NINE means: The direction of play changes. If there are only two players, the card means \n" +
+                    "a one-time skipping a round for the next player. \n" +
                     "SORRY, UNDER CONSTRUCTION: \n" +
                     "([NOT IMPLEMENTED YET]* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
                     "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
