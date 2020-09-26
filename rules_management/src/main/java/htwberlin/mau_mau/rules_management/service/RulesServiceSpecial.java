@@ -1,6 +1,5 @@
 package htwberlin.mau_mau.rules_management.service;
 
-
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Rank;
 import htwberlin.mau_mau.player_management.data.Player;
@@ -31,32 +30,40 @@ public class RulesServiceSpecial implements RulesService {
                     openCard.getRank().toString(), openCard.getSuit().toString()));
         }
 
+        rulesResult.setMessage("");
         if (((RulesResultSpecial) rulesResult).isSevenPlayed()) {
             validateSeven(card, ((RulesResultSpecial) rulesResult));
         } else if (((RulesResultSpecial) rulesResult).isEightPlayed()) {
             validateEight(card, ((RulesResultSpecial) rulesResult));
+        } else if (((RulesResultSpecial) rulesResult).isJackPlayed()
+                || card.getRank()==Rank.JACK) {
+            validateJack(card, openCard, ((RulesResultSpecial) rulesResult), numberOfPlayers);
         } else if ((card.getSuit() == openCard.getSuit())
                 || (card.getRank() == openCard.getRank())) {
-            if (card.getRank() == Rank.SEVEN) {
-                validateSeven(card, ((RulesResultSpecial) rulesResult));
-            } else if (card.getRank() == Rank.EIGHT) {
-                validateEight(card, ((RulesResultSpecial) rulesResult));
-            } else if (card.getRank() == Rank.NINE) {
-                validateNine(((RulesResultSpecial) rulesResult), numberOfPlayers);
-            } else {
-                int randomNum = ThreadLocalRandom.current().nextInt(0, messages.length);
-                String successMessage = messages[randomNum];
-                rulesResult.setSuccess(true);
-                rulesResult.setMessage(successMessage);
-            }
-            LOGGER.debug("*** CARDS MATCH");
+            validateDefaultSpecial(card, rulesResult, numberOfPlayers);
         } else {
             rulesResult.setSuccess(false);
-            rulesResult.setMessage("You can't play this card now. Choose another card from your hand or \n"
+            rulesResult.addMessage("You can't play this card now. Choose another card from your hand or \n"
                     + "draw a new card from the drawing stack, please.");
         }
 
         return rulesResult;
+    }
+
+    private void validateDefaultSpecial(Card card, RulesResult rulesResult, int numberOfPlayers){
+        if (card.getRank() == Rank.SEVEN) {
+            validateSeven(card, ((RulesResultSpecial) rulesResult));
+        } else if (card.getRank() == Rank.EIGHT) {
+            validateEight(card, ((RulesResultSpecial) rulesResult));
+        } else if (card.getRank() == Rank.NINE) {
+            validateNine(((RulesResultSpecial) rulesResult), numberOfPlayers);
+        } else {
+            int randomNum = ThreadLocalRandom.current().nextInt(0, messages.length);
+            String successMessage = messages[randomNum];
+            rulesResult.setSuccess(true);
+            rulesResult.addMessage(successMessage);
+        }
+        LOGGER.debug("*** CARDS MATCH");
     }
 
     /**
@@ -70,25 +77,25 @@ public class RulesServiceSpecial implements RulesService {
             LOGGER.debug("*** SEVEN RULES ");
             rulesResult.setSuccess(true);
             if (rulesResult.getSevenCounter() == 0) {
-                rulesResult.setMessage("SEVEN is played! Next player must play SEVEN or draw two cards!");
+                rulesResult.addMessage("SEVEN is played! Next player must play SEVEN or draw two cards!");
                 rulesResult.setSevenPlayed(true);
                 rulesResult.setSevenCounter(1);
             } else if (rulesResult.getSevenCounter() == 1) {
-                rulesResult.setMessage("SEVEN is played again! Next Player must play SEVEN or draw four cards!\n");
+                rulesResult.addMessage("SEVEN is played again! Next Player must play SEVEN or draw four cards!");
                 rulesResult.setSevenCounter(2);
             } else if (rulesResult.getSevenCounter() == 2) {
-                rulesResult.setMessage("SEVEN is played third time! Game continues as usual.\n");
+                rulesResult.addMessage("SEVEN is played third time! Game continues as usual.");
                 rulesResult.setSevenPlayed(false);
                 rulesResult.setSevenCounter(0);
             }
         } else {
             rulesResult.setSuccess(false);
             if (rulesResult.getSevenCounter() == 1) {
-                rulesResult.setMessage("Play SEVEN or draw 2! Choose SEVEN if you have it or " +
-                        "press 'D' to draw (you will be given two cards).");
+                rulesResult.addMessage("Play SEVEN or draw 2! Choose SEVEN if you have it or " +
+                        "enter 'D' to draw (you will be given two cards).");
             } else if (rulesResult.getSevenCounter() == 2) {
-                rulesResult.setMessage("Play SEVEN or draw 4! Choose another card or " +
-                        "press 'D' to draw (you will be given four cards).");
+                rulesResult.addMessage("Play SEVEN or draw 4! Choose another card or " +
+                        "enter 'D' to draw (you will be given four cards).");
             }
         }
     }
@@ -98,33 +105,61 @@ public class RulesServiceSpecial implements RulesService {
             LOGGER.debug("*** EIGHT RULES ");
             rulesResult.setSuccess(true);
             if (rulesResult.getEightCounter() == 0) {
-                rulesResult.setMessage("EIGHT is played! Next player must play EIGHT or skip a round!");
+                rulesResult.addMessage("EIGHT is played! Next player must play EIGHT or skip a round!");
                 rulesResult.setEightPlayed(true);
                 rulesResult.setEightCounter(1);
             } else if (rulesResult.getEightCounter() == 1) {
-                rulesResult.setMessage("EIGHT is played again! Next Player must play EIGHT or skip a round!\n");
+                rulesResult.addMessage("EIGHT is played again! Next Player must play EIGHT or skip a round!");
                 rulesResult.setEightCounter(2);
             } else if (rulesResult.getEightCounter() == 2) {
-                rulesResult.setMessage("EIGHT is played third time! Game continues as usual.\n");
+                rulesResult.addMessage("EIGHT is played third time! Game continues as usual.");
                 rulesResult.setEightPlayed(false);
                 rulesResult.setEightCounter(0);
             }
         } else {
             rulesResult.setSuccess(false);
 
-            rulesResult.setMessage("Play EIGHT or skip a round! Choose EIGHT if you have it or " +
-                    "press 'S' to skip.");
+            rulesResult.addMessage("Play EIGHT or skip a round! Choose EIGHT if you have it or " +
+                    "enter 'S' to skip.");
         }
     }
 
     private void validateNine(RulesResultSpecial rulesResult, int numberOfPlayers) {
+        LOGGER.debug("*** NINE RULES ");
         rulesResult.setNinePlayed(true);
         rulesResult.setSuccess(true);
         if(numberOfPlayers==2) {
-            rulesResult.setMessage("NINE is played! The direction of play changes.\n" +
+            rulesResult.addMessage("NINE is played! The direction of play changes.\n" +
                     "Because there are only two players, the card means skipping a round for next player.");
         } else {
-            rulesResult.setMessage("NINE is played! The direction of play changes.");
+            rulesResult.addMessage("NINE is played! The direction of play changes.");
+        }
+    }
+
+    private void validateJack(Card card, Card openCard, RulesResultSpecial rulesResult, int numberOfPlayers) {
+        LOGGER.debug("*** JACK RULES ");
+        if(!rulesResult.isJackPlayed()) {
+            if(openCard.getRank()!=Rank.JACK){
+                rulesResult.setJackPlayed(true);
+                rulesResult.addMessage("JACK is played! Player will now make a wish for a suit. \n" +
+            "Next player must play a card with that suit or draw two cards.");
+                rulesResult.setSuccess(true);
+            } else {
+                rulesResult.addMessage("JACK can't be played against another JACK.");
+                rulesResult.setSuccess(false);
+            }
+        } else {
+            if(card.getSuit() == rulesResult.getWish()){
+                rulesResult.setJackPlayed(false);
+                rulesResult.setSuccess(true);
+                rulesResult.setMessage(card.getSuit().toString() + " played! Wish fulfilled.\n");
+                validateDefaultSpecial(card, rulesResult, numberOfPlayers);
+            } else {
+                rulesResult.addMessage("Play " + rulesResult.getWish().toString() + " or draw 2! Choose " +
+                        rulesResult.getWish().toString() + " if you have it or " +
+                        "enter 'D' to draw (you will be given two cards).");
+                rulesResult.setSuccess(false);
+            }
         }
     }
 
@@ -144,6 +179,9 @@ public class RulesServiceSpecial implements RulesService {
             ((RulesResultSpecial) rulesResult).setEightPlayed(false);
             ((RulesResultSpecial) rulesResult).setEightCounter(0);
             return PostAction.SKIP;
+        } else if (((RulesResultSpecial) rulesResult).isJackPlayed()) {
+            ((RulesResultSpecial) rulesResult).setJackPlayed(false);
+            return PostAction.DRAWTWO;
         }
         return PostAction.DRAWONE;
     }

@@ -1,5 +1,7 @@
 package htwberlin.mau_mau.rules_management.data;
 
+import htwberlin.mau_mau.card_management.data.Suit;
+
 public class RulesResultSpecial extends RulesResult {
 
     private boolean sevenPlayed;
@@ -7,6 +9,9 @@ public class RulesResultSpecial extends RulesResult {
     private boolean eightPlayed;
     private int eightCounter;
     private boolean ninePlayed;
+
+    private boolean jackPlayed;
+    private Suit wish;
 
     public RulesResultSpecial(boolean success, String message) {
         super(success, message);
@@ -16,6 +21,7 @@ public class RulesResultSpecial extends RulesResult {
         eightPlayed = false;
         eightCounter = 0;
         ninePlayed = false;
+        jackPlayed = false;
     }
 
     public boolean isSevenPlayed() {
@@ -53,4 +59,12 @@ public class RulesResultSpecial extends RulesResult {
     public boolean isNinePlayed() { return ninePlayed; }
 
     public void setNinePlayed(boolean ninePlayed) { this.ninePlayed = ninePlayed; }
+
+    public boolean isJackPlayed() { return jackPlayed; }
+
+    public void setJackPlayed(boolean jackPlayed) { this.jackPlayed = jackPlayed; }
+
+    public Suit getWish() { return wish; }
+
+    public void setWish(Suit wish) { this.wish = wish; }
 }

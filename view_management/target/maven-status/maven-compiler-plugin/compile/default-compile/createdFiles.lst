@@ -1,4 +1,5 @@
 htwberlin\mau_mau\view_management\view\NameIsEmptyException.class
+htwberlin\mau_mau\view_management\view\WishedSuitException.class
 htwberlin\mau_mau\view_management\controller\ViewController.class
 htwberlin\mau_mau\view_management\view\PlayerMoveDrawException.class
 htwberlin\mau_mau\view_management\controller\ViewControllerImpl.class

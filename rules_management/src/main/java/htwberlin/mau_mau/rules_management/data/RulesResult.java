@@ -37,6 +37,8 @@ public abstract class RulesResult {
         this.message = message;
     }
 
+    public void addMessage(String message) { this.message += message; }
+
     public int getCurrentPlayerIndex() {
         return currentPlayerIndex;
     }

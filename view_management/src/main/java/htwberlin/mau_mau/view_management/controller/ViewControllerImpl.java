@@ -1,6 +1,7 @@
 package htwberlin.mau_mau.view_management.controller;
 
 import htwberlin.mau_mau.card_management.data.Card;
+import htwberlin.mau_mau.card_management.data.Suit;
 import htwberlin.mau_mau.card_management.service.CardService;
 import htwberlin.mau_mau.card_management.service.EmptyDrawingStackException;
 import htwberlin.mau_mau.card_management.service.EmptyPlayingStackException;
@@ -15,6 +16,7 @@ import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
 import htwberlin.mau_mau.view_management.view.View;
+import htwberlin.mau_mau.virtual_player_management.data.VirtualPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +52,7 @@ public class ViewControllerImpl implements ViewController {
         gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
         gameData.setRulesResult(rulesProvider.getRulesService().setUpRules(gameData.getOpenCard()));
-        gameData.getRulesResult().setCurrentPlayerIndex(gameData.getPlayers().size()-1);
+        //gameData.getRulesResult().setCurrentPlayerIndex(gameData.getPlayers().size()-1);
         view.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
         processMainFlow(gameData);
         view.requestEnter();
@@ -64,11 +66,13 @@ public class ViewControllerImpl implements ViewController {
      */
     private void processMainFlow(GameData gameData) {
         do {
+            Player player = gameData.getCurrentPlayer();
+            /*
             Player player = rulesProvider.getRulesService().defineCurrentPlayer(
                     gameData.getRulesResult(), gameData.getPlayers());
 
             gameData.setCurrentPlayer(player);
-
+             */
             boolean success;
 
             if (player instanceof RealPlayer) {
@@ -80,6 +84,12 @@ public class ViewControllerImpl implements ViewController {
             do {
                 success = processMove(gameData, player);
             } while (!success);
+
+            if(gameData.getGameStatus() == GameStatus.NORMAL) {
+                gameData.setCurrentPlayer(rulesProvider.getRulesService().defineCurrentPlayer(
+                        gameData.getRulesResult(), gameData.getPlayers()));
+            }
+
         } while (gameData.getGameStatus() == GameStatus.NORMAL);
 
         if (gameData.getGameStatus() == GameStatus.WIN) {
@@ -220,6 +230,12 @@ public class ViewControllerImpl implements ViewController {
             } else if (player.getHand().getCards().isEmpty()) {
                 gameData.setGameStatus(GameStatus.WIN);
             }
+            if(rulesResult instanceof RulesResultSpecial) {
+                if(((RulesResultSpecial)rulesResult).isJackPlayed()) {
+                    ((RulesResultSpecial)rulesResult).setWish(view.requestWish());
+                    view.showWish("You", ((RulesResultSpecial)rulesResult).getWish());
+                }
+            }
 
         } else {
             LOGGER.debug("*** YOU CAN'T PLAY THIS CARD NOW");
@@ -267,6 +283,14 @@ public class ViewControllerImpl implements ViewController {
                         gameData.getOpenCard().getRank().toString(), gameData.getOpenCard().getSuit().toString()));
             }
             view.showPlayedCard(true, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
+
+            if(rulesResult instanceof RulesResultSpecial) {
+                if(((RulesResultSpecial)rulesResult).isJackPlayed()){
+                    Suit wish = ((VirtualPlayer)player).getWish();
+                    ((RulesResultSpecial) rulesResult).setWish(wish);
+                    view.showWish(player.getName(), wish);
+                }
+            }
         } else {
             PostAction postAction = gameService.getPostAction(gameData.getRulesResult());
             if (postAction == PostAction.SKIP) {

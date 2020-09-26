@@ -2,6 +2,7 @@ package htwberlin.mau_mau.view_management.view;
 
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
+import htwberlin.mau_mau.card_management.data.Suit;
 import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import org.apache.logging.log4j.LogManager;
@@ -65,18 +66,17 @@ public class View {
             System.out.println("\nSpecial rules:\n" +
                     "* A SEVEN forces the next player to take two cards from the drawing stack \n" +
                     "- unless he can counter the attack with his own SEVEN. If SEVEN is played again,  \n" +
-                    "next player must play SEVEN too or draw four cards. Press 'D' once to draw and you \n" +
-                    "will be given a required number of cards. After that, the game continues as usual.\n" +
-
+                    "next player must play SEVEN too or draw four cards. Enter 'D' once to draw and you \n" +
+                    "will be given a required number of cards. After that, the game continues as usual.\n\n" +
                     "* An EIGHT means: skip a round, entering 'S' - unless you can counter \n" +
-                    "the attack with your own eight and let the following player skip. This rule is no longer valid \n" +
-                    "if anyone skips a round or if a second player counters with an eight.\n" +
+                    "the attack with your own EIGHT and let the following player skip. This rule is no longer \n" +
+                    "valid if anyone skips a round or if a second player counters with an EIGHT.\n\n" +
                     "* A NINE means: The direction of play changes. If there are only two players, the card means \n" +
-                    "a one-time skipping a round for the next player. \n" +
-                    "SORRY, UNDER CONSTRUCTION: \n" +
-                    "([NOT IMPLEMENTED YET]* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
-                    "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
-                    "on any card. But JACK on JACK is forbidden.)");
+                    "a one-time skipping a round for the next player. \n\n" +
+                    "* A JACK is a wish card, it gives a player the right to request a suit of card.\n" +
+                    "The next player have to play with the wished suit or draw 2 cards. Moreover, JACK can be played \n" +
+                    "on any card regardless of rank or suit. But JACK on JACK is forbidden. JACK does not neutralise \n" +
+                    "a SEVEN or an EIGHT.");
         }
     }
 
@@ -246,8 +246,12 @@ public class View {
      * @param name the player's name
      */
     public void showSkip(String name) {  //500
-                 System.out.println(name + " skipped this round. ");
-        }
+        System.out.println(name + " skipped this round. ");
+    }
+
+    public void showWish(String name, Suit wish) {
+        System.out.println(name + " requested  " + wish.toString() + ".");
+    }
 
     /**
      * Requests a player's name from user.
@@ -306,21 +310,21 @@ public class View {
      */
     private int requestLimitedNumber(String message, int min, int max) {
         boolean success = false;
-        String input="";
+        String input = "";
         int num = 1;
 
         do {
             try {
                 System.out.println(message);
                 input = scanner.nextLine();
-                if(isNumeric(input)){
-                    num=Integer.parseInt(input);
+                if (isNumeric(input)) {
+                    num = Integer.parseInt(input);
                     if (num < min || num > max) {
                         throw new NumberOutOfLimitsException(num, min, max);
                     }
                     success = true;
                 } else {
-                        throw new NotANumberException(input, min, max);
+                    throw new NotANumberException(input, min, max);
                 }
                 success = true;
             } catch (NotANumberException | NumberOutOfLimitsException e) {
@@ -369,15 +373,15 @@ public class View {
         int num = 1;
         String move = "";
         String specialMessage;
-        if (isEightPlayed){
+        if (isEightPlayed) {
             specialMessage = "'S' - to skip the round, ";
         } else {
             specialMessage = "'D' - to draw a card, ";
         }
         do {
             try {
-                    System.out.println("\nEnter (" + min + "-" + max + ") to play a card, " + specialMessage +
-             "'M' - to say 'Mau!', \n'MM' - to say 'Mau-Mau!', 'Q' - to quit the game.");
+                System.out.println("\nEnter (" + min + "-" + max + ") to play a card, " + specialMessage +
+                        "'M' - to say 'Mau!', \n'MM' - to say 'Mau-Mau!', 'Q' - to quit the game.");
                 //S - skip the round,
                 move = scanner.nextLine();
                 if (isNumeric(move)) {
@@ -387,21 +391,21 @@ public class View {
                     }
                     success = true;
                 } else {
-                    if(move.equalsIgnoreCase("d") && !isEightPlayed) {
+                    if (move.equalsIgnoreCase("d") && !isEightPlayed) {
                         num = 100;
-                    } else if(move.equalsIgnoreCase("m")) {
+                    } else if (move.equalsIgnoreCase("m")) {
                         num = 200;
-                    } else if(move.equalsIgnoreCase("mm")) {
+                    } else if (move.equalsIgnoreCase("mm")) {
                         num = 300;
-                    } else if(move.equalsIgnoreCase("q")) {
+                    } else if (move.equalsIgnoreCase("q")) {
                         num = 400;
-                    } else if(move.equalsIgnoreCase("s") && isEightPlayed) {
+                    } else if (move.equalsIgnoreCase("s") && isEightPlayed) {
                         num = 500;
-                    } else if (isEightPlayed){
-                    throw new PlayerMoveSkipException(move, min, max);
-                    } else if (!isEightPlayed){
-                    throw new PlayerMoveDrawException(move, min, max);
-                }
+                    } else if (isEightPlayed) {
+                        throw new PlayerMoveSkipException(move, min, max);
+                    } else if (!isEightPlayed) {
+                        throw new PlayerMoveDrawException(move, min, max);
+                    }
                     success = true;
                 }
             } catch (PlayerMoveDrawException | PlayerMoveSkipException e) {
@@ -415,6 +419,40 @@ public class View {
         while (!success);
 
         return num;
+    }
+
+    public Suit requestWish(){
+        boolean success = false;
+        String input = "";
+        Suit wishedSuit = Suit.SPADES;
+        do {
+            try {
+                System.out.println("Please choose a suit. Enter 'S' for SPADES, 'C' for CLUBS, \n" +
+                        "'H' for HEARTS, 'D' for DIAMONDS.");
+                input = scanner.nextLine();
+
+                if(input.equalsIgnoreCase("s")) {
+                    wishedSuit = Suit.SPADES;
+                } else if(input.equalsIgnoreCase("c")) {
+                    wishedSuit = Suit.CLUBS;
+                } else if(input.equalsIgnoreCase("h")) {
+                    wishedSuit = Suit.HEARTS;
+                } else if(input.equalsIgnoreCase("d")) {
+                    wishedSuit = Suit.DIAMONDS;
+                } else {
+                    throw new WishedSuitException(input);
+                }
+                success = true;
+            } catch (WishedSuitException e) {
+                System.out.printf(INCORRECT_INPUT + "Incorrect input. %s\n", e.getMessage());
+            } catch (Exception e) {
+                LOGGER.debug(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
+                System.out.println(INCORRECT_INPUT);
+            }
+        }
+        while (!success);
+
+        return wishedSuit;
     }
 
     /**

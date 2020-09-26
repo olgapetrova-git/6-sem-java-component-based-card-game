@@ -10,11 +10,11 @@ public abstract class Player {
     /**
      * Name of the Player.
      */
-    private String name;
+    protected String name;
     /**
      * The pack of cards held by this player.
      */
-    private Deck hand;
+    protected Deck hand;
 
     /**
      * Instantiates a new Player.

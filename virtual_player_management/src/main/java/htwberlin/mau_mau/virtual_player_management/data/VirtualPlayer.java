@@ -1,5 +1,6 @@
 package htwberlin.mau_mau.virtual_player_management.data;
 
+import htwberlin.mau_mau.card_management.data.Suit;
 import htwberlin.mau_mau.player_management.data.Player;
 
 /**
@@ -14,5 +15,9 @@ public class VirtualPlayer extends Player {
      */
     public VirtualPlayer(String name) {
         super(name);
-        }
+    }
+
+    public Suit getWish() {
+        return hand.getCards().get(0).getSuit();
+    }
 }
