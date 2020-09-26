@@ -125,12 +125,11 @@ public class RulesServiceSpecial implements RulesService {
                 ((RulesResultSpecial) rulesResult).setSevenCounter(0);
                 return PostAction.DRAWFOUR;
             }
-        } else if (((RulesResultSpecial) rulesResult).isEightPlayed()){
+        } else if (((RulesResultSpecial) rulesResult).isEightPlayed()) {
             ((RulesResultSpecial) rulesResult).setEightPlayed(false);
             ((RulesResultSpecial) rulesResult).setEightCounter(0);
             return PostAction.SKIP;
         }
-
         return PostAction.DRAWONE;
     }
 
@@ -141,7 +140,10 @@ public class RulesServiceSpecial implements RulesService {
             rulesResultSpecial.setSevenCounter(1);
             rulesResultSpecial.setSevenPlayed(true);
         }
-
+        if (openCard.getRank() == Rank.EIGHT) {
+            rulesResultSpecial.setEightCounter(1);
+            rulesResultSpecial.setEightPlayed(true);
+        }
         return rulesResultSpecial;
     }
 }

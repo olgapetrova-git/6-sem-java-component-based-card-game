@@ -59,6 +59,7 @@ public class GameServiceImpl implements GameService {
                 for (Player player : gameData.getPlayers()) {
                     if (player.getName().equals(newPlayer.getName())) {
                         duplicate = true;
+                        break;
                     }
                 }
             } while (duplicate);
@@ -136,6 +137,20 @@ public class GameServiceImpl implements GameService {
         RulesService rulesService = rulesProvider.getRulesService();
 
         return rulesService.definePostAction(rulesResult);
+    }
+    @Override
+    public int countPenaltyCards(PostAction postAction){
+        int numberOfPenaltyCards;
+        switch(postAction){
+            case DRAWONE: numberOfPenaltyCards = 1;
+                break;
+            case DRAWTWO: numberOfPenaltyCards = 2;
+                break;
+            case DRAWFOUR: numberOfPenaltyCards = 4;
+                break;
+            default: numberOfPenaltyCards = 0;
+        }
+        return numberOfPenaltyCards;
     }
 
     @Override

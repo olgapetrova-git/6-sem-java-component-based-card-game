@@ -1,8 +1,8 @@
 htwberlin\mau_mau\view_management\view\NameIsEmptyException.class
 htwberlin\mau_mau\view_management\controller\ViewController.class
-htwberlin\mau_mau\view_management\controller\ViewControllerImpl$1.class
+htwberlin\mau_mau\view_management\view\PlayerMoveDrawException.class
 htwberlin\mau_mau\view_management\controller\ViewControllerImpl.class
 htwberlin\mau_mau\view_management\view\NotANumberException.class
 htwberlin\mau_mau\view_management\view\NumberOutOfLimitsException.class
 htwberlin\mau_mau\view_management\view\View.class
-htwberlin\mau_mau\view_management\view\PlayerMoveException.class
+htwberlin\mau_mau\view_management\view\PlayerMoveSkipException.class

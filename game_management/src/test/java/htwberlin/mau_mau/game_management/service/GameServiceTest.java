@@ -84,12 +84,19 @@ public class GameServiceTest {
         replay(virtualPlayerServiceMock);
         replay(cardServiceMock);
         //Act
-        gameService.setupNewGame("test", 1, GameRulesId.STANDARD);
-
+        GameData gameData = gameService.setupNewGame("test", 1, GameRulesId.STANDARD);
         //Assert
         verify(realPlayerServiceMock);
         verify(virtualPlayerServiceMock);
         verify(cardServiceMock);
+        assertEquals("test", gameData.getCurrentPlayer().getName());
+        assertEquals(1, gameData.getPlayers().size() - 1);
+        assertEquals(GameRulesId.STANDARD, gameData.getGameRulesId());
+        assertEquals(2, gameData.getDrawingStack().getCards().size());
+        assertEquals(Suit.HEARTS, gameData.getDrawingStack().getCards().get(0).getSuit());
+        assertEquals(Rank.ACE, gameData.getDrawingStack().getCards().get(0).getRank());
+        assertEquals(Suit.SPADES, gameData.getDrawingStack().getCards().get(1).getSuit());
+        assertEquals(Rank.QUEEN, gameData.getDrawingStack().getCards().get(1).getRank());
     }
 
     @Test
@@ -105,17 +112,17 @@ public class GameServiceTest {
     @Test
     public void testMakeGameMoveForRealPlayer() {
         //Arrange
-        RulesResultStandard rulesResultStandard = new RulesResultStandard(true,"test");
+        RulesResultStandard rulesResultStandard = new RulesResultStandard(true, "test");
         gameData.setRulesResult(rulesResultStandard);
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceStandardMock);
         expect(rulesServiceStandardMock.validatePlayerMove(anyObject(Card.class), anyObject(Card.class),
-                anyObject(RulesResult.class))).andReturn(new RulesResultStandard(true,"test2"));
+                anyObject(RulesResult.class))).andReturn(new RulesResultStandard(true, "test2"));
         replay(rulesServiceStandardMock);
         replay(rulesProviderMock);
         gameData.getPlayers().get(0).getHand().getCards().add(new Card(Suit.HEARTS, Rank.ACE));
         gameData.setOpenCard(new Card(Suit.DIAMONDS, Rank.EIGHT));
         //Act
-        RulesResult result = gameService.makeGameMoveForRealPlayer(0,gameData);
+        RulesResult result = gameService.makeGameMoveForRealPlayer(0, gameData);
         //Assert
         verify(rulesServiceStandardMock);
         verify(rulesProviderMock);
@@ -125,11 +132,11 @@ public class GameServiceTest {
 
     @Test
     public void testMakeGameMoveForVirtualPlayer() {
-        RulesResultStandard rulesResultStandard = new RulesResultStandard(true,"test");
+        RulesResultStandard rulesResultStandard = new RulesResultStandard(true, "test");
         gameData.setRulesResult(rulesResultStandard);
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceStandardMock);
         expect(rulesServiceStandardMock.validatePlayerMove(anyObject(Card.class), anyObject(Card.class),
-                anyObject(RulesResult.class))).andReturn(new RulesResultStandard(true,"test2"));
+                anyObject(RulesResult.class))).andReturn(new RulesResultStandard(true, "test2"));
         replay(rulesServiceStandardMock);
         replay(rulesProviderMock);
         gameData.getPlayers().get(0).getHand().getCards().add(new Card(Suit.HEARTS, Rank.ACE));
@@ -152,8 +159,8 @@ public class GameServiceTest {
         replay(rulesProviderMock);
         replay(rulesServiceStandardMock);
         //Act
-       PostAction postAction = gameService.getPostAction(new RulesResultStandard(false,""));
-       //Assert
+        PostAction postAction = gameService.getPostAction(new RulesResultStandard(false, ""));
+        //Assert
         verify(rulesProviderMock);
         assertEquals(PostAction.DRAWONE, postAction);
     }

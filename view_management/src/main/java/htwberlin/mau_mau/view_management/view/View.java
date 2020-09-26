@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  * https://github.com/olgapetrova-git/mau_mau/
@@ -68,10 +67,11 @@ public class View {
                     "- unless he can counter the attack with his own SEVEN. If SEVEN is played again,  \n" +
                     "next player must play SEVEN too or draw four cards. Press 'D' once to draw and you \n" +
                     "will be given a required number of cards. After that, the game continues as usual.\n" +
-                    "SORRY, UNDER CONSTRUCTION: \n" +
-                    "([NOT IMPLEMENTED YET]* An EIGHT means: skip a round, entering 'S' - unless you can counter \n" +
+
+                    "* An EIGHT means: skip a round, entering 'S' - unless you can counter \n" +
                     "the attack with your own eight and let the following player skip. This rule is no longer valid \n" +
                     "if anyone skips a round or if a second player counters with an eight.\n" +
+                    "SORRY, UNDER CONSTRUCTION: \n" +
                     "([NOT IMPLEMENTED YET]* A JACK is a wish card, it gives a player the right to wish a suit of card.\n" +
                     "The next player have to play with wished suit or take 2 cards. Moreover, JACK can be played \n" +
                     "on any card. But JACK on JACK is forbidden.)");
@@ -239,6 +239,15 @@ public class View {
     }
 
     /**
+     * Show that player skipped a round.
+     *
+     * @param name the player's name
+     */
+    public void showSkip(String name) {  //500
+                 System.out.println(name + " skipped this round. ");
+        }
+
+    /**
      * Requests a player's name from user.
      *
      * @return name string
@@ -272,7 +281,6 @@ public class View {
      * Request user to press enter.
      */
     public void requestEnter() {
-        scanner.nextLine();
         System.out.println("Press enter to finish.");
         scanner.nextLine();
     }
@@ -354,45 +362,49 @@ public class View {
      * @param max last card number in player's hand
      * @return int card position in player's hand or code for other operations
      */
-    public int requestPlayerMove(int min, int max) {
+    public int requestPlayerMove(int min, int max, boolean isEightPlayed) {
         boolean success = false;
         int num = 1;
         String move = "";
+        String specialMessage;
+        if (isEightPlayed){
+            specialMessage = "'S' - to skip the round, ";
+        } else {
+            specialMessage = "'D' - to draw a card, ";
+        }
         do {
             try {
-                System.out.println("\nEnter (" + min + "-" + max + ") to play a card, 'D' - to draw a card,"
-            + "'M' - to say 'Mau!', \n'MM' - to say 'Mau-Mau!', 'Q' - to quit the game.");
+                    System.out.println("\nEnter (" + min + "-" + max + ") to play a card, " + specialMessage +
+             "'M' - to say 'Mau!', \n'MM' - to say 'Mau-Mau!', 'Q' - to quit the game.");
                 //S - skip the round,
                 move = scanner.nextLine();
                 if (isNumeric(move)) {
                     num = Integer.parseInt(move);
                     if (!(num >= min && num <= max)) {
-                        throw new PlayerMoveException(move, min, max);
+                        throw new PlayerMoveDrawException(move, min, max);
                     }
                     success = true;
                 } else {
-                    switch (move.toLowerCase()) {
-                        case "d":
-                            num = 100;
-                            break;
-                        case "m":
-                            num = 200;
-                            break;
-                        case "mm":
-                            num = 300;
-                            break;
-                        case "q":
-                            num = 400;
-                            break;
-                        default:
-                            throw new PlayerMoveException(move, min, max);
-                    }
+                    if(move.equalsIgnoreCase("d") && !isEightPlayed) {
+                        num = 100;
+                    } else if(move.equalsIgnoreCase("m")) {
+                        num = 200;
+                    } else if(move.equalsIgnoreCase("mm")) {
+                        num = 300;
+                    } else if(move.equalsIgnoreCase("q")) {
+                        num = 400;
+                    } else if(move.equalsIgnoreCase("s") && isEightPlayed) {
+                        num = 500;
+                    } else if (isEightPlayed){
+                    throw new PlayerMoveSkipException(move, min, max);
+                    } else if (!isEightPlayed){
+                    throw new PlayerMoveDrawException(move, min, max);
+                }
                     success = true;
                 }
-            } catch (InputMismatchException | PlayerMoveException e) {
-                LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.toString()));
-                System.out.println("Incorrect input. Expected value between " + min + " and " + max
-                        + ", 'D', 'M', 'MM', or 'Q', but received " + move + ".");
+            } catch (PlayerMoveDrawException | PlayerMoveSkipException e) {
+                LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
+                System.out.printf(INCORRECT_INPUT + " %s%n", e.getMessage());
             } catch (Exception e) {
                 LOGGER.error(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
                 System.out.println(INCORRECT_INPUT);

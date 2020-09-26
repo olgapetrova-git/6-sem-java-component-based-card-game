@@ -12,6 +12,7 @@ import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
+import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
 import htwberlin.mau_mau.view_management.view.View;
 import org.apache.logging.log4j.LogManager;
@@ -131,11 +132,19 @@ public class ViewControllerImpl implements ViewController {
     boolean processRealPlayerMove(GameData gameData, Player player) {
         // Real Player Move
         boolean moveSuccess = false;
+        boolean isEightPlayed = false;
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug(String.format("*** PLAYING STACK SIZE: %s ", gameData.getPlayingStack().getCards().size()));
             LOGGER.debug(String.format("*** DRAWING STACK SIZE: %s ", gameData.getDrawingStack().getCards().size()));
         }
-        int move = view.requestPlayerMove(1, player.getHand().getCards().size());
+        if (gameData.getRulesResult() instanceof RulesResultSpecial) {
+            isEightPlayed = ((RulesResultSpecial) gameData.getRulesResult()).isEightPlayed();
+            if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(String.format("*** EIGHT STATUS BEFORE PLAYER MOVE: %s ",
+                    isEightPlayed));
+        }
+                }
+        int move = view.requestPlayerMove(1, player.getHand().getCards().size(), isEightPlayed);
 
         // try to play card
         if (move >= 1 && move <= player.getHand().getCards().size()) {
@@ -143,7 +152,7 @@ public class ViewControllerImpl implements ViewController {
             moveSuccess = playRealPlayerCard(gameData, player, move - 1, gameData.getOpenCard());
 
         } else if (move == 100) {
-            int numberOfPenaltyCards = countPenaltyCards(gameService.getPostAction(gameData.getRulesResult()));
+            int numberOfPenaltyCards = gameService.countPenaltyCards(gameService.getPostAction(gameData.getRulesResult()));
             givePenaltyCards(gameData, player, numberOfPenaltyCards, "You");
             moveSuccess = true;
 
@@ -164,8 +173,12 @@ public class ViewControllerImpl implements ViewController {
         } else if (move == 400) {
             gameData.setGameStatus(GameStatus.QUIT);
             moveSuccess = true;
+        } else if (move == 500){
+            gameService.getPostAction(gameData.getRulesResult());
+            view.showSkip("You");
+            moveSuccess = true;
         }
-        if (LOGGER.isDebugEnabled()) {
+            if (LOGGER.isDebugEnabled()) {
             LOGGER.debug((String.format("*** MOVE: %s", move)));
         }
         return moveSuccess;
@@ -242,10 +255,10 @@ public class ViewControllerImpl implements ViewController {
             view.showPlayedCard(true, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
         } else {
             PostAction postAction = gameService.getPostAction(gameData.getRulesResult());
-            if(postAction == PostAction.SKIP){
-                // view showSkipForVirtualPlayer();
+            if (postAction == PostAction.SKIP) {
+                view.showSkip(player.getName());
             } else {
-                int numberOfPenaltyCards = countPenaltyCards(postAction);
+                int numberOfPenaltyCards = gameService.countPenaltyCards(postAction);
                 givePenaltyCards(gameData, player, numberOfPenaltyCards, player.getName());
             }
         }
@@ -255,17 +268,4 @@ public class ViewControllerImpl implements ViewController {
 
         return true;
     }
- private int countPenaltyCards(PostAction postAction){
-        int numberOfPenaltyCards;
-        switch(postAction){
-            case DRAWONE: numberOfPenaltyCards = 1;
-            break;
-            case DRAWTWO: numberOfPenaltyCards = 2;
-            break;
-            case DRAWFOUR: numberOfPenaltyCards = 4;
-            break;
-            default: numberOfPenaltyCards = 0;
-        }
-        return numberOfPenaltyCards;
- }
 }

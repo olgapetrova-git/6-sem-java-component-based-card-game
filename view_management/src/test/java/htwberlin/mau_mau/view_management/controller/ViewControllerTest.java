@@ -51,7 +51,7 @@ public class ViewControllerTest {
         ArrayList<Player> players = new ArrayList<>();
         players.add(new RealPlayer("test"));
         expect(viewMock.requestGameRules()).andReturn(GameRulesId.STANDARD);
-        expect(viewMock.requestPlayerMove(anyInt(), anyInt())).andReturn(400);
+        expect(viewMock.requestPlayerMove(anyInt(), anyInt(), anyBoolean())).andReturn(400);
         expect(gameServiceMock.setupNewGame(anyString(), anyInt(), anyObject(GameRulesId.class)))
                 .andReturn(new GameData(new Deck(), new Deck(), players, GameRulesId.STANDARD));
         replay(viewMock);

@@ -60,6 +60,14 @@ public interface GameService {
     PostAction getPostAction(RulesResult rulesResult);
 
     /**
+     * Count the number of penalty cards.
+     *
+     * @param postAction the post action gives information in case the move can't be made.
+     * @return the int
+     */
+    int countPenaltyCards(PostAction postAction);
+
+    /**
      * Saves gameData object to persistent storage.
      * @param gameData
      */
