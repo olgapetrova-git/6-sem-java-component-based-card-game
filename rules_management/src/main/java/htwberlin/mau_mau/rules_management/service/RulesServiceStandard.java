@@ -59,7 +59,7 @@ public class RulesServiceStandard implements RulesService {
     }
 
     @Override
-    public Player defineCurrentPlayer(RulesResult rulesResult, ArrayList<Player> players) {
+    public Player defineNextPlayer(RulesResult rulesResult, ArrayList<Player> players) {
         int oldCurrentPlayerIndex = rulesResult.getCurrentPlayerIndex();
 
         int newCurrentPlayerIndex = oldCurrentPlayerIndex + rulesResult.getDirection();

@@ -52,7 +52,6 @@ public class ViewControllerImpl implements ViewController {
         gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
         gameData.setRulesResult(rulesProvider.getRulesService().setUpRules(gameData.getOpenCard()));
-        //gameData.getRulesResult().setCurrentPlayerIndex(gameData.getPlayers().size()-1);
         view.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
         processMainFlow(gameData);
         view.requestEnter();
@@ -67,12 +66,6 @@ public class ViewControllerImpl implements ViewController {
     private void processMainFlow(GameData gameData) {
         do {
             Player player = gameData.getCurrentPlayer();
-            /*
-            Player player = rulesProvider.getRulesService().defineCurrentPlayer(
-                    gameData.getRulesResult(), gameData.getPlayers());
-
-            gameData.setCurrentPlayer(player);
-             */
             boolean success;
 
             if (player instanceof RealPlayer) {
@@ -85,8 +78,8 @@ public class ViewControllerImpl implements ViewController {
                 success = processMove(gameData, player);
             } while (!success);
 
-            if(gameData.getGameStatus() == GameStatus.NORMAL) {
-                gameData.setCurrentPlayer(rulesProvider.getRulesService().defineCurrentPlayer(
+            if (gameData.getGameStatus() == GameStatus.NORMAL) {
+                gameData.setCurrentPlayer(rulesProvider.getRulesService().defineNextPlayer(
                         gameData.getRulesResult(), gameData.getPlayers()));
             }
 
@@ -102,9 +95,7 @@ public class ViewControllerImpl implements ViewController {
                 LOGGER.debug(String.format("*** %s  HAS WON! ***", gameData.getCurrentPlayer().getName()));
             }
         } else if (gameData.getGameStatus() == GameStatus.QUIT) {
-            if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("*** QUIT ***");
-            }
+            LOGGER.debug("*** QUIT ***");
             view.showQuit(gameData.getPlayers().get(0).getName());
             //Press enter to continue
             // quit
@@ -128,29 +119,6 @@ public class ViewControllerImpl implements ViewController {
             moveSuccess = processVirtualPlayerMove(gameData, player);
         }
         return moveSuccess;
-    }
-
-    private void doOneRound(GameData gameData) {
-        view.showTable(gameData.getPlayers().get(0).getHand(), gameData.getOpenCard(), gameData.getPlayers());
-
-        for (Player player : gameData.getPlayers()) {
-            boolean success;
-
-            if (player instanceof RealPlayer) {
-                ((RealPlayer) player).setSaidMau(false);
-                ((RealPlayer) player).setSaidMauMau(false);
-            }
-
-            gameData.setCurrentPlayer(player);
-            do {
-                success = processMove(gameData, player);
-                // success = true if card is played, or player drew a card, or quit
-                // success = false if incorrect card is played or mau is said - card has to be played yet
-            } while (!success);
-            if (gameData.getGameStatus() != GameStatus.NORMAL) { // NORMAL, WIN, QUIT
-                break;
-            }
-        }
     }
 
     boolean processRealPlayerMove(GameData gameData, Player player) {
@@ -181,19 +149,9 @@ public class ViewControllerImpl implements ViewController {
             moveSuccess = true;
 
         } else if (move == 200) {
-            if (player.getHand().getCards().size() > 2) {
-                view.showIncorrectMau();
-            } else {
-                view.showMau("You");
-            }
-            ((RealPlayer) player).setSaidMau(true);
+            processRealPlayerMau(player);
         } else if (move == 300) {
-            if (player.getHand().getCards().size() > 1) {
-                view.showIncorrectMauMau();
-            } else {
-                view.showMauMau("You");
-            }
-            ((RealPlayer) player).setSaidMauMau(true);
+            processRealPlayerMauMau(player);
         } else if (move == 400) {
             gameData.setGameStatus(GameStatus.QUIT);
             moveSuccess = true;
@@ -206,6 +164,24 @@ public class ViewControllerImpl implements ViewController {
             LOGGER.debug((String.format("*** MOVE: %s", move)));
         }
         return moveSuccess;
+    }
+
+    private void processRealPlayerMau(Player player) {
+        if (player.getHand().getCards().size() > 2) {
+            view.showIncorrectMau();
+        } else {
+            view.showMau("You");
+        }
+        ((RealPlayer) player).setSaidMau(true);
+    }
+
+    private void processRealPlayerMauMau(Player player) {
+        if (player.getHand().getCards().size() > 1) {
+            view.showIncorrectMauMau();
+        } else {
+            view.showMauMau("You");
+        }
+        ((RealPlayer) player).setSaidMauMau(true);
     }
 
     private boolean playRealPlayerCard(GameData gameData, Player player, int cardNumber, Card oldOpenCard) {
@@ -230,11 +206,9 @@ public class ViewControllerImpl implements ViewController {
             } else if (player.getHand().getCards().isEmpty()) {
                 gameData.setGameStatus(GameStatus.WIN);
             }
-            if(rulesResult instanceof RulesResultSpecial) {
-                if(((RulesResultSpecial)rulesResult).isJackPlayed()) {
-                    ((RulesResultSpecial)rulesResult).setWish(view.requestWish());
-                    view.showWish("You", ((RulesResultSpecial)rulesResult).getWish());
-                }
+            if (rulesResult instanceof RulesResultSpecial && ((RulesResultSpecial) rulesResult).isJackPlayed()) {
+                ((RulesResultSpecial) rulesResult).setWish(view.requestWish());
+                view.showWish("You", ((RulesResultSpecial) rulesResult).getWish());
             }
 
         } else {
@@ -262,9 +236,6 @@ public class ViewControllerImpl implements ViewController {
 
     boolean processVirtualPlayerMove(GameData gameData, Player player) {
         Card oldOpenCard = gameData.getOpenCard();
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug((String.format("*** %s MAKES HIS MOVE", player.getName())));
-        }
         view.showVirtualPlayerTurn(player.getName());
         RulesResult rulesResult = gameService.makeGameMoveForVirtualPlayer(gameData.getOpenCard(), player.getHand(),
                 gameData);
@@ -284,12 +255,10 @@ public class ViewControllerImpl implements ViewController {
             }
             view.showPlayedCard(true, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
 
-            if(rulesResult instanceof RulesResultSpecial) {
-                if(((RulesResultSpecial)rulesResult).isJackPlayed()){
-                    Suit wish = ((VirtualPlayer)player).getWish();
-                    ((RulesResultSpecial) rulesResult).setWish(wish);
-                    view.showWish(player.getName(), wish);
-                }
+            if (rulesResult instanceof RulesResultSpecial && ((RulesResultSpecial) rulesResult).isJackPlayed()) {
+                Suit wish = ((VirtualPlayer) player).getWish();
+                ((RulesResultSpecial) rulesResult).setWish(wish);
+                view.showWish(player.getName(), wish);
             }
         } else {
             PostAction postAction = gameService.getPostAction(gameData.getRulesResult());

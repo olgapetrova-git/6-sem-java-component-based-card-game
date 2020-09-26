@@ -201,7 +201,7 @@ public class RulesServiceSpecial implements RulesService {
     }
 
     @Override
-    public Player defineCurrentPlayer(RulesResult rulesResult, ArrayList<Player> players) {
+    public Player defineNextPlayer(RulesResult rulesResult, ArrayList<Player> players) {
         int oldCurrentPlayerIndex = rulesResult.getCurrentPlayerIndex();
 
         if(((RulesResultSpecial)rulesResult).isNinePlayed()){

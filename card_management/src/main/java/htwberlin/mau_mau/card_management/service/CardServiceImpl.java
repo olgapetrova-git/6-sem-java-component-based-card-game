@@ -15,15 +15,6 @@ import java.util.EmptyStackException;
 @Component
 public class CardServiceImpl implements CardService {
 
-    /**
-     * Fixed number of cards in the deck (french).
-     */
-    private static final int NUMBER_OF_CARDS_IN_DECK = 32;
-
-
-//rename createDrawingDeck
-    //make a method moveCard() Moves one Card from Deck to Deck, not specified.
-
     @Override
     public Deck createDrawingStack() {
         Deck drawingDeck = new Deck();

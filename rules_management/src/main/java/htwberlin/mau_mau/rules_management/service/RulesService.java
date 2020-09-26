@@ -39,5 +39,5 @@ public interface RulesService {
 	 */
 	RulesResult setUpRules(Card openCard);
 
-	Player defineCurrentPlayer (RulesResult rulesResult, ArrayList<Player> players);
+	Player defineNextPlayer(RulesResult rulesResult, ArrayList<Player> players);
 }

@@ -322,7 +322,6 @@ public class View {
                     if (num < min || num > max) {
                         throw new NumberOutOfLimitsException(num, min, max);
                     }
-                    success = true;
                 } else {
                     throw new NotANumberException(input, min, max);
                 }
@@ -360,12 +359,14 @@ public class View {
         return gameRulesId;
     }
 
+
     /**
      * Request player move, returns card position in player's hand or code for other operations -
      * draw card, say mau, etc.
      *
-     * @param min first card number in player's hand
-     * @param max last card number in player's hand
+     * @param min           first card number in player's hand
+     * @param max           last card number in player's hand
+     * @param isEightPlayed true if 'eight' rule is enabled
      * @return int card position in player's hand or code for other operations
      */
     public int requestPlayerMove(int min, int max, boolean isEightPlayed) {
@@ -391,21 +392,7 @@ public class View {
                     }
                     success = true;
                 } else {
-                    if (move.equalsIgnoreCase("d") && !isEightPlayed) {
-                        num = 100;
-                    } else if (move.equalsIgnoreCase("m")) {
-                        num = 200;
-                    } else if (move.equalsIgnoreCase("mm")) {
-                        num = 300;
-                    } else if (move.equalsIgnoreCase("q")) {
-                        num = 400;
-                    } else if (move.equalsIgnoreCase("s") && isEightPlayed) {
-                        num = 500;
-                    } else if (isEightPlayed) {
-                        throw new PlayerMoveSkipException(move, min, max);
-                    } else if (!isEightPlayed) {
-                        throw new PlayerMoveDrawException(move, min, max);
-                    }
+                    num = parsePlayerMoveInput(move, isEightPlayed, min, max);
                     success = true;
                 }
             } catch (PlayerMoveDrawException | PlayerMoveSkipException e) {
@@ -417,6 +404,29 @@ public class View {
             }
         }
         while (!success);
+
+        return num;
+    }
+
+    private int parsePlayerMoveInput(String move, boolean isEightPlayed, int min, int max)
+    throws PlayerMoveSkipException, PlayerMoveDrawException {
+        int num = 0;
+
+        if (move.equalsIgnoreCase("d") && !isEightPlayed) {
+            num = 100;
+        } else if (move.equalsIgnoreCase("m")) {
+            num = 200;
+        } else if (move.equalsIgnoreCase("mm")) {
+            num = 300;
+        } else if (move.equalsIgnoreCase("q")) {
+            num = 400;
+        } else if (move.equalsIgnoreCase("s") && isEightPlayed) {
+            num = 500;
+        } else if (isEightPlayed) {
+            throw new PlayerMoveSkipException(move, min, max);
+        } else {
+            throw new PlayerMoveDrawException(move, min, max);
+        }
 
         return num;
     }
