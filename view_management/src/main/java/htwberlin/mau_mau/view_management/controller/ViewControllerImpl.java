@@ -16,6 +16,7 @@ import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
 import htwberlin.mau_mau.view_management.view.View;
+import htwberlin.mau_mau.virtual_player_management.data.ArgumentOutOfBoundsException;
 import htwberlin.mau_mau.virtual_player_management.data.VirtualPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -256,9 +257,13 @@ public class ViewControllerImpl implements ViewController {
             view.showPlayedCard(true, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
 
             if (rulesResult instanceof RulesResultSpecial && ((RulesResultSpecial) rulesResult).isJackPlayed()) {
-                Suit wish = ((VirtualPlayer) player).getWish();
-                ((RulesResultSpecial) rulesResult).setWish(wish);
-                view.showWish(player.getName(), wish);
+                try{
+                    Suit wish = ((VirtualPlayer) player).getWish();
+                    ((RulesResultSpecial) rulesResult).setWish(wish);
+                    view.showWish(player.getName(), wish);
+                } catch (ArgumentOutOfBoundsException e) {
+                    LOGGER.error(e.getMessage());
+                }
             }
         } else {
             PostAction postAction = gameService.getPostAction(gameData.getRulesResult());

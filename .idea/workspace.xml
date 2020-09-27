@@ -23,22 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CLass.ucls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class Diagram Mau Mau.ucls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/ArgumentOutOfBoundsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mau-Mau Class Diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/test/java/htwberlin/mau_mau/view_management/controller/ViewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/test/java/htwberlin/mau_mau/view_management/controller/ViewControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +128,7 @@
       <recent name="C:\Users\olgap\OneDrive\6. Semester\KBE\mau_mau\configuration_management\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApplicationRunner">
+  <component name="RunManager" selected="JUnit.ViewControllerTest">
     <configuration name="ApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.configuration_management.runner.ApplicationRunner" />
       <module name="configuration_management" />
@@ -151,21 +151,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameServiceJpaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="game_management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwberlin.mau_mau.game_management.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.game_management.service" />
-      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.game_management.service.GameServiceJpaTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,6 +197,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="htwberlin.mau_mau.rules_management.service" />
       <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.rules_management.service.RulesServiceSpecialTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="view_management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwberlin.mau_mau.view_management.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.view_management.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.view_management.controller.ViewControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -641,8 +641,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.ApplicationRunner" />
-      <item itemvalue="JUnit.GameServiceJpaTest" />
       <item itemvalue="JUnit.RulesServiceSpecialTest" />
+      <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
+      <item itemvalue="JUnit.GameServiceTest.testSetupNewGame" />
       <item itemvalue="Maven.dependency:analyze rules_management" />
       <item itemvalue="Maven.dependency:analyze view_management" />
       <item itemvalue="Maven.dependency:analyze virtual_player_management" />
@@ -659,16 +660,15 @@
       <item itemvalue="Maven.rules_management [clean install]" />
       <item itemvalue="Maven.game_management [clean install]" />
       <item itemvalue="Maven.view_management [clean install]" />
-      <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
-      <item itemvalue="JUnit.GameServiceTest.testSetupNewGame" />
+      <item itemvalue="JUnit.ViewControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ViewControllerTest" />
         <item itemvalue="Application.ApplicationRunner" />
         <item itemvalue="JUnit.GameServiceTest.testSetupNewGame" />
         <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
         <item itemvalue="JUnit.RulesServiceSpecialTest" />
-        <item itemvalue="JUnit.GameServiceJpaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -719,10 +719,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="406" y="282" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1500.960@0.0.1500.960" timestamp="1598700265737" />
-    <state x="1033" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1601147477810">
+    <state x="1033" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1601227657958">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="1033" y="232" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1601147477810" />
+    <state x="1033" y="232" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1601227657958" />
     <state x="431" y="216" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600772181650">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -748,38 +748,38 @@
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1600941398830" />
     <state x="1132" y="362" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600907426797" />
-    <state width="1458" height="749" key="GridCell.Tab.0.bottom" timestamp="1601163402815">
+    <state width="1458" height="316" key="GridCell.Tab.0.bottom" timestamp="1601228258746">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="749" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601163402815" />
-    <state width="1458" height="749" key="GridCell.Tab.0.center" timestamp="1601163402815">
+    <state width="1458" height="316" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601228258746" />
+    <state width="1458" height="316" key="GridCell.Tab.0.center" timestamp="1601228258746">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="749" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1601163402815" />
-    <state width="1458" height="749" key="GridCell.Tab.0.left" timestamp="1601163402815">
+    <state width="1458" height="316" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1601228258746" />
+    <state width="1458" height="316" key="GridCell.Tab.0.left" timestamp="1601228258746">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="749" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1601163402815" />
-    <state width="1458" height="749" key="GridCell.Tab.0.right" timestamp="1601163402815">
+    <state width="1458" height="316" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1601228258746" />
+    <state width="1458" height="316" key="GridCell.Tab.0.right" timestamp="1601228258746">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="749" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1601163402815" />
-    <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1601156104075">
+    <state width="1458" height="316" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1601228258746" />
+    <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1601228258747">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601156104075" />
-    <state width="1458" height="316" key="GridCell.Tab.1.center" timestamp="1601156104075">
+    <state width="1458" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601228258747" />
+    <state width="1458" height="316" key="GridCell.Tab.1.center" timestamp="1601228258747">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1601156104075" />
-    <state width="1458" height="316" key="GridCell.Tab.1.left" timestamp="1601156104075">
+    <state width="1458" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1601228258747" />
+    <state width="1458" height="316" key="GridCell.Tab.1.left" timestamp="1601228258747">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1601156104075" />
-    <state width="1458" height="316" key="GridCell.Tab.1.right" timestamp="1601156104075">
+    <state width="1458" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1601228258747" />
+    <state width="1458" height="316" key="GridCell.Tab.1.right" timestamp="1601228258747">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1601156104075" />
+    <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1601228258747" />
     <state x="281" y="135" key="Maven.ArtifactSearchDialog" timestamp="1598219688230">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -817,8 +817,18 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="htwberlin.mau_mau.card_management.data.Deck" memberName="cards" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="gameData" />

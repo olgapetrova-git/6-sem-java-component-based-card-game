@@ -17,7 +17,12 @@ public class VirtualPlayer extends Player {
         super(name);
     }
 
-    public Suit getWish() {
-        return hand.getCards().get(0).getSuit();
+    public Suit getWish() throws ArgumentOutOfBoundsException {
+        try{
+            return hand.getCards().peek().getSuit();
+        } catch (Exception e){
+            throw new ArgumentOutOfBoundsException();
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 package htwberlin.mau_mau.view_management.controller;
 
+import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
 import htwberlin.mau_mau.card_management.service.CardService;
 import htwberlin.mau_mau.game_management.data.GameData;
@@ -7,12 +8,11 @@ import htwberlin.mau_mau.game_management.service.GameService;
 import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import htwberlin.mau_mau.rules_management.data.GameRulesId;
+import htwberlin.mau_mau.rules_management.data.RulesResultSpecial;
 import htwberlin.mau_mau.rules_management.service.RulesProvider;
+import htwberlin.mau_mau.rules_management.service.RulesService;
 import htwberlin.mau_mau.view_management.view.View;
-import org.easymock.EasyMockRunner;
-import org.easymock.Mock;
-import org.easymock.MockType;
-import org.easymock.TestSubject;
+import org.easymock.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,6 +41,9 @@ public class ViewControllerTest {
     @Mock(MockType.NICE)
     private CardService cardServiceMock;
 
+    @Mock(MockType.NICE)
+    private RulesService rulesServiceMock;
+
     @Before
     public void setUp(){
     }
@@ -50,13 +53,20 @@ public class ViewControllerTest {
         //Arrange
         ArrayList<Player> players = new ArrayList<>();
         players.add(new RealPlayer("test"));
+        GameData gameData = new GameData(new Deck(), new Deck(), players, GameRulesId.STANDARD);
+        gameData.setCurrentPlayer(players.get(0));
+        expect(viewMock.requestNumberOfVirtualPlayers()).andReturn(0);
         expect(viewMock.requestGameRules()).andReturn(GameRulesId.STANDARD);
         expect(viewMock.requestPlayerMove(anyInt(), anyInt(), anyBoolean())).andReturn(400);
         expect(gameServiceMock.setupNewGame(anyString(), anyInt(), anyObject(GameRulesId.class)))
-                .andReturn(new GameData(new Deck(), new Deck(), players, GameRulesId.STANDARD));
+                .andReturn(gameData);
+        expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceMock);
+        expect(rulesServiceMock.setUpRules(EasyMock.<Card>anyObject())).andReturn(new RulesResultSpecial(false, ""));
         replay(viewMock);
         replay(gameServiceMock);
         replay(cardServiceMock);
+        replay(rulesProviderMock);
+        replay(rulesServiceMock);
         //Act
         viewController.run();
         //Assert

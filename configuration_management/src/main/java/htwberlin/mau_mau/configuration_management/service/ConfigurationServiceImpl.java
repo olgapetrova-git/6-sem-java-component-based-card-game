@@ -16,10 +16,10 @@ public class ConfigurationServiceImpl implements ConfigurationService {
     public ConfigurableApplicationContext context(){
         return new AnnotationConfigApplicationContext("htwberlin"); //type of Context (DI container)
     }
-/*    @Bean(name = "entityManager")
+    @Bean(name = "entityManager")
     private static EntityManager createEntityManager() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mau_mau");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         return entityManager;
-    }*/
+    }
 }
