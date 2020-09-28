@@ -2,18 +2,14 @@ package htwberlin.mau_mau.game_management.data;
 
 import htwberlin.mau_mau.card_management.data.Card;
 import htwberlin.mau_mau.card_management.data.Deck;
-import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.player_management.data.Player;
+import htwberlin.mau_mau.rules_management.data.GameRulesId;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
-
-import static javax.persistence.GenerationType.AUTO;
+import java.util.List;
 
 /**
  * The type Game data describes current game state via game entities.
@@ -26,50 +22,57 @@ public class GameData {
      * Unique identifier.
      */
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy=AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     /**
      * An object of the drawing stack of cards. Represents a not yet dealt portion of the deck of cards, face down, which are
      * left over after setting up the game and will be used in the rest of the game.
      */
+    @OneToOne(targetEntity = Deck.class, cascade = CascadeType.ALL)
     private Deck drawingStack;
 
     /**
      * An object that represents the playing stack, i.e. the pack of playing cards, which were already played by players
      * and put face up on top of each other.
      */
+    @OneToOne(targetEntity = Deck.class, cascade = CascadeType.ALL)
     private Deck playingStack;
 
     /**
      * List of players
      */
-    private ArrayList<Player> players;
+    @OneToMany (cascade = CascadeType.ALL)
+    private List<Player> players;
 
     /**
      * Current player
      */
+    @OneToOne(targetEntity = Player.class, cascade = CascadeType.ALL)
     private Player currentPlayer;
 
     /**
      * Game Rules Id
      */
+    @Enumerated(EnumType.STRING)
     private GameRulesId gameRulesId;
 
     /**
      * Current open card on the top of the playing stack
      */
+    @OneToOne(targetEntity = Card.class, cascade = CascadeType.ALL)
     private Card openCard;
 
     /**
      * Status of current game
      */
+    @Enumerated(EnumType.STRING)
     private GameStatus gameStatus;
 
     /**
      * Result and status of last rules validation
      */
+    @OneToOne(targetEntity = RulesResult.class, cascade = CascadeType.ALL)
     private RulesResult rulesResult;
 
     /**
@@ -142,7 +145,7 @@ public class GameData {
      *
      * @return the players
      */
-    public ArrayList<Player> getPlayers() {
+    public List<Player> getPlayers() {
         return players;
     }
 

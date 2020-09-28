@@ -1,22 +1,32 @@
 package htwberlin.mau_mau.card_management.data;
 
-import java.util.Stack;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * The type Deck.
  * Describes deck of cards used for drawing deck, playing deck and players' hands.
  */
-public class Deck {
+@Entity
+public class Deck implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
     /**
      * Collection of type Stack representing a deck of cards.
      */
-    private Stack<Card> cards;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Card> cards;
 
     /**
      * Instantiates a new Deck.
      */
     public Deck() {
-        cards = new Stack<Card>();
+        cards = new LinkedList<>();
     }
 
     /**
@@ -24,7 +34,19 @@ public class Deck {
      *
      * @return the cards
      */
-    public Stack<Card> getCards() {
+    public List<Card> getCards() {
         return cards;
+    }
+
+    public Card pop(){
+        return cards.remove(cards.size()-1);
+    }
+
+    public void push(Card card){
+        cards.add(card);
+    }
+
+    public Card peek() {
+        return cards.get(cards.size()-1);
     }
 }

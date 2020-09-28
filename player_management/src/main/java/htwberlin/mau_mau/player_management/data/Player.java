@@ -2,11 +2,21 @@ package htwberlin.mau_mau.player_management.data;
 
 import htwberlin.mau_mau.card_management.data.Deck;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * The type Player.
  * Describes virtual or real player which takes part in the card game.
  */
-public abstract class Player {
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Player implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
     /**
      * Name of the Player.
      */
@@ -14,7 +24,10 @@ public abstract class Player {
     /**
      * The pack of cards held by this player.
      */
+    @OneToOne(targetEntity = Deck.class, cascade = CascadeType.ALL)
     protected Deck hand;
+
+    public Player(){}
 
     /**
      * Instantiates a new Player.

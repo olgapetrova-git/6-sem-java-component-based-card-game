@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 /**
  * https://github.com/olgapetrova-git/mau_mau/
@@ -88,7 +88,7 @@ public class View {
      * @param openCard the open card on the top of the playing stack
      * @param players  the players
      */
-    public void showTable(Deck hand, Card openCard, ArrayList<Player> players) {
+    public void showTable(Deck hand, Card openCard, List<Player> players) {
         System.out.println("\nPlayers' cards: ");
         for (int i = 1; i < players.size(); i++) {
 

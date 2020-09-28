@@ -21,6 +21,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
 
 /**
@@ -30,8 +31,8 @@ import java.util.ArrayList;
 public class GameServiceImpl implements GameService {
 
     private static final Logger LOGGER = LogManager.getLogger(GameServiceImpl.class);
-/*    @Autowired
-    private EntityManager entityManager;*/
+    @Autowired
+    private EntityManager entityManager;
 
     @Autowired
     private RealPlayerService realPlayerService;
@@ -159,10 +160,12 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public void saveToDB(GameData gameData) {
-/*        entityManager.getTransaction().begin();
+        if (LOGGER.isDebugEnabled()) { LOGGER.debug("SAVETODB START"); }
+        entityManager.getTransaction().begin();
+        if (LOGGER.isDebugEnabled()) { LOGGER.debug("PERSIST START"); }
         entityManager.persist(gameData);
+        if (LOGGER.isDebugEnabled()) { LOGGER.debug("COMMIT START"); }
         entityManager.getTransaction().commit();
-        entityManager.clear();
-        entityManager.close();*/
+        if (LOGGER.isDebugEnabled()) { LOGGER.debug("COMMIT FINISH"); }
     }
 }

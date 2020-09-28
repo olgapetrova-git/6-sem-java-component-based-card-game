@@ -5,7 +5,7 @@ import htwberlin.mau_mau.player_management.data.Player;
 import htwberlin.mau_mau.rules_management.data.PostAction;
 import htwberlin.mau_mau.rules_management.data.RulesResult;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The interface RulesService provides operations to check game conditions according to the set of rules.
@@ -39,5 +39,5 @@ public interface RulesService {
 	 */
 	RulesResult setUpRules(Card openCard);
 
-	Player defineNextPlayer(RulesResult rulesResult, ArrayList<Player> players);
+	Player defineNextPlayer(RulesResult rulesResult, List<Player> players);
 }

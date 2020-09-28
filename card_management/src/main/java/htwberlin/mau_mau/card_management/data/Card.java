@@ -1,10 +1,22 @@
 package htwberlin.mau_mau.card_management.data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
+
 /**
  * The type Card.
  * Describes playing card.
  */
-public class Card {
+@Entity
+public class Card implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
     /**
      * Suit of the card, the symbol on the card.
      */
@@ -13,6 +25,11 @@ public class Card {
      * Rank of the card, the value of the card.
      */
     private final Rank rank;
+
+    public Card() {
+        suit = Suit.HEARTS;
+        rank = Rank.ACE;
+    }
 
     /**
      * Instantiates a new playing card.

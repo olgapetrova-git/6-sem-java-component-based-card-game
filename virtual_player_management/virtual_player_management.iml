@@ -20,5 +20,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.1.1.RELEASE" level="project" />
     <orderEntry type="module" module-name="player_management" />
     <orderEntry type="module" module-name="card_management" />
+    <orderEntry type="library" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />
   </component>
 </module>

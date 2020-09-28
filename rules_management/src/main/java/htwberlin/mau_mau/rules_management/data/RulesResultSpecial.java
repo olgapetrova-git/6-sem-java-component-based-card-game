@@ -2,6 +2,9 @@ package htwberlin.mau_mau.rules_management.data;
 
 import htwberlin.mau_mau.card_management.data.Suit;
 
+import javax.persistence.Entity;
+
+@Entity
 public class RulesResultSpecial extends RulesResult {
 
     private boolean sevenPlayed;

@@ -5,13 +5,18 @@
              version="2.1">
     <persistence-unit name="mau_mau">
         <class>htwberlin.mau_mau.game_management.data.GameData</class>
+        <class>htwberlin.mau_mau.player_management.data.Player</class>
+        <class>htwberlin.mau_mau.card_management.data.Deck</class>
+        <class>htwberlin.mau_mau.card_management.data.Card</class>
+        <class>htwberlin.mau_mau.rules_management.data.RulesResult</class>
 
         <properties>
             <!-- Database configuration -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:"/>
-            <property name="javax.persistence.jdbc.user" value="user"/>
-            <property name="javax.persistence.jdbc.password" value="password"/>
+            <!-- property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:"/-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/test;init=drop all objects"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 
             <!-- Schema configuration -->
             <property name="javax.persistence.schema-generation.database.action" value="create"/>

@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Component
@@ -59,7 +59,7 @@ public class RulesServiceStandard implements RulesService {
     }
 
     @Override
-    public Player defineNextPlayer(RulesResult rulesResult, ArrayList<Player> players) {
+    public Player defineNextPlayer(RulesResult rulesResult, List<Player> players) {
         int oldCurrentPlayerIndex = rulesResult.getCurrentPlayerIndex();
 
         int newCurrentPlayerIndex = oldCurrentPlayerIndex + rulesResult.getDirection();

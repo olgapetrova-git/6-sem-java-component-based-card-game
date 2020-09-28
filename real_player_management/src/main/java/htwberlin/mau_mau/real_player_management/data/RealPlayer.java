@@ -2,10 +2,13 @@ package htwberlin.mau_mau.real_player_management.data;
 
 import htwberlin.mau_mau.player_management.data.Player;
 
+import javax.persistence.Entity;
+
 /**
  * The type Real player.
  * Describes a real player, operated by human.
  */
+@Entity
 public class RealPlayer extends Player {
     /**
      * Flag if Player has pressed button "Mau"

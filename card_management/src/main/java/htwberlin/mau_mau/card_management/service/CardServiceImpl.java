@@ -31,7 +31,7 @@ public class CardServiceImpl implements CardService {
             throws EmptyDrawingStackException, EmptyPlayingStackException {
         Deck playingStack = new Deck();
         try {
-            playingStack.getCards().add(drawingStack.getCards().pop());
+            playingStack.getCards().add(drawingStack.pop());
         } catch (EmptyStackException ex) {
             throw new EmptyDrawingStackException();
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -45,7 +45,7 @@ public class CardServiceImpl implements CardService {
     public void playCard(Deck hand, int cardPosition, Deck playingStack) throws IncorrectCardPositionException {
         try{
             Card card = hand.getCards().get(cardPosition);
-            playingStack.getCards().push(card);
+            playingStack.push(card);
             hand.getCards().remove(cardPosition);}
         catch (ArrayIndexOutOfBoundsException e){
             throw new IncorrectCardPositionException();
@@ -56,7 +56,7 @@ public class CardServiceImpl implements CardService {
     public Card drawCard(Deck drawingStack, Deck playingStack, Deck hand)
             throws EmptyDrawingStackException, EmptyPlayingStackException {
         try {
-            Card card = drawingStack.getCards().pop();
+            Card card = drawingStack.pop();
             hand.getCards().add(card);
             if (drawingStack.getCards().isEmpty()) {
                 do {
@@ -80,7 +80,7 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public Card getOpenCard(Deck playingStack) {
-        return playingStack.getCards().peek();
+        return playingStack.peek();
     }
 
     @Override

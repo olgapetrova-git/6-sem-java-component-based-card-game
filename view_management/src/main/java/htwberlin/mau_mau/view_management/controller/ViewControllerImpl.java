@@ -23,6 +23,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import javax.persistence.EntityManager;
+
 /**
  * The type View controller.
  */
@@ -42,6 +44,9 @@ public class ViewControllerImpl implements ViewController {
     @Autowired
     private CardService cardService;
 
+    @Autowired
+    private EntityManager entityManager;
+
     @Override
     public void run() {
         view.showStartGreeting();
@@ -49,14 +54,18 @@ public class ViewControllerImpl implements ViewController {
         String name = view.requestPlayerName();
         int numberOfVirtualPlayers = view.requestNumberOfVirtualPlayers();
         GameRulesId gameRulesId = view.requestGameRules();
+
         GameData gameData = gameService.setupNewGame(name, numberOfVirtualPlayers, gameRulesId);
-        gameService.saveToDB(gameData);
         rulesProvider.chooseRules(gameData.getGameRulesId());
         gameData.setRulesResult(rulesProvider.getRulesService().setUpRules(gameData.getOpenCard()));
         view.showNewGameGreeting(name, numberOfVirtualPlayers, gameRulesId);
+        gameService.saveToDB(gameData);
         processMainFlow(gameData);
         view.requestEnter();
         view.close();
+
+        entityManager.clear();
+        entityManager.close();
     }
 
     /**
@@ -101,6 +110,7 @@ public class ViewControllerImpl implements ViewController {
             //Press enter to continue
             // quit
         }
+
     }
 
     /**
