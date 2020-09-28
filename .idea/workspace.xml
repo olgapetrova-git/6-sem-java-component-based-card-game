@@ -24,43 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/card_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/card_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/data/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/data/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/data/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/data/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/configuration_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/configuration_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/target/classes/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/classes/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_management/game_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/game_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/data/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/data/GameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_management/src/test/java/htwberlin/mau_mau/game_management/service/GameServiceJpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/test/java/htwberlin/mau_mau/game_management/service/GameServiceJpaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_management/player_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/player_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_management/src/main/java/htwberlin/mau_mau/player_management/data/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/src/main/java/htwberlin/mau_mau/player_management/data/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/real_player_management/real_player_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/real_player_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/data/RealPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/data/RealPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/rules_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/rules_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultStandard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_management/view_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/view_management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual_player_management/virtual_player_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/virtual_player_management.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -774,22 +738,22 @@
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1600941398830" />
     <state x="1132" y="362" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600907426797" />
-    <state width="1458" height="387" key="GridCell.Tab.0.bottom" timestamp="1601251807029">
+    <state width="1458" height="387" key="GridCell.Tab.0.bottom" timestamp="1601252039658">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601251807029" />
-    <state width="1458" height="387" key="GridCell.Tab.0.center" timestamp="1601251807029">
+    <state width="1458" height="387" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601252039658" />
+    <state width="1458" height="387" key="GridCell.Tab.0.center" timestamp="1601252039658">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1601251807029" />
-    <state width="1458" height="387" key="GridCell.Tab.0.left" timestamp="1601251807029">
+    <state width="1458" height="387" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1601252039658" />
+    <state width="1458" height="387" key="GridCell.Tab.0.left" timestamp="1601252039657">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1601251807029" />
-    <state width="1458" height="387" key="GridCell.Tab.0.right" timestamp="1601251807029">
+    <state width="1458" height="387" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1601252039657" />
+    <state width="1458" height="387" key="GridCell.Tab.0.right" timestamp="1601252039658">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1601251807029" />
+    <state width="1458" height="387" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1601252039658" />
     <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1601245464027">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

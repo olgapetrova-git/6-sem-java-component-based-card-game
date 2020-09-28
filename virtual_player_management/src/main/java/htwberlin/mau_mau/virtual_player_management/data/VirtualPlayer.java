@@ -22,7 +22,11 @@ public class VirtualPlayer extends Player {
 
     public Suit getWish() throws ArgumentOutOfBoundsException {
         try{
-            return hand.peek().getSuit();
+            if(!hand.getCards().isEmpty()) {
+                return hand.peek().getSuit();
+            } else {
+                return Suit.HEARTS;
+            }
         } catch (Exception e){
             throw new ArgumentOutOfBoundsException();
         }
