@@ -2,9 +2,11 @@ package htwberlin.mau_mau.rules_management.data;
 
 import javax.persistence.*;
 
+
 /**
- * Class containing rules validation result and related text message.
+ * The type RulesResult contains rules validation result and related text message.
  * Used by RulesService to pass rules related data to game service and view service.
+ *
  */
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

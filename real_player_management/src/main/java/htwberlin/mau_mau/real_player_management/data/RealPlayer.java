@@ -6,12 +6,12 @@ import javax.persistence.Entity;
 
 /**
  * The type Real player.
- * Describes a real player, operated by human.
+ * Describes a real player, operated by a human.
  */
 @Entity
 public class RealPlayer extends Player {
     /**
-     * Flag if Player has pressed button "Mau"
+     * Flag if Player has pressed button 'Mau!' when it is his turn and he only has two cards
      */
     private boolean saidMau;
 

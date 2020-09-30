@@ -18,8 +18,8 @@ public interface CardService {
 	/**
 	 * Create initial playing stack deck.
 	 *
-	 * @param drawingStack the drawing stack
-	 * @return the deck
+	 * @param drawingStack Deck object representing the drawing stack
+	 * @return Deck object representing the playing stack
 	 * @throws EmptyDrawingStackException the empty drawing stack exception
 	 * @throws EmptyPlayingStackException the empty playing stack exception
 	 */
@@ -28,21 +28,21 @@ public interface CardService {
 	/**
 	 * Removes one card from the player's hand and add the played card to the top of the playing stack.
 	 *
-	 * @param hand         the hand
+	 * @param hand         Deck object representing cards in the player's hand
 	 * @param cardPosition card position in hand
-	 * @param playingStack the playing stack
+	 * @param playingStack Deck object representing the playing stack
 	 * @throws IncorrectCardPositionException the incorrect card position exception
 	 */
 	void playCard(Deck hand, int cardPosition, Deck playingStack) throws IncorrectCardPositionException;
 
 	/**
 	 * Picks the new card from the top of drawing stack and add it to the player's hand.
-	 * When the drawing stack is empty,turns over and shuffles the playing stack to serve as new drawing stack.
+	 * When the drawing stack is empty, turns over and shuffles the playing stack to serve as new drawing stack.
 	 *
-	 * @param drawingStack the drawing stack
-	 * @param playingStack the playing stack
-	 * @param hand         the hand
-	 * @return card
+	 * @param drawingStack Deck object representing the drawing stack
+	 * @param playingStack Deck object representing the playing stack
+	 * @param hand         Deck object representing cards in the player's hand
+	 * @return Card the card
 	 * @throws EmptyDrawingStackException the empty drawing stack exception
 	 * @throws EmptyPlayingStackException the empty playing stack exception
 	 */
@@ -53,7 +53,7 @@ public interface CardService {
 	 * Gets card by position from player's hand.
 	 *
 	 * @param position the position of card in player's hand, returned by View
-	 * @param hand     the hand
+	 * @param hand     Deck object representing cards in the player's hand
 	 * @return Card the card
 	 */
 	Card getCardByPositionFromHand(int position, Deck hand);
@@ -61,16 +61,16 @@ public interface CardService {
 	/**
 	 * Gets the open card from top of the the playing stack.
 	 *
-	 * @param playingStack the playing stack
+	 * @param playingStack Deck object representing the playing stack
 	 * @return Card the open card on the top of the playing stack.
 	 */
 	Card getOpenCard(Deck playingStack);
 
 	/**
-	 * Shuffles deck, i.e. rearrange a drawing deck of cards by placing them in random order.
+	 * Shuffles a drawing deck of cards by placing them in random order.
 	 *
-	 * @param drawingStack the drawing stack
-	 * @return Deck the deck
+	 * @param drawingStack Deck object representing the drawing stack
+	 * @return Deck object representing the shuffled drawing stack
 	 */
 	Deck shuffleDrawingDeck(Deck drawingStack);
 }

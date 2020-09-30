@@ -19,7 +19,7 @@ public class Deck implements Serializable {
     /**
      * Collection of type Stack representing a deck of cards.
      */
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Card> cards;
 
     /**

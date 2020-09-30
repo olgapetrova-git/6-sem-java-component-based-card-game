@@ -18,6 +18,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import java.util.ArrayList;
 
 import static org.easymock.EasyMock.*;
@@ -44,8 +46,14 @@ public class ViewControllerTest {
     @Mock(MockType.NICE)
     private RulesService rulesServiceMock;
 
+    @Mock(MockType.NICE)
+    private EntityManager entityManagerMock;
+
+    @Mock(MockType.NICE)
+    private EntityTransaction entityTransactionMock;
+
     @Before
-    public void setUp(){
+    public void setUp() {
     }
 
     @Test
@@ -62,11 +70,15 @@ public class ViewControllerTest {
                 .andReturn(gameData);
         expect(rulesProviderMock.getRulesService()).andReturn(rulesServiceMock);
         expect(rulesServiceMock.setUpRules(EasyMock.<Card>anyObject())).andReturn(new RulesResultSpecial(false, ""));
+        expect(entityManagerMock.getTransaction()).andReturn(entityTransactionMock).times(2);
+
         replay(viewMock);
         replay(gameServiceMock);
         replay(cardServiceMock);
         replay(rulesProviderMock);
         replay(rulesServiceMock);
+        replay(entityManagerMock);
+        replay(entityTransactionMock);
         //Act
         viewController.run();
         //Assert

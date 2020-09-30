@@ -7,7 +7,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 public interface ConfigurationService {
     /**
-     * Context configurable application context (DI container)
+     * Configurable application context (DI container)
      *
      * @return the configurable application context
      */

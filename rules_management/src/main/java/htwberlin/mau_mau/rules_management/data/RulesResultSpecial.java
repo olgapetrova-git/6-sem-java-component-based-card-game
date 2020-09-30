@@ -4,6 +4,9 @@ import htwberlin.mau_mau.card_management.data.Suit;
 
 import javax.persistence.Entity;
 
+/**
+ * The type RulesResultSpecial contains validation result according to special rules and related text message.
+ */
 @Entity
 public class RulesResultSpecial extends RulesResult {
 
@@ -12,7 +15,6 @@ public class RulesResultSpecial extends RulesResult {
     private boolean eightPlayed;
     private int eightCounter;
     private boolean ninePlayed;
-
     private boolean jackPlayed;
     private Suit wish;
 
@@ -59,15 +61,27 @@ public class RulesResultSpecial extends RulesResult {
         this.eightCounter = eightCounter;
     }
 
-    public boolean isNinePlayed() { return ninePlayed; }
+    public boolean isNinePlayed() {
+        return ninePlayed;
+    }
 
-    public void setNinePlayed(boolean ninePlayed) { this.ninePlayed = ninePlayed; }
+    public void setNinePlayed(boolean ninePlayed) {
+        this.ninePlayed = ninePlayed;
+    }
 
-    public boolean isJackPlayed() { return jackPlayed; }
+    public boolean isJackPlayed() {
+        return jackPlayed;
+    }
 
-    public void setJackPlayed(boolean jackPlayed) { this.jackPlayed = jackPlayed; }
+    public void setJackPlayed(boolean jackPlayed) {
+        this.jackPlayed = jackPlayed;
+    }
 
-    public Suit getWish() { return wish; }
+    public Suit getWish() {
+        return wish;
+    }
 
-    public void setWish(Suit wish) { this.wish = wish; }
+    public void setWish(Suit wish) {
+        this.wish = wish;
+    }
 }

@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * The type RulesServiceSpecial implements operations to check game conditions according to the special set of rules.
+ */
 @Component
 @Qualifier("RulesServiceSpecial")
 public class RulesServiceSpecial implements RulesService {

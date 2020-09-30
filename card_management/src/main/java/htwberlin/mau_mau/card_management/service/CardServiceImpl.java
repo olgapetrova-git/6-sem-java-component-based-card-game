@@ -68,7 +68,7 @@ public class CardServiceImpl implements CardService {
             return  card;
         } catch (EmptyStackException ex) {
             throw new EmptyDrawingStackException();
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (IndexOutOfBoundsException e) {
             throw new EmptyPlayingStackException();
         }
     }

@@ -26,7 +26,7 @@ import org.springframework.stereotype.Controller;
 import javax.persistence.EntityManager;
 
 /**
- * The type View controller.
+ * The type View controller implements actions for the user interface (View) to interact with other components of the game.
  */
 @Controller
 public class ViewControllerImpl implements ViewController {
@@ -71,10 +71,11 @@ public class ViewControllerImpl implements ViewController {
     /**
      * Process main game flow in a console cycle.
      *
-     * @param gameData current game object
+     * @param gameData the game data object representing current game state
      */
     private void processMainFlow(GameData gameData) {
         do {
+            entityManager.getTransaction().begin();
             Player player = gameData.getCurrentPlayer();
             boolean success;
 
@@ -92,7 +93,7 @@ public class ViewControllerImpl implements ViewController {
                 gameData.setCurrentPlayer(rulesProvider.getRulesService().defineNextPlayer(
                         gameData.getRulesResult(), gameData.getPlayers()));
             }
-
+            entityManager.getTransaction().commit();
         } while (gameData.getGameStatus() == GameStatus.NORMAL);
 
         if (gameData.getGameStatus() == GameStatus.WIN) {
@@ -114,9 +115,9 @@ public class ViewControllerImpl implements ViewController {
     }
 
     /**
-     * Process one game move for one real or virtual player.
+     * Process one game move for the one real or virtual player.
      *
-     * @param gameData the game data
+     * @param gameData the game data object representing current game state
      * @param player   the player
      * @return the boolean: true, if the player has won, else false
      */
@@ -251,8 +252,7 @@ public class ViewControllerImpl implements ViewController {
         RulesResult rulesResult = gameService.makeGameMoveForVirtualPlayer(gameData.getOpenCard(), player.getHand(),
                 gameData);
         boolean success = rulesResult.getSuccess();
-        // here mau/mau-mau if required
-        // here view.show what card was played (open card)
+
         if (success) {
             if (player.getHand().getCards().size() == 1) {
                 view.showMau(player.getName());
@@ -267,7 +267,7 @@ public class ViewControllerImpl implements ViewController {
             view.showPlayedCard(true, player.getName(), rulesResult.getMessage(), gameData.getOpenCard(), oldOpenCard);
 
             if (rulesResult instanceof RulesResultSpecial && ((RulesResultSpecial) rulesResult).isJackPlayed()) {
-                try{
+                try {
                     Suit wish = ((VirtualPlayer) player).getWish();
                     ((RulesResultSpecial) rulesResult).setWish(wish);
                     view.showWish(player.getName(), wish);

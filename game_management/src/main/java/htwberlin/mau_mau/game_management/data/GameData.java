@@ -8,7 +8,6 @@ import htwberlin.mau_mau.rules_management.data.RulesResult;
 import htwberlin.mau_mau.rules_management.data.RulesResultStandard;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,8 +25,8 @@ public class GameData {
     private long id;
 
     /**
-     * An object of the drawing stack of cards. Represents a not yet dealt portion of the deck of cards, face down, which are
-     * left over after setting up the game and will be used in the rest of the game.
+     * An object of the drawing stack of cards. Represents a not yet dealt portion of the deck of cards, face down,
+     * which are left over after setting up the game and will be used in the rest of the game.
      */
     @OneToOne(targetEntity = Deck.class, cascade = CascadeType.ALL)
     private Deck drawingStack;
@@ -78,12 +77,12 @@ public class GameData {
     /**
      * Instantiates a new Game data object.
      *
-     * @param drawingStack the drawing stack, an undealt portion of the deck of cards
-     * @param playingStack the playing stack, the pack of cards, which were already played
+     * @param drawingStack Deck object representing the drawing stack, an undealt portion of the deck of cards
+     * @param playingStack Deck object representing the playing stack, i.e. the pack of cards, which were already played
      * @param players      list of players
      * @param gameRulesId  the game rules id
      */
-    public GameData(Deck drawingStack, Deck playingStack, ArrayList<Player> players, GameRulesId gameRulesId) {
+    public GameData(Deck drawingStack, Deck playingStack, List<Player> players, GameRulesId gameRulesId) {
         this.drawingStack = drawingStack;
         this.playingStack = playingStack;
         this.players = players;
@@ -106,7 +105,7 @@ public class GameData {
     /**
      * Gets drawing stack.
      *
-     * @return the drawing stack
+     * @return Deck object representing the drawing stack
      */
     public Deck getDrawingStack() {
         return drawingStack;
@@ -115,7 +114,7 @@ public class GameData {
     /**
      * Sets drawing stack.
      *
-     * @param drawingStack the drawing stack
+     * @param drawingStack Deck object representing the drawing stack
      */
     public void setDrawingStack(Deck drawingStack) {
         this.drawingStack = drawingStack;
@@ -124,7 +123,7 @@ public class GameData {
     /**
      * Gets playing stack.
      *
-     * @return the playing stack
+     * @return Deck object representing the playing stack
      */
     public Deck getPlayingStack() {
         return playingStack;
@@ -134,7 +133,7 @@ public class GameData {
     /**
      * Sets playing stack.
      *
-     * @param playingStack the playing stack
+     * @param playingStack Deck object representing the playing stack
      */
     public void setPlayingStack(Deck playingStack) {
         this.playingStack = playingStack;
@@ -143,7 +142,7 @@ public class GameData {
     /**
      * Gets players.
      *
-     * @return the players
+     * @return the list of players
      */
     public List<Player> getPlayers() {
         return players;

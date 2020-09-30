@@ -3,6 +3,10 @@ package htwberlin.mau_mau.real_player_management.service;
 import htwberlin.mau_mau.real_player_management.data.RealPlayer;
 import org.springframework.stereotype.Component;
 
+/**
+ * The type Real player service implements operations relating to the real player's attributes.
+ *
+ */
 @Component
 public class RealPlayerServiceImpl implements RealPlayerService {
     @Override

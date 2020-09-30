@@ -10,6 +10,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+/**
+ * The type ConfigurationServiceImpl implements configuration for Spring dependency injection container.
+ */
 @Configuration
 public class ConfigurationServiceImpl implements ConfigurationService {
     @Override

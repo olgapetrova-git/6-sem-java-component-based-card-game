@@ -7,13 +7,17 @@ import htwberlin.mau_mau.view_management.controller.ViewControllerImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ConfigurableApplicationContext;
-/**
- * https://github.com/olgapetrova-git/mau_mau/
- */
 
 /**
  * Provides an entry point to start a program.
+ *
+ * @author Olga Petrova
+ * https://github.com/olgapetrova-git/mau_mau/
+ *
+ * @since * 28 Sep 2020
+ *
  */
+
 public class ApplicationRunner
 {
     private static final Logger LOGGER = LogManager.getLogger(ApplicationRunner.class);

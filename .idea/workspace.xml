@@ -23,8 +23,204 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d151cc8-e672-4c00-b7ba-88fb456e8d0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration_management/.settings/org.eclipse.jpt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration_management/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration_management/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration_management/Class_Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration_management/Class_Diagram.ucls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/runner/ApplicationBuilder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/runner/ApplicationRunner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/runner/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/runner/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/runner/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameServiceJpaTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/PostAction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/NotANumberException.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/PlayerMoveDrawException.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/PlayerMoveSkipException.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/View.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/WishedSuitException.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/ArgumentOutOfBoundsException.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Class Diagram vert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Class Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Component Diagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Component Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Component Diagram.vpd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/h2-latest.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_management/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_management/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_management/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d084fd4028b6eda89b720bcfc167f8ca5e8f33e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLass.ucls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Class Diagram Mau Mau.ucls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Class_Diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mau Mau Component Diagramm.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mau Mau Component Diagramm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mau Mau Component Diagramm.vpd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/data/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/data/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/card_management/src/main/java/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/.project" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/runner/ApplicationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/runner/ApplicationBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/runner/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/runner/ApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/service/ConfigurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/service/ConfigurationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/src/main/java/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/target/classes/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/classes/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/configuration_management/target/configuration_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Card.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Deck.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Deck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Rank.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Rank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Suit.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/Suit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/data/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/CardService.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/CardService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/CardServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/CardServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/CardServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/CardServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/EmptyDrawingStackException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/EmptyPlayingStackException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/IncorrectCardPositionException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/card_management/service/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/ConfigurationService.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/ConfigurationService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/ConfigurationServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/configuration_management/service/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/GameData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/GameData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/GameStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/GameStatus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/data/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameService.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/GameServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/game_management/service/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/Player.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/player_management/data/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/RealPlayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/RealPlayer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/data/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/RealPlayerService.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/RealPlayerService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/real_player_management/service/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/GameRulesId.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/GameRulesId.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/RulesResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/RulesResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/RulesResultStandard.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/RulesResultStandard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/data/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesService.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceSpecialTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceSpecialTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceStandardTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/RulesServiceStandardTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/rules_management/service/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/ViewController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/ViewController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/ViewControllerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/ViewControllerTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/controller/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/NameIsEmptyException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/NameIsEmptyException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/NumberOutOfLimitsException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/NumberOutOfLimitsException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/view_management/view/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/VirtualPlayer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/data/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerService.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/htwberlin/mau_mau/virtual_player_management/service/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/data/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/data/GameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/src/main/java/htwberlin/mau_mau/game_management/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/game_management/target/game_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/player_management/target/player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/data/RealPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/data/RealPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/service/RealPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/service/RealPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/src/main/java/htwberlin/mau_mau/real_player_management/service/RealPlayerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/real_player_management/target/real_player_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/PostAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/PostAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultSpecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/data/RulesResultStandard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceSpecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/src/main/java/htwberlin/mau_mau/rules_management/service/RulesServiceStandard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rules_management/target/rules_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/Mau-Mau class diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/Mau-Mau class diagram.ucls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/class_diagramm.ucls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/controller/ViewControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/main/java/htwberlin/mau_mau/view_management/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/src/test/java/htwberlin/mau_mau/view_management/controller/ViewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/src/test/java/htwberlin/mau_mau/view_management/controller/ViewControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/view_management/target/view_management-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual_player_management/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_player_management/src/main/java/htwberlin/mau_mau/virtual_player_management/service/VirtualPlayerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +251,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="skipTests" value="true" />
-  </component>
   <component name="ProjectId" id="1gVPSbM3IZS24H6tMEAxzicdfD3" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,7 +266,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/card_management" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -141,48 +334,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameServiceTest.testGetPostAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="game_management" />
+    <configuration name="CardServiceTest.testDrawCardThrowsEmptyPlayingStackException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="card_management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwberlin.mau_mau.game_management.service.*" />
+          <option name="PATTERN" value="htwberlin.mau_mau.card_management.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.game_management.service" />
-      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.game_management.service.GameServiceTest" />
-      <option name="METHOD_NAME" value="testGetPostAction" />
+      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.card_management.service" />
+      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.card_management.service.CardServiceTest" />
+      <option name="METHOD_NAME" value="testDrawCardThrowsEmptyPlayingStackException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameServiceTest.testSetupNewGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="game_management" />
+    <configuration name="ConfigurationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="configuration_management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwberlin.mau_mau.game_management.service.*" />
+          <option name="PATTERN" value="htwberlin.mau_mau.configuration_management.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.game_management.service" />
-      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.game_management.service.GameServiceTest" />
-      <option name="METHOD_NAME" value="testSetupNewGame" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RulesServiceSpecialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rules_management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwberlin.mau_mau.rules_management.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.rules_management.service" />
-      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.rules_management.service.RulesServiceSpecialTest" />
+      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.configuration_management.service" />
+      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.configuration_management.service.ConfigurationServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -199,6 +376,22 @@
       <option name="PACKAGE_NAME" value="htwberlin.mau_mau.view_management.controller" />
       <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.view_management.controller.ViewControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewControllerTest.testRun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="view_management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwberlin.mau_mau.view_management.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwberlin.mau_mau.view_management.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwberlin.mau_mau.view_management.controller.ViewControllerTest" />
+      <option name="METHOD_NAME" value="testRun" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -627,10 +820,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.ApplicationRunner" />
-      <item itemvalue="JUnit.RulesServiceSpecialTest" />
-      <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
-      <item itemvalue="JUnit.GameServiceTest.testSetupNewGame" />
       <item itemvalue="JUnit.ViewControllerTest" />
+      <item itemvalue="JUnit.CardServiceTest.testDrawCardThrowsEmptyPlayingStackException" />
+      <item itemvalue="JUnit.ConfigurationServiceTest" />
+      <item itemvalue="JUnit.ViewControllerTest.testRun" />
       <item itemvalue="Maven.dependency:analyze rules_management" />
       <item itemvalue="Maven.dependency:analyze view_management" />
       <item itemvalue="Maven.dependency:analyze virtual_player_management" />
@@ -651,10 +844,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicationRunner" />
+        <item itemvalue="JUnit.ViewControllerTest.testRun" />
         <item itemvalue="JUnit.ViewControllerTest" />
-        <item itemvalue="JUnit.GameServiceTest.testSetupNewGame" />
-        <item itemvalue="JUnit.GameServiceTest.testGetPostAction" />
-        <item itemvalue="JUnit.RulesServiceSpecialTest" />
+        <item itemvalue="JUnit.ConfigurationServiceTest" />
+        <item itemvalue="JUnit.CardServiceTest.testDrawCardThrowsEmptyPlayingStackException" />
       </list>
     </recent_temporary>
   </component>
@@ -725,10 +918,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1500.960@0.0.1500.960" timestamp="1601237822046" />
-    <state x="498" y="179" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598824034874">
+    <state x="498" y="179" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601482635965">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="498" y="179" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1500.960@0.0.1500.960" timestamp="1598824034874" />
+    <state x="498" y="179" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1500.960@0.0.1500.960" timestamp="1601482635965" />
     <state x="502" y="331" key="AddEditExclusionDialog" timestamp="1600725106241">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -738,22 +931,22 @@
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1600941398830" />
     <state x="1132" y="362" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600907426797" />
-    <state width="1458" height="387" key="GridCell.Tab.0.bottom" timestamp="1601252039658">
+    <state width="1458" height="371" key="GridCell.Tab.0.bottom" timestamp="1601503156192">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601252039658" />
-    <state width="1458" height="387" key="GridCell.Tab.0.center" timestamp="1601252039658">
+    <state width="1458" height="371" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1601503156192" />
+    <state width="1458" height="371" key="GridCell.Tab.0.center" timestamp="1601503156192">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1601252039658" />
-    <state width="1458" height="387" key="GridCell.Tab.0.left" timestamp="1601252039657">
+    <state width="1458" height="371" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1601503156192" />
+    <state width="1458" height="371" key="GridCell.Tab.0.left" timestamp="1601503156192">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1601252039657" />
-    <state width="1458" height="387" key="GridCell.Tab.0.right" timestamp="1601252039658">
+    <state width="1458" height="371" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1601503156192" />
+    <state width="1458" height="371" key="GridCell.Tab.0.right" timestamp="1601503156192">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="387" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1601252039658" />
+    <state width="1458" height="371" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1601503156192" />
     <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1601245464027">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -774,10 +967,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="281" y="135" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1598219688230" />
-    <state x="252" y="110" key="SettingsEditor" timestamp="1601241949460">
+    <state x="252" y="110" key="SettingsEditor" timestamp="1601418133715">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="252" y="110" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1601241949460" />
+    <state x="252" y="110" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1601418133715" />
     <state x="323" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600907455516" />
     <state x="475" y="242" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600940521150">
       <screen x="0" y="0" width="1500" height="960" />
@@ -787,10 +980,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="297" y="216" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1500.960@0.0.1500.960" timestamp="1598612705366" />
-    <state x="459" y="79" width="688" height="801" key="find.popup" timestamp="1601230590376">
+    <state x="459" y="79" width="717" height="801" key="find.popup" timestamp="1601497231459">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="459" y="79" width="688" height="801" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1601230590376" />
+    <state x="459" y="79" width="717" height="801" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1601497231459" />
     <state x="175" y="141" key="new project wizard" timestamp="1600444879497">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

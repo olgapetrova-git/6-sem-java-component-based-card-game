@@ -1,5 +1,6 @@
 htwberlin.mau_mau.card_management.data
 htwberlin.mau_mau.card_management.service
+htwberlin.mau_mau.configuration_management.runner
 htwberlin.mau_mau.configuration_management.service
 htwberlin.mau_mau.game_management.data
 htwberlin.mau_mau.game_management.service

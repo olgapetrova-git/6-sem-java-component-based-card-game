@@ -11,16 +11,13 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
-/**
- * https://github.com/olgapetrova-git/mau_mau/
- */
 
 /**
- * Provides actions for the player to interact with the game.
+ * Provides actions for the player to interact with the game and handles game responds to the player.
  */
 @Component
 public class View {
-    private Scanner scanner;
+    private final Scanner scanner;
 
     private static final Logger LOGGER = LogManager.getLogger(View.class);
 
@@ -38,12 +35,12 @@ public class View {
      * Show start greeting.
      */
     public void showStartGreeting() {
-        System.out.println("Welcome to the Mau-Mau Palace! Here we offer you your favorite Mau-Mau game against virtual " +
+        System.out.println("Welcome to the Mau-Mau Palace! Here we offer you your favourite Mau-Mau game against virtual " +
                 "players with standard and special rules.");
     }
 
     /**
-     * Show new game greeting.
+     * Shows the new game greeting and rules info.
      *
      * @param name                   the name
      * @param numberOfVirtualPlayers the number of virtual players
@@ -81,10 +78,10 @@ public class View {
     }
 
     /**
-     * Show game table to the real player, incl. cards in the real player's hand, number of the cards
+     * Shows game table to the real player, incl. cards in the real player's hand, number of the cards
      * per each virtual player and the open card in the playing stack.
      *
-     * @param hand     the real player's hand
+     * @param hand     Deck object representing cards in the real player's hand
      * @param openCard the open card on the top of the playing stack
      * @param players  the players
      */
@@ -409,7 +406,7 @@ public class View {
     }
 
     private int parsePlayerMoveInput(String move, boolean isEightPlayed, int min, int max)
-    throws PlayerMoveSkipException, PlayerMoveDrawException {
+            throws PlayerMoveSkipException, PlayerMoveDrawException {
         int num = 0;
 
         if (move.equalsIgnoreCase("d") && !isEightPlayed) {
@@ -431,7 +428,7 @@ public class View {
         return num;
     }
 
-    public Suit requestWish(){
+    public Suit requestWish() {
         boolean success = false;
         String input = "";
         Suit wishedSuit = Suit.SPADES;
@@ -441,20 +438,20 @@ public class View {
                         "'H' for HEARTS, 'D' for DIAMONDS.");
                 input = scanner.nextLine();
 
-                if(input.equalsIgnoreCase("s")) {
+                if (input.equalsIgnoreCase("s")) {
                     wishedSuit = Suit.SPADES;
-                } else if(input.equalsIgnoreCase("c")) {
+                } else if (input.equalsIgnoreCase("c")) {
                     wishedSuit = Suit.CLUBS;
-                } else if(input.equalsIgnoreCase("h")) {
+                } else if (input.equalsIgnoreCase("h")) {
                     wishedSuit = Suit.HEARTS;
-                } else if(input.equalsIgnoreCase("d")) {
+                } else if (input.equalsIgnoreCase("d")) {
                     wishedSuit = Suit.DIAMONDS;
                 } else {
                     throw new WishedSuitException(input);
                 }
                 success = true;
             } catch (WishedSuitException e) {
-                System.out.printf(INCORRECT_INPUT + "Incorrect input. %s\n", e.getMessage());
+                System.out.printf(INCORRECT_INPUT + " %s\n", e.getMessage());
             } catch (Exception e) {
                 LOGGER.debug(String.format(USER_INPUT_EXCEPTION + " %s", e.getMessage()));
                 System.out.println(INCORRECT_INPUT);
