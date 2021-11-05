@@ -1,7 +1,12 @@
 *Please find German version below*
 # (EN) Mau-Mau card game
-This is an implementation of [Mau-Mau card game](https://en.wikipedia.org/wiki/Mau-Mau_(card_game)) for a one real player and up to 3 virtual players.
-It is a study project at the HTW Berlin in the Business Informatics study programme for the 6th semester in August-September 2020. The project was carried out as part of the course Components-based development. The project assignment was completed in 6 weeks with a grade of 1.0.
+Study project at the University of Applied Sciences Berlin (HTW Berlin).       
+My bachelor study program was Business Computing (Wirtschaftsinformatik B.Sc).       
+
+6. Semester, August-September 2020.    
+The project was carried out as part of the course Components-based development. The project assignment was completed in 6 weeks with a grade of 1.0.        
+
+This is an implementation of [Mau-Mau card game](https://en.wikipedia.org/wiki/Mau-Mau_(card_game)) for a one real player and up to 3 virtual players.     
 
 The project is a Java application developed using the following technologies:
 - Component Architecture
@@ -41,7 +46,13 @@ Olga Petrova
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  
 Do not use and hand in this project as your own assignment in the studies.
 # (DE) Mau-Mau-Kartenspiel
-Dies ist eine Implementierung des [Mau-Mau Kartenspiels](https://de.wikipedia.org/wiki/Mau-Mau_(Kartenspiel)) für einen realen Spieler und bis zu 3 virtuelle Spieler. Studienprojekt an der HTW Berlin im Studiengang Wirtschaftsinformatik für das 6. Semester im August-September 2020. Das Projekt wurde im Rahmen der Lehrveranstaltung Komponentenbasierte Entwicklung durchgeführt. Der Projektauftrag wurde in 6 Wochen mit der Note 1,0 abgeschlossen.
+Studienprojekt während des Studiums an der HTW Berlin (Hochschule für Technik und Wirtschaft Berlin).
+Studiengang Wirtschaftsinformatik B.Sc.
+
+6. Semester, August-September 2020.     
+Das Projekt wurde im Rahmen der Lehrveranstaltung Komponentenbasierte Entwicklung durchgeführt. Der Projektauftrag wurde in 6 Wochen mit der Note 1,0 abgeschlossen.     
+
+Dies ist eine Implementierung des [Mau-Mau Kartenspiels](https://de.wikipedia.org/wiki/Mau-Mau_(Kartenspiel)) für einen realen Spieler und bis zu 3 virtuelle Spieler.    
 
 Das Projekt ist eine Java-Anwendung, die unter Einsatz der folgenden Technologien entwickelt wurde:
 - Komponentenarchitektur
