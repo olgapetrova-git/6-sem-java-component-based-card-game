@@ -1,7 +1,7 @@
 *Please find German version below*
 # (EN) Mau-Mau card game
 Study project at the University of Applied Sciences Berlin (HTW Berlin).       
-My bachelor study program was Business Computing (Wirtschaftsinformatik B.Sc).       
+My bachelor study program was Business Computing (Wirtschaftsinformatik B.Sc).   
 
 6. Semester, August-September 2020.    
 The project was carried out as part of the course Components-based development. The project assignment was completed in 6 weeks with a grade of 1.0.        
