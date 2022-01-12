@@ -4,19 +4,20 @@ Study project at the University of Applied Sciences Berlin (HTW Berlin).
 My bachelor study program was Business Computing (Wirtschaftsinformatik B.Sc).   
 
 6. Semester, August-September 2020.    
-The project was carried out as part of the course Components-based development. The project assignment was completed in 6 weeks with a grade of 1.0.        
+    
+The project was carried out as part of the course Components-based development. The project assignment was accomplished within the prescribed 6-week time frame and completed with a grade of 1.0.        
 
 This is an implementation of [Mau-Mau card game](https://en.wikipedia.org/wiki/Mau-Mau_(card_game)) for a one real player and up to 3 virtual players.     
 
-The project is a Java application developed using the following technologies:
-- Component Architecture
-- Maven
-- DI with Spring Context
-- JPA persistence with Hibernate and H2
-- Test cases with JUnit and Easy-Mock
-- Logging library log4j
-- MVC pattern
-- Error handling
+  The project is a Java application developed using the following technologies:
+  - Component Architecture
+  - Maven
+  - DI with Spring Context
+  - JPA persistence with Hibernate and H2
+  - Test cases with JUnit and Easy-Mock
+  - Logging library log4j
+  - MVC pattern
+  - Error handling
 ## Documentation
 The Java application is accompanied by technical documentation that includes a detailed description, a component diagram, a data schema, interface documentation as a formatted JavaDoc, interface images, a description of the frameworks and runtime environment used, and a presentation of the application examples. 
 
@@ -44,25 +45,26 @@ Olga Petrova
 - LinkedIn: [Olga Petrova](https://www.linkedin.com/in/olga-petrova-berlin/)
 ## License  
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  
-Do not use and hand in this project as your own assignment in the studies.
+Please do not use and hand in this project as your own assignment in the studies.
 # (DE) Mau-Mau-Kartenspiel
 Studienprojekt während des Studiums an der HTW Berlin (Hochschule für Technik und Wirtschaft Berlin).        
 Studiengang Wirtschaftsinformatik B.Sc.       
 
-6. Semester, August-September 2020.        
-Das Projekt wurde im Rahmen der Lehrveranstaltung Komponentenbasierte Entwicklung durchgeführt. Der Projektauftrag wurde in 6 Wochen mit der Note 1,0 abgeschlossen.     
+6. Semester, August-September 2020.   
+        
+Das Projekt wurde im Rahmen der Lehrveranstaltung Komponentenbasierte Entwicklung erledigt.  Die Projektarbeit wurde innerhalb des vorgeschriebenen Zeitrahmens von 6 Wochen durchgeführt und mit der Note 1,0 abgeschlossen.       
 
 Dies ist eine Implementierung des [Mau-Mau Kartenspiels](https://de.wikipedia.org/wiki/Mau-Mau_(Kartenspiel)) für einen realen Spieler und bis zu 3 virtuelle Spieler.    
 
-Das Projekt ist eine Java-Anwendung, die unter Einsatz der folgenden Technologien entwickelt wurde:
-- Komponentenarchitektur
-- Maven Tool
-- DI mit Spring Context
-- JPA-Persistenz mit Hibernate und H2
-- Testfälle mit JUnit und Easy-Mock
-- Logging library log4j
-- MVC-Pattern
-- Fehlerbehandlung
+  Das Projekt ist eine Java-Anwendung, die unter Einsatz der folgenden Technologien entwickelt wurde:
+  - Komponentenarchitektur
+  - Maven Tool
+  - DI mit Spring Context
+  - JPA-Persistenz mit Hibernate und H2
+  - Testfälle mit JUnit und Easy-Mock
+  - Logging library log4j
+  - MVC-Pattern
+  - Fehlerbehandlung
 ## Dokumentation
 Die Java-Anwendung wurde von einer technischen Dokumentation begleitet, die eine detaillierte Beschreibung, ein Komponentendiagramm, ein Datenschema, eine Schnittstellendokumentation als formatiertes JavaDoc, Oberflächenbilder, eine Beschreibung der verwendeten Frameworks und Ablaufumgebung sowie eine Darstellung der Anwendungsbeispiele enthielt.
 
@@ -90,4 +92,4 @@ Olga Petrova
 - LinkedIn: [Olga Petrova](https://www.linkedin.com/in/olga-petrova-berlin/)
 ## Lizenz
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  
-Verwenden und/oder reichen Sie dieses Projekt nicht als Ihre eigene Aufgabe im Studium ein. 
+Verwenden und/oder reichen Sie bitte dieses Projekt nicht als Ihre eigene Arbeit im Studium ein. 
